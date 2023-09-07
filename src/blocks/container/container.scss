@@ -1,0 +1,15 @@
+.container {
+	$self: &;
+	box-sizing: border-box;
+	padding-right: 30px;
+	padding-left: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1820px;
+	width: 100%;
+	
+	@include media('<=xs') {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}

@@ -1,0 +1,90 @@
+.h-navi {
+	$self: &;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+
+	@include media('<=sm') {
+		flex-flow: column nowrap;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		background-color: #fff;
+		padding: 50px 20px 20px;
+	}
+
+	&__close {
+		@extend %reset-button;
+		display: none;
+		position: absolute;
+		z-index: 1;
+		top: 10px;
+		right: 10px;
+		width: 38px;
+		height: 38px;
+		background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" preserveAspectRatio="none"><defs><style>.line{fill:#444;fill-rule:evenodd;}</style></defs><rect class="line" x="10.5" y="9" width="26" height="2" transform="rotate(45 10.5 9)"/><rect class="line" x="28.8" y="10.5" width="26" height="2" transform="rotate(135 28.8 10.5)"/></svg>') center / contain no-repeat transparent;
+
+		@include media('<=sm') {
+			display: block;
+		}
+	}
+	
+	&__menu {
+		box-sizing: border-box;
+		position: relative;
+		display: flex;
+		align-items: center;
+		margin-right: auto;
+
+		@include media('<=sm') {
+			flex-flow: column nowrap;
+			align-items: flex-start;		
+			flex-grow: 1;
+			overflow: auto;
+		}
+	}
+
+	&__link {
+		box-sizing: border-box;
+		padding: 10px 20px;
+		color: inherit;
+		text-decoration: none;
+		font-size: 28px;
+		color: #fff;
+		white-space: nowrap;
+
+		@include media('<=sm') {
+			width: 100%;
+		}
+	}
+
+	&__link-access {
+		text-decoration: none;
+		white-space: nowrap;
+		font-size: 28px;
+		color: #fff;
+	}
+
+	&__lang {
+		display: flex;
+		align-items: center;
+
+		hr {
+			align-self: stretch;
+			box-sizing: border-box;
+			background-color: rgba(255, 255, 255, 0.3);
+			width: 2px;
+			border: none;
+		}
+	}
+	
+	&__lg-link {
+		text-decoration: none;
+		font-size: 28px;
+		color: rgba(255, 255, 255, 0.3);
+		padding: 10px 15px;
+
+		&.active {
+			color: #fff;
+		}
+	}
+}
