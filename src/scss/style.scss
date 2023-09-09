@@ -31,7 +31,8 @@ $decor: #8357FF;
 @include font-face("DMSans-Medium", "DMM");
 @include font-face("DMSans-Light", "DML");
 @include font-face("DMSans-Bold", "DMB");
-// @import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/modules/effect-fade";
 
 // Import BEM blocks scss
 @import "../blocks/**/*.scss";
