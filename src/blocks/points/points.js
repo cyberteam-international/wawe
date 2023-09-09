@@ -15,7 +15,7 @@ import Swiper from 'swiper';
 			},
 			640: {
 				spaceBetween: 14,
-				slidesPerView: 2.5
+				slidesPerView: 3.15
 			},
 			1100: {
 				spaceBetween: 20,

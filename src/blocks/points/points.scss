@@ -41,15 +41,17 @@
 		@include media('<=md') {
 			padding: 30px;
 			border-radius: 30px;
-			min-height: 340px;
+			min-height: 320px;
 		}
 		
 		@include media('<=sm') {
-			border-radius: 25px;
-			min-height: 270px;
+			padding: 20px;
+			border-radius: 15px;
+			min-height: 230px;
 		}
 		
-		@include media('<=xxs') {
+		@include media('<=xs') {
+			border-radius: 25px;
 			padding: 15px;
 			min-height: 250px;
 		}

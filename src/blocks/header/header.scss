@@ -29,14 +29,10 @@
 	}
 
 	@include media('<=lg') {
-		margin-bottom: 100px;
+		margin-bottom: 80px;
 	}
 
 	@include media('<=sm') {
-		margin-bottom: 60px;
-	}
-
-	@include media('<=xs') {
 		margin-bottom: 40px;
 	}
 	
