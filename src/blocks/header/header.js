@@ -16,14 +16,16 @@ import { Autoplay, EffectFade } from 'swiper/modules';
 		fadeEffect: {
 			crossFade: true,
 		},
-		autoplay: {
+		/* autoplay: {
 			delay: 5000,
-		},
+		}, */
 		on: {
-			slideChange: function () {
-				// console.log(swiper.realIndex);
+			slideChangeTransitionStart: function(sw) {
 				header.className = 'header';
-				header.classList.add(`header_type-${swiper.realIndex}`);
+				header.classList.add(`header_type-${sw.realIndex}`);
+				sw.slides.forEach((item, index) => {
+					item.querySelector('.header__flyer').classList[(index == sw.activeIndex) ? 'add': 'remove']('rised');
+				});
 			}
 		}
 	});

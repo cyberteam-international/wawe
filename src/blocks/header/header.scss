@@ -2,10 +2,15 @@
 	$self: &;
 	box-sizing: border-box;
 	background-color: #5166dd;
+	position: relative;
 	transition: background-color 2.0s;
-	@keyframes imageSlideUp {
-		from { opacity: 0; transform: translateY(1000px); }
+	@keyframes flyerSlideUp {
+		from { opacity: 0; transform: translateY(100%); }
 		to { opacity: 1; transform: translateY(0); }
+	}
+	@keyframes flyerRotateDown {
+		from { opacity: 1; transform: translateY(0); }
+		to { opacity: 0; transform: rotateZ(-45deg); }
 	}
 	@keyframes waveLeftToRight {
 		from { left: 0; }
@@ -20,7 +25,18 @@
 	
 	&_type-0 { background-color: #5166dd; }
 	&_type-1 { background-color: #8251dd; }
-	&_type-2 { background-color: #11b751; }
+	&_type-2 { background-color: #00c920; }
+
+	&::before {
+		display: block;
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+		background: linear-gradient(70deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%);
+	}
 
 	&__top {
 		height: 95px;
@@ -111,6 +127,8 @@
 
 	&__title {
 		display: inline-block;
+		position: relative;
+		z-index: 1;
 		font-size: calc(5.3vw - 0.5px);
 		font-family: "DMEB", sans-serif;
 		color: rgba(255, 255, 255, 0.3);
@@ -167,6 +185,20 @@
 		position: absolute;
 		left: calc(80px - 100%);
 		bottom: 40px;
+		transform-origin: bottom right;
+		animation: flyerRotateDown 1.0s forwards;
+		
+		@include media('<=md') {
+			left: calc(30px - 100%);
+		}
+
+		@include media('<=xs') {
+			display: none;
+		}
+		
+		&.rised {
+			animation: flyerSlideUp 1.0s forwards;
+		}
 	}
 	
 	&__corner {
