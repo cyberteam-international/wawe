@@ -1,0 +1,112 @@
+	.points {
+	$self: &;
+	margin-bottom: 160px;
+
+	&__slider {
+		box-sizing: border-box;
+		padding-left: 30px;
+		max-width: calc(100vw - ((100vw - 1820px) / 2));
+		margin: 0 0 0 auto;
+		width: 100%;
+	
+		@include media('<=sm') {
+			padding-left: 20px;
+		}
+		
+		@include media('<=xxs') {
+			padding-left: 15px;
+		}
+	}
+
+	&__slide {
+		display: flex;
+		box-sizing: border-box;
+		flex-flow: column nowrap;
+		border-radius: 40px;
+		padding: 40px;
+		position: relative;
+		min-height: 570px;
+		overflow: hidden;
+		height: auto;
+		color: #fff;
+		
+		@include media('<=xxlg') {
+			min-height: 450px;
+		}
+		
+		@include media('<=xlg') {
+			min-height: 380px;
+		}
+		
+		@include media('<=md') {
+			padding: 30px;
+			border-radius: 30px;
+			min-height: 340px;
+		}
+		
+		@include media('<=sm') {
+			border-radius: 25px;
+			min-height: 270px;
+		}
+		
+		@include media('<=xxs') {
+			padding: 15px;
+			min-height: 250px;
+		}
+		
+		&_dark {
+			color: #404668;
+		}
+
+		&_cyan {
+			background: linear-gradient(180deg, #43B3F6 0%, #B2E2FF 100%);
+		}
+
+		&_magenta {
+			background: linear-gradient(180deg, #F509FF 0%, #F1A3F5 100%);
+		}
+
+		&_purple {
+			background: linear-gradient(180deg, #B24AFB 0%, #D599FF 100%);
+		}
+
+		&_yellow {
+			background: linear-gradient(180deg, #FFFFC4 0%, #FAFAD1 100%);
+		}
+
+		&_blue {
+			background: linear-gradient(180deg, #5771FF 0%, #A3B0F5 100%);
+		}
+	}
+
+	&__title {
+		font-size: 42px;
+		font-family: "DMB", sans-serif;
+		position: relative;
+		z-index: 1;
+
+		@include media('<=xxlg') {
+			font-size: 2.2vw;
+		}
+
+		@include media('<=sm') {
+			font-size: 17px;
+		}
+
+		@include media('<=xs') {
+			font-size: 20px;
+		}
+		// font-size: 42px;
+	}
+
+	&__text {
+
+	}
+
+	&__image {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+}

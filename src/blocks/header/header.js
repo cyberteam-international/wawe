@@ -7,7 +7,7 @@ import { Autoplay, EffectFade } from 'swiper/modules';
 (() => {
 	let header = document.querySelector('.header');
 
-	let swiper = new Swiper(".header__slider", {
+	new Swiper(".header__slider", {
 		modules: [ Autoplay, EffectFade ],
 		spaceBetween: 30,
 		loop: true,
@@ -16,9 +16,9 @@ import { Autoplay, EffectFade } from 'swiper/modules';
 		fadeEffect: {
 			crossFade: true,
 		},
-		/* autoplay: {
+		autoplay: {
 			delay: 5000,
-		}, */
+		},
 		on: {
 			slideChangeTransitionStart: function(sw) {
 				header.className = 'header';
