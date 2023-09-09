@@ -63,6 +63,7 @@
 		"omit": "@@,js-,active,opened,footer"
 	},
 	"dependencies": {
+		"gsap": "^3.12.2",
 		"scroll-lock": "^2.1.5"
 	}
 }
