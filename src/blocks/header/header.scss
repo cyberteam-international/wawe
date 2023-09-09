@@ -142,6 +142,7 @@
 
 	&__images {
 		box-sizing: border-box;
+		position: relative;
 		padding-right: 60px;
 		grid-column: span 1;
 		grid-row: span 2;
@@ -159,11 +160,13 @@
 	}
 
 	&__image {
-		display: block;
+		img { display: block; }
+	}
 
-		img {
-			display: block;
-		}
+	&__flyer {
+		position: absolute;
+		left: calc(80px - 100%);
+		bottom: 40px;
 	}
 	
 	&__corner {
