@@ -1,6 +1,7 @@
 // import gsap from "gsap";
 // import ScrollTrigger from "gsap/ScrollTrigger";
 // gsap.registerPlugin(ScrollTrigger);
+
 import Swiper from 'swiper';
 import { Autoplay, EffectFade } from 'swiper/modules';
 
@@ -13,12 +14,8 @@ import { Autoplay, EffectFade } from 'swiper/modules';
 		loop: true,
 		speed: 2000,
 		effect: "fade",
-		fadeEffect: {
-			crossFade: true,
-		},
-		autoplay: {
-			delay: 5000,
-		},
+		fadeEffect: { crossFade: true },
+		autoplay: { delay: 5000 },
 		on: {
 			slideChangeTransitionStart: function(sw) {
 				header.className = 'header';

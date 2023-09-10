@@ -1,11 +1,19 @@
-	.points {
+.points {
 	$self: &;
 	margin-bottom: 160px;
+	
+	@include media('<=sm') {
+		margin-bottom: 90px;
+	}
+	
+	@include media('<=xs') {
+		margin-bottom: 80px;
+	}
 
 	&__slider {
 		box-sizing: border-box;
 		padding-left: 30px;
-		max-width: calc(100vw - ((100vw - 1820px) / 2));
+		max-width: $oneside;
 		margin: 0 0 0 auto;
 		width: 100%;
 	
@@ -38,9 +46,12 @@
 			min-height: 380px;
 		}
 		
+		@include media('<=lg') {
+			border-radius: 30px;
+		}
+		
 		@include media('<=md') {
 			padding: 30px;
-			border-radius: 30px;
 			min-height: 320px;
 		}
 		

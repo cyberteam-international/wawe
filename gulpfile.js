@@ -133,10 +133,11 @@ function icons() {
 	return gulp.src(pth.src.icn)
 	.pipe($.svgSymbolView({
 		name: 'icons-sprite',
-		svgo: { plugins: [
-            { removeRasterImages: true },
-            { removeStyleElement: true }
-        ]}
+		monochrome: {
+			dark: '#0b0e21',
+			white: '#ffffff',
+			accent: '#465BCC'
+		}
 	}))
 	.pipe(gulp.dest(pth.pbl.img))
 };

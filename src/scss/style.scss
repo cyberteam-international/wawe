@@ -2,7 +2,7 @@
 @include reset(); 
 
 // Include breakpoints badge
-body { @include screen-media(); }
+// body { @include screen-media(); }
 
 // Import media-query helper
 @import "../../node_modules/include-media/dist/_include-media.scss";
@@ -24,6 +24,11 @@ $breakpoints: (
 $black: #0C0D12;
 $accent: #5771FF;
 $decor: #8357FF;
+$text: #404668;
+
+// Sizes
+$container: 1820px;
+$oneside: calc(100vw - (100vw - 1820px) / 2);
 
 
 @include font-face("DMSans-ExtraBold", "DMEB");
@@ -42,7 +47,7 @@ body, html {
 	font-size: #{$basesize}px;
 	line-height: 1.2;
 	font-family: "DM", sans-serif;
-	background-color: #fafafa;
+	background-color: #F2F2F7;
 	min-height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;
@@ -57,3 +62,27 @@ body, html {
 p { margin-bottom: 10px; }
 strong { font-weight: bold; }
 em { font-style: italic; }
+
+@keyframes waveLeftToRight {
+	from { left: 0; }
+	50% { left: -100% }
+	to { left: 0; }
+}
+
+@keyframes waveRightToLeft {
+	from { right: 0; }
+	50% { right: -100% }
+	to { right: 0; }
+}
+
+@keyframes waveCircleLeftToRight {
+	from { left: 0; }
+	50% { left: -300% }
+	to { left: 0; }
+}
+
+@keyframes waveCircleRightToLeft {
+	from { right: 0; }
+	50% { right: -300% }
+	to { right: 0; }
+}

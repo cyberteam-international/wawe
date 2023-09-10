@@ -1,0 +1,281 @@
+.payment {
+	$self: &;
+	margin-bottom: 80px;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 60px;
+
+		@include media('<=xs') {
+			flex-flow: column nowrap;
+		}
+	}
+
+	&__title {
+		margin: 0 40px 0 0;
+		
+		@include media('<=xs') {
+			margin: 0 0 10px 0;
+		}
+	}
+
+	&__t-text {
+		max-width: 560px;
+		font-size: 28px;
+		color: rgba($text, 0.6);
+		
+		@include media('<=xxlg') {
+			font-size: calc(1.75vw + 3px);
+		}
+		
+		@include media('<=lg') {
+			max-width: 420px;
+		}
+		
+		@include media('<=sm') {
+			max-width: 250px;
+			font-size: 16px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 18px;
+		}
+	}
+
+	&__body {
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__circle {
+		display: block;
+		box-sizing: border-box;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		height: 550px;
+		width: 550px;
+		background-color: #EDF2FC;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		// @include outline();
+
+		@include media('<=xxlg') {
+			width: calc(70vw - 450px);			
+			height: calc(70vw - 450px);			
+		}
+
+		@include media('<=md') {
+			width: 220px;
+			height: 220px;
+		}
+		
+		img {
+			position: relative;
+			z-index: 2;
+			width: 65%;
+		}
+
+		&::before, &::after {
+			display: block;
+			content: '';
+			width: 400%;
+			opacity: 0.9;
+			position: absolute;
+			bottom: 0;
+			z-index: 1;
+			background-color: transparent;
+			background-position: left top;
+			background-repeat: no-repeat;
+			background-size: cover;
+			animation: linear infinite;
+			animation-duration: 40s;
+			animation-timing-function: ease-in-out;
+		}
+		
+		&::before {
+			left: 0;
+			height: 95%;
+			background-position: center top;
+			animation-name: waveCircleLeftToRight;
+			background-image: url('#{$images-path}wave-hued-1.svg');
+		}
+		
+		&::after {
+			right: 0;
+			height: 80%;
+			animation-name: waveCircleRightToLeft;
+			background-image: url('#{$images-path}wave-hued-2.svg');
+		}
+
+	}
+
+	&__rows {
+	
+	}
+
+	&__row {
+		&:not(:last-child) {
+			margin-bottom: 40px;
+			
+			@include media('<=xlg') {
+				margin-bottom: 30px;
+			}
+			
+			@include media('<=lg') {
+				margin-bottom: 20px;
+			}
+			
+			@include media('<=xs') {
+				margin-bottom: 10px;
+			}
+		}
+
+		.swiper-wrapper { 
+			transition-timing-function: linear;
+		}
+	}
+
+	&__set {
+		box-sizing: border-box;
+	}
+
+	&__item {
+		display: flex;
+		box-sizing: border-box;
+		align-items: center;
+		justify-content: center;
+		background-color: #fff;
+		border-radius: 15px;
+		padding: 40px;
+		font-size: 28px;
+		font-family: "DMM", sans-serif;
+		white-space: nowrap;
+		overflow: hidden;
+		// width: fit-content !important;
+		// width: auto !important;
+		
+		@include media('<=xxlg') {
+			padding: calc(7vw - 60px);
+			font-size: calc(2.5vw - 7px);
+		}
+		
+		@include media('<=lg') {
+			border-radius: 10px;
+			padding: 16px;
+		}
+			
+		@include media('<=sm') {
+			border-radius: 6px;
+			font-size: 11px;
+		}
+
+		&::before {
+			display: none;
+			content: '';
+			width: 48px;
+			height: 48px;
+			background-size: 40px 40px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			flex-shrink: 0;
+			margin-right: 10px;
+			
+			@include media('<=xlg') {
+				width: 42px;
+				height: 42px;
+				margin-right: 5px;
+				background-size: 35px 35px;
+			}
+			
+			@include media('<=lg') {
+				width: 38px;
+				height: 38px;
+				background-size: 28px 28px;
+			}
+			
+			@include media('<=sm') {
+				width: 20px;
+				height: 20px;
+				background-size: 14px 14px;
+			}
+		}
+
+		&_union::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-union-view-accent');
+		}
+		
+		&_parking::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-parking-view-accent');
+		}
+
+		&_crew::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-crew-view-accent');
+		}
+
+		&_mobile::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-mobile-view-accent');
+		}
+
+		&_percent::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-percent-view-accent');
+		}
+
+		&_faucet::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-faucet-view-accent');
+		}
+
+		&_phone::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-phone-view-accent');
+		}
+
+		&_bag::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-bag-view-accent');
+		}
+
+		&_wifi::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-wifi-view-accent');
+		}
+
+		&_wallet::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-wallet-view-accent');
+		}
+
+		&_plane::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-plane-view-accent');
+		}
+
+		&_car::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-car-view-accent');
+		}
+
+		&_game::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-game-view-accent');
+		}
+
+		&_tv::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-tv-view-accent');
+		}
+	}
+}

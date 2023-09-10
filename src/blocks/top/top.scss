@@ -73,7 +73,7 @@
 		display: none;
 		width: 30px;
 		height: 19px;
-		background: url('#{$images-path}icons-sprite.svg#icon-menu-view') center / auto no-repeat transparent;
+		background: url('#{$images-path}icons-sprite.svg#icon-menu-view-white') center / auto no-repeat transparent;
 
 		@include media('<=xs') {
 			display: block;
@@ -89,7 +89,7 @@
 		right: 10px;
 		width: 38px;
 		height: 38px;
-		background: url('#{$images-path}icons-sprite.svg#icon-close-view') center / auto no-repeat transparent;
+		background: url('#{$images-path}icons-sprite.svg#icon-close-view-white') center / auto no-repeat transparent;
 
 		@include media('<=xs') {
 			display: block;
@@ -160,7 +160,7 @@
 				margin-right: 10px;
 				width: 40px;
 				aspect-ratio: 3 / 1.8;
-				background: url('#{$images-path}icons-sprite.svg#icon-aye-view') center / contain no-repeat transparent;
+				background: url('#{$images-path}icons-sprite.svg#icon-aye-view-white') center / contain no-repeat transparent;
 
 				@include media('<=xxlg') {
 					width: calc(3.5vw - 7px);

@@ -13,16 +13,6 @@
 		from { opacity: 1; transform: translateY(0); }
 		to { opacity: 0; transform: rotateZ(-45deg); }
 	}
-	@keyframes waveLeftToRight {
-		from { left: 0; }
-		50% { left: -100% }
-		to { left: 0; }
-	}
-	@keyframes waveRightToLeft {
-		from { right: 0; }
-		50% { right: -100% }
-		to { right: 0; }
-	}
 
 	@include media('<=xlg') {
 		margin-bottom: 120px;
@@ -76,7 +66,7 @@
 		&::before, &::after {
 			display: block;
 			content: '';
-			width: 200vw;
+			width: 200%;
 			position: absolute;
 			bottom: 0;
 			z-index: 1;
@@ -285,7 +275,7 @@
 			content: '';
 			width: 19px;
 			height: 17px;
-			background: url('#{$images-path}icons-sprite.svg#icon-arr-link-view') center / contain no-repeat transparent;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-link-view-white') center / contain no-repeat transparent;
 			margin: 8px 0 0 10px;
 			flex-shrink: 0;
 			
