@@ -1,0 +1,74 @@
+.outside {
+	$self: &;
+	display: flex;
+	align-items: center;
+	font-size: 28px;
+	color: #fff;
+		
+	@include media('<=xxlg') {
+		font-size: calc(1.7vw + 4px);
+	}
+
+	&_blue {
+		color: $accent;
+
+		#{$self}__link::after {
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-link-view-accent') center / contain no-repeat transparent;
+		}
+
+		hr { background-color: rgba(0, 0, 0, 0.15) !important; }
+	}
+
+	hr {
+		box-sizing: border-box;
+		background-color: rgba(255, 255, 255, 0.15);
+		flex-shrink: 0;
+		border: none;
+		margin: 0 30px;
+		width: 2px;
+		height: 35px;
+		
+		@include media('<=sm') {
+			height: 25px;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		letter-spacing: -0.03em;
+		color: inherit;
+		
+		@include media('<=xs') {
+			font-size: 22px;
+		}
+
+		&::after {
+			display: block;
+			content: '';
+			width: 19px;
+			height: 17px;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-link-view-white') center / contain no-repeat transparent;
+			margin: 8px 0 0 10px;
+			flex-shrink: 0;
+			
+			@include media('<=md') {
+				width: 16px;
+				height: 15px;
+				margin: 5px 0 0 5px;
+			}
+			
+			@include media('<=sm') {
+				width: 14px;
+				height: 13px;
+			}
+			
+			@include media('<=md') {
+				width: 16px;
+				height: 15px;
+				margin: 5px 0 0 5px;
+			}
+		}
+	}
+}

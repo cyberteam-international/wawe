@@ -1,0 +1,93 @@
+.features {
+	$self: &;
+
+	@keyframes featureMove {
+		from {
+			transform: rotateZ(10deg);
+		}
+		50% {
+			transform: rotateZ(-10deg);
+		}
+		to {
+			transform: rotateZ(10deg);
+		}
+	}
+
+	&__inner {
+		padding-bottom: 170px;
+	}
+
+	&__cards {
+
+	}
+
+	&__card {
+		display: flex;
+		align-items: center;
+		box-sizing: border-box;
+		justify-content: space-between;
+		padding: 80px 0;
+		
+		&:nth-child(even) {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&__side {
+		width: calc(50% - 40px);
+		flex-shrink: 0;
+	}
+	
+	&__title {
+		margin-bottom: 40px;		
+	}
+	
+	&__text {
+		font-size: 28px;
+		color: rgba($text, 0.6);
+
+		strong {
+			color: $text;
+		}
+	}
+	
+	&__image {
+		height: 610px;
+		flex-shrink: 0;
+		border-radius: 40px;
+		width: calc(50% - 40px);
+		background-color: rgba($decor, 0.07);
+		position: relative;
+	}
+
+	&__box {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 100%;
+
+		img {
+			display: block;
+			animation-name: featureMove;
+			animation-fill-mode: both;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+			transform-origin: center;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__appeal {
+		max-width: 560px;
+	}
+
+	&__links {
+
+	}
+}
