@@ -3,44 +3,15 @@
 	margin-bottom: 80px;
 
 	&__top {
-		display: flex;
-		justify-content: space-between;
 		margin-bottom: 60px;
-
-		@include media('<=xs') {
-			flex-flow: column nowrap;
-		}
 	}
 
 	&__title {
-		margin: 0 40px 0 0;
-		
-		@include media('<=xs') {
-			margin: 0 0 10px 0;
-		}
+
 	}
 
 	&__t-text {
-		max-width: 560px;
-		font-size: 28px;
-		color: rgba($text, 0.6);
-		
-		@include media('<=xxlg') {
-			font-size: calc(1.75vw + 3px);
-		}
-		
-		@include media('<=lg') {
-			max-width: 420px;
-		}
-		
-		@include media('<=sm') {
-			max-width: 250px;
-			font-size: 16px;
-		}
-		
-		@include media('<=xs') {
-			font-size: 18px;
-		}
+
 	}
 
 	&__body {
@@ -163,7 +134,7 @@
 		
 		@include media('<=xxlg') {
 			padding: calc(7vw - 60px);
-			font-size: calc(2.5vw - 7px);
+			@include setFontSize(28px, 11px, 1440px, 780px);
 		}
 		
 		@include media('<=lg') {

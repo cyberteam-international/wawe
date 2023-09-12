@@ -2,12 +2,12 @@ import scrollLock from 'scroll-lock';
 import { menuToggle } from "../../js/libs/menuToggle";
 
 (() => {
-	const top = document.querySelector('.top');
+	const top = document.querySelector('.navi');
 	if(!top) return;
 	
 	const vh = window.visualViewport.height * 0.01;
-	const navi = top.querySelector('.top__navi');
-	const toggles = top.querySelectorAll('.top__toggle, .top__close');
+	const navi = top.querySelector('.navi__shell');
+	const toggles = top.querySelectorAll('.navi__toggle, .navi__close');
 	
 	const menu = menuToggle(navi, toggles, {
 		scrollLock: scrollLock,

@@ -1,12 +1,11 @@
 .title {
 	$self: &;
-	color: $text;
 	font-family: "DMEB", sans-serif;
 	font-size: 84px;
 	letter-spacing: -0.04em;
 
 	@include media('<=xxlg') {
-		font-size: calc(7.45vw - 23px);
+		@include setFontSize(84px, 34px, 1440px, 780px);
 	}
 
 	@include media('<=sm') {
@@ -30,7 +29,7 @@
 		font-size: 42px;		
 
 		@include media('<=xxlg') {
-			font-size: calc(3.8vw - 12px);
+			@include setFontSize(42px, 17px, 1440px, 780px);
 		}
 
 		@include media('<=sm') {

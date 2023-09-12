@@ -6,7 +6,15 @@
 	color: #fff;
 		
 	@include media('<=xxlg') {
-		font-size: calc(1.7vw + 4px);
+		@include setFontSize(28px, 22px, 1440px, 640px);
+	}
+		
+	@include media('<=xs') {
+		font-size: 22px;
+	}
+	
+	@include media('<=xxxs') {
+		font-size: 18px;
 	}
 
 	&_blue {
@@ -25,11 +33,15 @@
 		flex-shrink: 0;
 		border: none;
 		margin: 0 30px;
-		width: 2px;
 		height: 35px;
+		width: 2px;
 		
 		@include media('<=sm') {
 			height: 25px;
+		}
+		
+		@include media('<=xxs') {
+			margin: 0 20px;
 		}
 	}
 
@@ -39,10 +51,6 @@
 		align-items: center;
 		letter-spacing: -0.03em;
 		color: inherit;
-		
-		@include media('<=xs') {
-			font-size: 22px;
-		}
 
 		&::after {
 			display: block;

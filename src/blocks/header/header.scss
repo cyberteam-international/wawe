@@ -134,7 +134,7 @@
 		display: inline-block;
 		position: relative;
 		z-index: 1;
-		font-size: calc(5.3vw - 0.5px);
+		font-size: 100px;
 		font-family: "DMEB", sans-serif;
 		color: rgba(255, 255, 255, 0.3);
 		letter-spacing: -0.04em;
@@ -143,6 +143,10 @@
 		grid-column: span 1;
 		padding-right: 60px;
 		margin-bottom: 60px;
+
+		@include media('<=xxlg') {
+			@include setFontSize(100px, 42px, 1440px, 640px);
+		}
 		
 		@include media('<=sm') {
 			padding-right: 30px;
@@ -227,7 +231,7 @@
 		margin-bottom: 30px;
 		
 		@include media('<=xxlg') {
-			font-size: calc(1.7vw + 4px);
+			@include setFontSize(28px, 16px, 1440px, 780px);
 		}
 		
 		@include media('<=sm') {
