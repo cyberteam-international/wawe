@@ -162,7 +162,7 @@
 	<div class="account__cards container">
 		<div class="account__card account__card_green">
 			<img class="account__c-icon" src="./images/ic-account-wallet.png" alt="">
-			<h3 class="account__c-title">Online account</h3>
+			<h3 class="account__c-title">Daily account</h3>
 			<div class="account__c-text">
 				<p>It's free to open by default</p>
 				<p>The account currency is IDR</p>
@@ -174,7 +174,7 @@
 		</div>
 		<div class="account__card account__card_lilac">
 			<img class="account__c-icon" src="./images/ic-account-box.png" alt="">
-			<h3 class="account__c-title">Online account</h3>
+			<h3 class="account__c-title">E-commerce account</h3>
 			<div class="account__c-text">
 				<p>It's free to open by default</p>
 				<p>The account currency is IDR</p>
@@ -184,9 +184,9 @@
 			</div>
 			<a class="account__c-link" href="./">Open an account</a>
 		</div>
-		<div class="account__card account__card_cyan">
-			<img class="account__c-icon" src="./images/ic-account-pig.png" alt="">
-			<h3 class="account__c-title">Saving account</h3>
+		<div class="account__card account__card_violet">
+			<img class="account__c-icon" src="./images/ic-account-bag.png" alt="">
+			<h3 class="account__c-title">Business account</h3>
 			<div class="account__c-text">
 				<p>It's free to open by default</p>
 				<p>The account currency is IDR</p>
@@ -197,6 +197,109 @@
 				<p>Interest payout on a monthly basis.</p>
 			</div>
 			<a class="account__c-link" href="./">Open an account</a>
+		</div>
+	</div>
+</section>
+
+<section class="protect">
+	<div class="protect__inner container">
+		<h2 class="protect__title title">We provide <span>enhanced protection to our application</span> by making it more difficult to read and attack</h2>
+		<div class="protect__scene">
+
+		</div>
+		<div class="protect__bottom">
+			<div class="protect__part">We ensure the security of content, code, and user accounts from hackers through internal protection measures. We utilize cryptography and secure storage for key information. </div>
+			<div class="protect__part">Additionally, we implement safeguards against 'man-in-the-middle' attacks and prevent dynamic analysis. Our telemetry and analytics system provide valuable insights into risks and help us respond promptly to attacks</div>
+			<div class="protect__part"><img src="./images/protect-folder-image.png" alt=""></div>
+		</div>
+	</div>
+</section>
+
+<section class="insure">
+	<div class="insure__inner container">
+		<h2 class="insure__title title">Insurance</h2>
+		<div class="insure__body tab">
+			<div class="insure__buttons">
+				<button class="insure__button tab__button active">Home/property</button>
+				<button class="insure__button tab__button">Travel</button>
+				<button class="insure__button tab__button">Personal accident</button>
+				<button class="insure__button tab__button">Gadget protection</button>
+				<button class="insure__button tab__button">Movable risk (car/bike)</button>
+			</div>
+			<div class="insure__blocks">
+				@@include("_i-card.html", { cls: "active"}) 
+				@@include("_i-card.html") 
+				@@include("_i-card.html") 
+				@@include("_i-card.html") 
+				@@include("_i-card.html") 
+			</div>
+		</div>
+		<div class="insure__bottom">
+			<div class="insure__appeal title title_subtitle">It is convenient and fast to apply for insurance through the application</div>
+			<div class="insure__links outside outside_blue">
+				<a class="outside__link" href="./">App Store</a><hr>
+				<a class="outside__link" href="./">Google play</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="points">
+	<div class="points__top top container">
+		<h2 class="points__title title top__title">Lifestyle</h2>
+		<div class="points__t-text top__text">In our application, you can make payments and receive special offers in each category</div>
+	</div>
+	<div class="points__slider swiper">
+		<div class="swiper-wrapper">
+			<div class="points__slide points__slide_cyan swiper-slide">
+				<h3 class="points__title">Afisha  Cinema, Theaters, Concerts</h3>
+				<div class="points__text">Tickets to your favorite artist's concert or the cinema</div>
+				<div class="points__image">
+					<img src="./images/points-image-6.png" alt="">
+				</div>
+			</div>
+			<div class="points__slide points__slide_purple swiper-slide">
+				<h3 class="points__title">Tours</h3>
+				<div class="points__text">Extreme, relaxing, beach, or winter vacations</div>
+				<div class="points__image">
+					<img src="./images/points-image-7.png" alt="">
+				</div>
+			</div>
+			<div class="points__slide points__slide_violent swiper-slide">
+				<h3 class="points__title">Hotels, villas, and apartments</h3>
+				<div class="points__text">Easily choose and book comfortable accommodation for your travels</div>
+				<div class="points__image">
+					<img src="./images/points-image-8.png" alt="">
+				</div>
+			</div>
+			<div class="points__slide points__slide_red swiper-slide">
+				<h3 class="points__title">Restaurants</h3>
+				<div class="points__text">Easy booking of places in the most popular establishments</div>
+				<div class="points__image">
+					<img src="./images/points-image-9.png" alt="">
+				</div>
+			</div>
+			<div class="points__slide points__slide_blue swiper-slide">
+				<h3 class="points__title">Airplane tickets and train tickets</h3>
+				<div class="points__text">Convenient search and payment for the most advantageous deals are offered</div>
+				<div class="points__image">
+					<img src="./images/points-image-10.png" alt="">
+				</div>
+			</div>
+			<div class="points__slide points__slide_yellow points__slide_dark swiper-slide">
+				<h3 class="points__title">Car and motorcycle rental</h3>
+				<div class="points__text">Convenient one-click search and booking</div>
+				<div class="points__image">
+					<img src="./images/points-image-11.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="points__bottom container">
+		<div class="points__appeal title title_subtitle">Available in the app</div>
+		<div class="points__links outside outside_blue">
+			<a class="outside__link" href="./">App Store</a><hr>
+			<a class="outside__link" href="./">Google play</a>
 		</div>
 	</div>
 </section>

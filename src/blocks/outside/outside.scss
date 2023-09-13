@@ -2,11 +2,16 @@
 	$self: &;
 	display: flex;
 	align-items: center;
+	font-family: "DMM", sans-serif;
 	font-size: 28px;
 	color: #fff;
 		
 	@include media('<=xxlg') {
-		@include setFontSize(28px, 22px, 1440px, 640px);
+		@include setFontSize(28px, 18px, 1440px, 640px);
+	}
+		
+	@include media('<=sm') {
+		font-size: 18px;
 	}
 		
 	@include media('<=xs') {

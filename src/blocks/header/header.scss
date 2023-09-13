@@ -2,7 +2,6 @@
 	$self: &;
 	box-sizing: border-box;
 	position: relative;
-	margin-bottom: 160px;
 	background-color: #5166dd;
 	transition: background-color 2.0s;
 	@keyframes flyerSlideUp {
@@ -12,18 +11,6 @@
 	@keyframes flyerRotateDown {
 		from { opacity: 1; transform: translateY(0); }
 		to { opacity: 0; transform: rotateZ(-45deg); }
-	}
-
-	@include media('<=xlg') {
-		margin-bottom: 120px;
-	}
-
-	@include media('<=lg') {
-		margin-bottom: 80px;
-	}
-
-	@include media('<=sm') {
-		margin-bottom: 40px;
 	}
 	
 	&_type-0 { background-color: #5166dd; }

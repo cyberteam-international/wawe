@@ -1,13 +1,35 @@
 .points {
 	$self: &;
-	margin-bottom: 160px;
+	padding-top: 160px;
+	padding-bottom: 80px;
+
+	@include media('<=xlg') {
+
+	}
+
+	@include media('<=lg') {
+
+	}
 	
 	@include media('<=sm') {
-		margin-bottom: 90px;
+		padding-top: 45px;
+		padding-bottom: 45px;
 	}
 	
 	@include media('<=xs') {
-		margin-bottom: 80px;
+
+	}
+
+	&__top {
+		margin-bottom: 60px;
+		
+		@include media('<=sm') {
+			margin-bottom: 20px;
+		}
+		
+		@include media('<=xs') {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__slider {
@@ -69,6 +91,10 @@
 		
 		&_dark {
 			color: #404668;
+
+			#{$self}__text {
+				color: rgba(0, 0, 0, 0.5);
+			}
 		}
 
 		&_cyan {
@@ -77,6 +103,10 @@
 
 		&_magenta {
 			background: linear-gradient(180deg, #F509FF 0%, #F1A3F5 100%);
+		}
+
+		&_violent {
+			background: linear-gradient(180deg, #6A36FE 0%, #B9A4F4 100%);
 		}
 
 		&_purple {
@@ -90,11 +120,16 @@
 		&_blue {
 			background: linear-gradient(180deg, #5771FF 0%, #A3B0F5 100%);
 		}
+
+		&_red {
+			background: linear-gradient(180deg, #FF0944 0%, #F0A8B9 100%);
+		}
 	}
 
 	&__title {
 		font-size: 42px;
 		font-family: "DMB", sans-serif;
+		margin-bottom: 15px;
 		position: relative;
 		z-index: 1;
 
@@ -103,6 +138,7 @@
 		}
 
 		@include media('<=sm') {
+			margin-bottom: 6px;
 			font-size: 17px;
 		}
 
@@ -112,13 +148,68 @@
 	}
 
 	&__text {
+		font-size: 28px;
+		color: rgba(255, 255, 255, 0.6);
+		font-family: "DML", sans-serif;
+		position: relative;
+		z-index: 1;
 
+		@include media('<=xxlg') {
+			@include setFontSize(28px, 11px, 1440px, 780px);
+		}
+
+		@include media('<=sm') {
+			font-size: 11px;
+		}
+
+		@include media('<=xs') {
+			font-size: 18px;
+		}
 	}
 
 	&__image {
 		position: absolute;
+		width: 100%;
 		bottom: 0;
 		left: 0;
-		width: 100%;
+		
+		img {
+			display: block;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 80px;
+		
+		@include media('<=sm') {
+			padding-top: 30px;
+		}
+		
+		@include media('<=xs') {
+			display: block;
+		}
+	}
+
+	&__appeal {
+		box-sizing: border-box;
+		max-width: 720px;
+		padding-right: 20px;
+		
+		@include media('<=sm') {
+			max-width: 330px;
+		}
+		
+		@include media('<=xs') {
+			padding: 0;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__links {
+
+		a { white-space: nowrap; }
 	}
 }

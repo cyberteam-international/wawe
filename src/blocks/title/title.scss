@@ -10,6 +10,7 @@
 
 	@include media('<=sm') {
 		font-size: 34px;
+		line-height: 1.1;
 	}
 
 	@include media('<=xs') {
@@ -19,6 +20,10 @@
 	span, a {
 		color: $accent;
 		text-decoration: none;
+		background: var(--blue-grd, linear-gradient(264deg, #5771FF 0%, #465BCC 100%));
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 
 	a:hover {

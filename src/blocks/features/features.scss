@@ -1,6 +1,5 @@
 .features {
 	$self: &;
-
 	@keyframes featureMove {
 		from { transform: rotateZ(10deg) translate(-50%, -50%); }
 		50% { transform: rotateZ(-10deg) translate(-50%, -50%); }
@@ -26,7 +25,7 @@
 		}
 		
 		@include media('<=sm') {
-			padding-bottom: 50px;
+			padding-bottom: 40px;
 		}
 		
 		@include media('<=xs') {
@@ -35,7 +34,11 @@
 	}
 
 	&__cards {
-
+		margin-bottom: 15px;
+	
+		@include media('<=xs') {
+			margin-bottom: 0;
+		}
 	}
 
 	&__card {

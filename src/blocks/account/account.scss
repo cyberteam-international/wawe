@@ -3,6 +3,10 @@
 	background-color: #fff;
 	padding: 160px 0;
 	
+	@include media('<=md') {
+		padding: 80px 0;
+	}
+	
 	@include media('<=sm') {
 		padding: 44px 0;
 	}
@@ -91,8 +95,8 @@
 			background: linear-gradient(180deg, #6A36FE 0%, #9576EF 100%);			
 		}
 
-		&_cyan {
-			background: linear-gradient(180deg, #43B3F6 0%, #80CFFF 100%);			
+		&_violet {
+			background: linear-gradient(180deg, #404668 0%, #6470B4 100%);
 		}
 	}
 

@@ -1,0 +1,13 @@
+.tab {
+	$self: &;
+	@keyframes show_tab { from { opacity: 0; } to { opacity: 1; }}
+
+	&__button {
+
+	}
+
+	&__block {
+		display: none;
+		animation: show_tab 1.0s;
+	}
+}
