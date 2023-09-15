@@ -1,0 +1,92 @@
+.about {
+	$self: &;
+	padding-top: 80px;
+	padding-bottom: 200px;
+	overflow: hidden;
+	
+	@include media('<=sm') {
+		padding-top: 30px;
+	}
+
+	&__inner {
+
+	}
+
+	&__title {
+		margin-bottom: 60px;
+		
+		@include media('<=sm') {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: 2.1fr 0.9fr;
+		
+		@include media('<=xs') {
+			display: block;
+		}
+	}
+
+	&__t-title {
+		margin-bottom: 15px;
+	}
+
+	&__text {
+		grid-column: span 1;
+		position: relative;
+		z-index: 1;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 40px;
+		font-size: 28px;
+		color: rgba($text, 0.8);
+		
+		@include media('<=xxlg') {
+			@include setFontSize(28px, 14px, 1440px, 780px);
+		}
+		
+		@include media('<=sm') {
+			font-size: 14px;
+			grid-gap: 10px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 18px;
+			display: block;
+		}
+	}
+	
+	&__t-part {
+		grid-column: span 1;
+	}
+	
+	&__image {
+		grid-column: span 1;
+		position: relative;
+
+		img {
+			display: block;
+			position: absolute;
+			top: calc(50% + 30px);
+			left: 50%;
+			transform: translate(-50%, -50%);
+			max-width: calc(100% + 140px);
+			z-index: 3;
+			
+			@include media('<=sm') {
+				max-width: calc(100% + 50px);
+			}
+		
+			@include media('<=xs') {
+				position: static;
+				transform: none;
+				max-width: 100%;
+				width: 330px;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+}

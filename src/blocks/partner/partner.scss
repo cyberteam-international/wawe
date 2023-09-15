@@ -1,0 +1,49 @@
+.partner {
+	$self: &;
+	position: relative;
+	background: #4F67E8;
+	padding-top: 50px;
+	padding-bottom: 160px;
+	// background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1" preserveAspectRatio="none"><rect width="1" height="1" fill="#4F67E8"/></svg>') top left / 100% 50px no-repeat transparent;
+
+	&::before {
+		display: block;
+		content: '';
+		height: 700px;
+		width: 100%;
+		background: url('#{$images-path}partners-wave.svg') center top / cover no-repeat transparent;
+		position: absolute;
+		left: 0;
+		bottom: calc(100% - 390px);
+	}
+
+	&__inner {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__title {
+		color: #fff;
+		margin-bottom: 60px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 40px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 260px;
+		background-color: rgba(255, 255, 255, 0.1);
+		border-radius: 15px;
+
+		img {
+			width: 100%;
+			max-width: 170px;
+		}
+	}
+}

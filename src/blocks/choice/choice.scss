@@ -1,0 +1,128 @@
+.choice {
+	$self: &;
+	box-sizing: border-box;
+	position: relative;
+	border-radius: 8px;
+	min-height: 45px;
+
+	&::before {
+		display: none;
+		content: '';
+		position: absolute;
+		height: 7px;
+		width: 12px;
+		background: url('#{$images-path}icons-sprite.svg#icon-list-down-view-white') center / contain no-repeat transparent;
+		top: calc(50% - 3px);
+		right: 15px;
+		z-index: 2;
+		
+		@include media('<=xs') {
+			display: block;
+		}
+	}
+	
+	@include media('<=xs') {
+		border: 2px solid rgba(255, 255, 255, 0.3) !important;
+		clear: both;
+	}
+
+	&.opened {
+
+		&::before {
+			transform: rotate(180deg);
+		}
+		
+		#{$self}__wrapper {
+			height: auto;
+			transition: background-color 0.3s;
+			background-color: rgba(255, 255, 255, 0.3);
+			backdrop-filter: blur(5px);
+		}
+		
+		#{$self}__button:not(.active):hover {
+			transition: color 0.2s;
+			color: $accent;
+		}
+	}
+	
+	&__wrapper {
+		box-sizing: content-box;
+		border-radius: 8px;
+		
+		@include media('<=xs') {
+			display: flex;
+			flex-flow: column nowrap;
+			height: 100%;
+			overflow: hidden;
+			position: absolute;
+			width: calc(100% + 4px);
+			padding: 2px 0;
+			left: -2px;
+			top: -2px;
+			z-index: 1;
+		}
+	}
+	
+	&__button {
+		@extend %reset-button;
+		font-size: 28px;
+		color: #fff;
+		border: 2px solid rgba(255, 255, 255, 0.2);
+		font-family: "DML", sans-serif;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 11px 40px;
+		border-radius: 12px;
+		margin: 0 20px 20px 0;
+		min-height: 90px;
+		transition: border-color 0.3s;
+
+		&:hover, &.active {
+			border-color: #fff;
+		}
+		
+		@include media('<=xxlg') {
+			@include setFontSize(28px, 11px, 1440px, 780px);
+		}
+		
+		@include media('<=xlg') {
+			min-height: 70px;
+			padding: 11px 30px;
+			border-radius: 8px;
+		}
+		
+		@include media('<=lg') {
+			min-height: 60px;
+			padding: 11px 20px;
+			margin: 0 15px 15px 0;
+		}
+		
+		@include media('<=md') {
+			min-height: 50px;
+		}
+
+		@include media('<=sm') {
+			min-height: auto;
+			padding: 11px 16px;
+			font-size: 11px;
+			border-radius: 5px;
+			border-width: 1px;
+			margin: 0 8px 8px 0;
+		}
+		
+		@include media('<=xs') {
+			border-radius: 0;
+			text-align: left;
+			font-size: 18px;
+			display: block;
+			margin: 0;
+			width: 100%;
+			border: none;
+
+			&.active {
+				order: -1;
+			}
+		}
+	}
+}
