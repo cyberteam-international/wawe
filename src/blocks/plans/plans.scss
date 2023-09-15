@@ -1,6 +1,10 @@
 .plans {
 	$self: &;
 	background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1" preserveAspectRatio="none"><rect width="1" height="1" fill="#4F67E8"/></svg>') top left / 100% 850px no-repeat transparent;
+		
+	@include media('<=sm') {
+		background-size: 100% 250px;
+	}
 
 	&__inner {
 		
@@ -167,47 +171,6 @@
 	}
 
 	&__outside {
-		text-decoration: none;
-		display: flex;
-		align-items: center;
-		letter-spacing: -0.03em;
-		color: $accent;
-		font-family: "DMM", sans-serif;
-		@include range(28px, 18px, 1440px, 640px);
-			
-		@include media('<=xs') {
-			font-size: 22px;
-		}
-		
-		@include media('<=xxxs') {
-			font-size: 18px;
-		}
-	
-		&::after {
-			display: block;
-			content: '';
-			width: 19px;
-			height: 17px;
-			background: url('#{$images-path}icons-sprite.svg#icon-arr-link-view-accent') center / contain no-repeat transparent;
-			margin: 8px 0 0 10px;
-			flex-shrink: 0;
-			
-			@include media('<=md') {
-				width: 16px;
-				height: 15px;
-				margin: 5px 0 0 5px;
-			}
-			
-			@include media('<=sm') {
-				width: 14px;
-				height: 13px;
-			}
-			
-			@include media('<=md') {
-				width: 16px;
-				height: 15px;
-				margin: 5px 0 0 5px;
-			}
-		}
+
 	}
 }

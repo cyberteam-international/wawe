@@ -24,6 +24,16 @@
 		hr { background-color: rgba(0, 0, 0, 0.15) !important; }
 	}
 
+	&_dark {
+		color: $text;
+
+		#{$self}__link::after {
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-link-view-dark') center / contain no-repeat transparent;
+		}
+
+		hr { background-color: rgba(0, 0, 0, 0.08) !important; }
+	}
+
 	hr {
 		box-sizing: border-box;
 		background-color: rgba(255, 255, 255, 0.15);

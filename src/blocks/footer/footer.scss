@@ -1,0 +1,130 @@
+.footer {
+	$self: &;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-color: #fff;
+
+	&__inner {
+
+	}
+
+	&__top {
+		display: flex;
+		padding-bottom: 20px;
+	}
+
+	&__col {
+		margin-right: 60px;
+
+		&:last-child {
+			margin: 0 0 0 auto;
+		}
+	}
+
+	&__c-title {
+		color: rgba(64, 70, 104, 0.3);
+		font-size: 22px;
+		margin-bottom: 20px;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		font-size: 28px;
+		text-decoration: none;
+		color: inherit;
+		font-family: "DMM", sans-serif;
+		margin-bottom: 15px;
+		letter-spacing: -0.04em;
+
+		&::before {
+			display: none;
+			content: '';
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			background: url() center / auto no-repeat rgba($accent, 0.85);
+			margin-right: 10px;
+		}
+
+		&_out {
+
+			&::after {
+				display: block;
+				content: '';
+				width: 19px;
+				height: 17px;
+				background: url('#{$images-path}icons-sprite.svg#icon-arr-link-view-dark') center / contain no-repeat transparent;
+				margin: 8px 0 0 10px;
+				flex-shrink: 0;
+				
+				@include media('<=md') {
+					width: 16px;
+					height: 15px;
+					margin: 5px 0 0 5px;
+				}
+				
+				@include media('<=sm') {
+					width: 14px;
+					height: 13px;
+				}
+				
+				@include media('<=md') {
+					width: 16px;
+					height: 15px;
+					margin: 5px 0 0 5px;
+				}
+			}
+		}
+
+		&_twt::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-soc-twt-view-white');
+			background-size: 20px 17px;
+		}
+
+		&_fcb::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-soc-fb-view-white');
+			background-size: 14px 24px;
+			background-position: center bottom;
+		}
+
+		&_ins::before {
+			display: block;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-soc-inst-view-white');
+			background-size: 18px 18px;
+		}
+	}
+
+	&__info {
+		font-size: 28px;
+		color: rgba($text, 0.6);
+		margin-bottom: 35px;
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		border-top: 2px solid rgba(64, 70, 104, 0.06);
+		padding-top: 40px;
+	}
+
+	&__logo {
+		margin-right: 40px;
+		width: 100%;
+		max-width: 260px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__copy {
+		font-size: 22px;
+	}
+
+	&__outside {
+		margin-left: auto;
+	}
+}
