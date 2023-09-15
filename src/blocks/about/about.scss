@@ -6,6 +6,11 @@
 	
 	@include media('<=sm') {
 		padding-top: 30px;
+		padding-bottom: 140px;
+	}
+	
+	@include media('<=xs') {
+		padding-bottom: 0;
 	}
 
 	&__inner {
@@ -40,15 +45,10 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 40px;
-		font-size: 28px;
 		color: rgba($text, 0.8);
-		
-		@include media('<=xxlg') {
-			@include setFontSize(28px, 14px, 1440px, 780px);
-		}
+		@include range(28px, 14px, 1440px, 780px);
 		
 		@include media('<=sm') {
-			font-size: 14px;
 			grid-gap: 10px;
 		}
 		
@@ -77,10 +77,13 @@
 			
 			@include media('<=sm') {
 				max-width: calc(100% + 50px);
+				top: 50%;
 			}
 		
 			@include media('<=xs') {
-				position: static;
+				position: relative;
+				left: auto;
+				top: auto;
 				transform: none;
 				max-width: 100%;
 				width: 330px;

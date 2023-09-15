@@ -127,19 +127,14 @@
 	}
 
 	&__title {
-		font-size: 42px;
 		font-family: "DMB", sans-serif;
 		margin-bottom: 15px;
 		position: relative;
 		z-index: 1;
-
-		@include media('<=xxlg') {
-			@include setFontSize(42px, 17px, 1440px, 780px);
-		}
+		@include range(42px, 17px, 1440px, 780px);
 
 		@include media('<=sm') {
 			margin-bottom: 6px;
-			font-size: 17px;
 		}
 
 		@include media('<=xs') {
@@ -148,19 +143,11 @@
 	}
 
 	&__text {
-		font-size: 28px;
 		color: rgba(255, 255, 255, 0.6);
 		font-family: "DML", sans-serif;
 		position: relative;
 		z-index: 1;
-
-		@include media('<=xxlg') {
-			@include setFontSize(28px, 11px, 1440px, 780px);
-		}
-
-		@include media('<=sm') {
-			font-size: 11px;
-		}
+		@include range(28px, 11px, 1440px, 780px);
 
 		@include media('<=xs') {
 			font-size: 18px;

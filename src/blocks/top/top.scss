@@ -21,12 +21,8 @@
 
 	&__text {
 		max-width: 560px;
-		font-size: 28px;
 		color: rgba($text, 0.6);
-		
-		@include media('<=xxlg') {
-			@include setFontSize(28px, 16px, 1440px, 780px);
-		}
+		@include range(28px, 16px, 1440px, 780px);
 		
 		@include media('<=lg') {
 			max-width: 420px;
@@ -34,7 +30,6 @@
 		
 		@include media('<=sm') {
 			max-width: 250px;
-			font-size: 16px;
 		}
 		
 		@include media('<=xs') {

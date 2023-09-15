@@ -3,16 +3,8 @@
 	display: flex;
 	align-items: center;
 	font-family: "DMM", sans-serif;
-	font-size: 28px;
 	color: #fff;
-		
-	@include media('<=xxlg') {
-		@include setFontSize(28px, 18px, 1440px, 640px);
-	}
-		
-	@include media('<=sm') {
-		font-size: 18px;
-	}
+	@include range(28px, 18px, 1440px, 640px);
 		
 	@include media('<=xs') {
 		font-size: 22px;

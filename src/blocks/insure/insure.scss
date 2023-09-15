@@ -121,17 +121,9 @@
 	}
 
 	&__b-title {
-		font-family: "DMB", sans-serif;
-		font-size: 64px;
 		color: #fff;
-		
-		@include media('<=xxlg') {
-			@include setFontSize(64px, 25px, 1440px, 780px);
-		}
-		
-		@include media('<=sm') {
-			font-size: 25px;
-		}
+		font-family: "DMB", sans-serif;
+		@include range(64px, 25px, 1440px, 780px);
 		
 		@include media('<=xs') {
 			font-size: 28px;
@@ -141,15 +133,7 @@
 	&__b-text {
 		color: rgba(255, 255, 255, 0.6);
 		line-height: 1.5;
-		font-size: 22px;
-
-		@include media('<=xxlg') {
-			@include setFontSize(22px, 8px, 1440px, 780px);
-		}
-		
-		@include media('<=sm') {
-			font-size: 8px;
-		}
+		@include range(22px, 8px, 1440px, 780px);
 		
 		@include media('<=xs') {
 			margin-bottom: 30px;
@@ -183,12 +167,8 @@
 		background-color: #fff;
 		border-radius: 12px;
 		line-height: 1.3;
-		font-size: 22px;
 		padding: 25px;
-		
-		@include media('<=xxlg') {
-			@include setFontSize(22px, 12px, 1440px, 780px);
-		}
+		@include range(22px, 12px, 1440px, 780px);
 		
 		@include media('<=lg') {
 			padding: 15px;
@@ -196,7 +176,6 @@
 		
 		@include media('<=sm') {
 			border-radius: 5px;
-			font-size: 12px;
 			padding: 10px;
 		}
 		

@@ -3,15 +3,40 @@
 	background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1" preserveAspectRatio="none"><rect width="1" height="1" fill="#4F67E8"/></svg>') top left / 100% 850px no-repeat transparent;
 
 	&__inner {
+		
+		@include media('<=xs') {
+			padding: 0;
+		}
+	}
+	
+	&__wrapper {
 		box-sizing: border-box;
 		background-color: #fff;
 		border-radius: 40px;
 		padding: 80px;
+		
+		@include media('<=sm') {
+			border-radius: 16px;
+			padding: 30px;
+		}
+		
+		@include media('<=xs') {
+			border-radius: 0;
+			padding: 40px 15px;
+		}
 	}
 
 	&__title {
 		margin-bottom: 60px;
-		line-height: 0.85;
+		line-height: 0.85 !important;
+		
+		@include media('<=sm') {
+			margin-bottom: 25px;
+		}
+		
+		@include media('<=sm') {
+			line-height: 1.0 !important;
+		}
 	}
 
 	&__cards {
@@ -19,6 +44,11 @@
 		column-width: 220px;
 		column-gap: 40px;
 		margin-bottom: 65px;
+		
+		@include media('<=sm') {
+			column-gap: 16px;
+			margin-bottom: 30px;
+		}
 	}
 
 	&__card {
@@ -27,6 +57,11 @@
 		padding: 40px;
 		border-radius: 15px;
 		margin-bottom: 40px;
+		
+		@include media('<=sm') {
+			padding: 16px;
+			margin-bottom: 16px;
+		}
 
 		&::before {
 			display: block;
@@ -51,7 +86,7 @@
 			@include media('<=xs') {
 				width: 60px;
 				height: 60px;
-				margin-bottom: 5px;
+				margin-bottom: 10px;
 				border-radius: 10px;
 				background-size: 44px 44px;
 			}
@@ -72,7 +107,6 @@
 		
 		&_headphone::before {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-headphone-view-accent');
-			background-size: 44px 44px;
 		}
 		
 		&_car::before {
@@ -81,27 +115,99 @@
 		
 		&_graf::before {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-graf-view-accent');
-			background-size: 44px 44px;
 		}
 	}
 
 	&__c-title {
 		margin-bottom: 15px;
+		
+		@include media('<=xs') {
+			font-family: "DMM", sans-serif !important;
+			font-size: 18px !important;
+			margin-bottom: 5px;
+		}
 	}
 
 	&__c-text {
+		color: rgba($text, 0.6);
+		@include range(28px, 11px, 1440px, 780px);
 
+		@include media('<=xs') {
+			font-size: 18px;
+		}
 	}
 
 	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		
+		@include media('<=sm') {
 
+		}
+		
+		@include media('<=xs') {
+			display: block;
+		}
 	}
 
 	&__appeal {
-
+		box-sizing: border-box;
+		max-width: 720px;
+		padding-right: 20px;
+		
+		@include media('<=sm') {
+			max-width: 330px;
+		}
+		
+		@include media('<=xs') {
+			padding: 0;
+			margin-bottom: 20px;
+		}
 	}
 
 	&__outside {
-
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		letter-spacing: -0.03em;
+		color: $accent;
+		font-family: "DMM", sans-serif;
+		@include range(28px, 18px, 1440px, 640px);
+			
+		@include media('<=xs') {
+			font-size: 22px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 18px;
+		}
+	
+		&::after {
+			display: block;
+			content: '';
+			width: 19px;
+			height: 17px;
+			background: url('#{$images-path}icons-sprite.svg#icon-arr-link-view-accent') center / contain no-repeat transparent;
+			margin: 8px 0 0 10px;
+			flex-shrink: 0;
+			
+			@include media('<=md') {
+				width: 16px;
+				height: 15px;
+				margin: 5px 0 0 5px;
+			}
+			
+			@include media('<=sm') {
+				width: 14px;
+				height: 13px;
+			}
+			
+			@include media('<=md') {
+				width: 16px;
+				height: 15px;
+				margin: 5px 0 0 5px;
+			}
+		}
 	}
 }

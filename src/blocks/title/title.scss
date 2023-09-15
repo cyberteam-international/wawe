@@ -3,13 +3,9 @@
 	font-family: "DMEB", sans-serif;
 	font-size: 84px;
 	letter-spacing: -0.04em;
-
-	@include media('<=xxlg') {
-		@include setFontSize(84px, 34px, 1440px, 780px);
-	}
+	@include range(84px, 34px, 1440px, 780px);
 
 	@include media('<=sm') {
-		font-size: 34px;
 		line-height: 1.1;
 	}
 
@@ -31,15 +27,7 @@
 	}
 
 	&_subtitle {
-		font-size: 42px;		
-
-		@include media('<=xxlg') {
-			@include setFontSize(42px, 17px, 1440px, 780px);
-		}
-
-		@include media('<=sm') {
-			font-size: 17px;
-		}
+		@include range(42px, 17px, 1440px, 780px);
 
 		@include media('<=xs') {
 			font-size: 20px;

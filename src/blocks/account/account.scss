@@ -131,15 +131,10 @@
 	&__c-title {
 		color: inherit;
 		margin-bottom: 15px;
-		font-size: 42px;
-		
-		@include media('<=xxlg') {
-			@include setFontSize(42px, 18px, 1440px, 780px);
-		}
+		@include range(42px, 18px, 1440px, 780px);
 		
 		@include media('<=sm') {
 			margin-bottom: 5px;
-			font-size: 18px;
 		}
 		
 		@include media('<=xs') {
@@ -153,10 +148,9 @@
 	
 	&__c-text {
 		margin-bottom: 40px;
-		font-size: 28px;
+		@include range(28px, 12px, 1440px, 780px);
 		
 		@include media('<=xxlg') {
-			@include setFontSize(28px, 12px, 1440px, 780px);
 			margin-bottom: 30px;
 		}
 		
@@ -165,7 +159,6 @@
 		}
 		
 		@include media('<=sm') {
-			font-size: 12px;
 			margin-bottom: 10px;
 		}
 		
@@ -191,11 +184,7 @@
 		border-radius: 20px;
 		text-align: center;
 		margin-top: auto;
-		font-size: 34px;
-		
-		@include media('<=xxlg') {
-			@include setFontSize(34px, 14px, 1440px, 780px);
-		}
+		@include range(34px, 14px, 1440px, 780px);
 		
 		@include media('<=xlg') {
 			padding: 20px 35px 25px;
@@ -210,7 +199,6 @@
 		@include media('<=sm') {
 			padding: 10px 16px 12px;
 			border-radius: 8px;
-			font-size: 14px;
 		}
 		
 		@include media('<=xs') {

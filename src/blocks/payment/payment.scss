@@ -140,16 +140,15 @@
 		background-color: #fff;
 		border-radius: 15px;
 		padding: 40px;
-		font-size: 28px;
 		font-family: "DMM", sans-serif;
 		white-space: nowrap;
 		overflow: hidden;
+		@include range(28px, 11px, 1440px, 780px);
 		// width: fit-content !important;
 		// width: auto !important;
 		
 		@include media('<=xxlg') {
 			padding: calc(7vw - 60px);
-			@include setFontSize(28px, 11px, 1440px, 780px);
 		}
 		
 		@include media('<=lg') {
@@ -159,7 +158,6 @@
 			
 		@include media('<=sm') {
 			border-radius: 6px;
-			font-size: 11px;
 		}
 
 		&::before {

@@ -5,6 +5,14 @@
 	padding-top: 50px;
 	padding-bottom: 160px;
 	// background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1" preserveAspectRatio="none"><rect width="1" height="1" fill="#4F67E8"/></svg>') top left / 100% 50px no-repeat transparent;
+	
+	@include media('<=sm') {
+		padding-bottom: 80px;
+	}
+	
+	@include media('<=xs') {
+		padding-bottom: 40px;
+	}
 
 	&::before {
 		display: block;
@@ -15,6 +23,15 @@
 		position: absolute;
 		left: 0;
 		bottom: calc(100% - 390px);
+		
+		@include media('<=sm') {
+			height: 300px;
+			bottom: calc(100% - 150px);
+		}
+		
+		@include media('<=xs') {
+			bottom: calc(100% - 20px);
+		}
 	}
 
 	&__inner {
@@ -31,19 +48,42 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 40px;
+		
+		@include media('<=sm') {
+			grid-gap: 10px;
+		}
 	}
 
 	&__item {
 		display: flex;
 		align-items: center;
+		box-sizing: border-box;
 		justify-content: center;
 		min-height: 260px;
+		padding: 40px;
 		background-color: rgba(255, 255, 255, 0.1);
 		border-radius: 15px;
-
+		
+		@include media('<=sm') {
+			border-radius: 6px;
+			min-height: 100px;
+		}
+		
+		@include media('<=xs') {
+			padding: 20px;
+		}
+		
 		img {
 			width: 100%;
 			max-width: 170px;
+			
+			@include media('<=sm') {
+				max-width: 90px;
+			}
+			
+			@include media('<=xs') {
+				max-width: 50px;
+			}
 		}
 	}
 }

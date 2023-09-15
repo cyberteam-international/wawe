@@ -121,7 +121,6 @@
 		display: inline-block;
 		position: relative;
 		z-index: 1;
-		font-size: 100px;
 		font-family: "DMEB", sans-serif;
 		color: rgba(255, 255, 255, 0.3);
 		letter-spacing: -0.04em;
@@ -130,10 +129,7 @@
 		grid-column: span 1;
 		padding-right: 60px;
 		margin-bottom: 60px;
-
-		@include media('<=xxlg') {
-			@include setFontSize(100px, 42px, 1440px, 640px);
-		}
+		@include range(100px, 42px, 1440px, 640px);
 		
 		@include media('<=sm') {
 			padding-right: 30px;
@@ -141,7 +137,6 @@
 		}
 		
 		@include media('<=xs') {
-			font-size: 42px;
 			margin-bottom: 70px;
 		}
 		
@@ -210,20 +205,15 @@
 	}
 	
 	&__text {
-		font-size: 28px;
 		font-family: "DML", sans-serif;
 		letter-spacing: -0.038em;
 		color: rgba(255, 255, 255, 0.6);
 		line-height: 1.6;
 		margin-bottom: 30px;
-		
-		@include media('<=xxlg') {
-			@include setFontSize(28px, 16px, 1440px, 780px);
-		}
+		@include range(28px, 16px, 1440px, 780px);
 		
 		@include media('<=sm') {
 			margin-bottom: 10px;
-			font-size: 16px;
 		}
 		
 		@include media('<=xs') {

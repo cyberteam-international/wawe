@@ -96,16 +96,8 @@
 	}
 	
 	&__text {
-		font-size: 28px;
 		color: rgba($text, 0.6);
-		
-		@include media('<=xxlg') {
-			@include setFontSize(28px, 16px, 1440px, 780px);
-		}
-		
-		@include media('<=sm') {
-			font-size: 16px;
-		}
+		@include range(28px, 16px, 1440px, 780px);
 		
 		@include media('<=xs') {
 			font-size: 18px;
