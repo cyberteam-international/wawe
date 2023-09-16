@@ -1,25 +1,15 @@
 .payment {
 	$self: &;
-	padding-top: 80px;
-	padding-bottom: 80px;
+	@include range(80px, 40px, 1920px, 780px, 'padding-top');
 	
-	@include media('<=sm') {
-		padding-top: 40px;
-		padding-bottom: 40px;
-	}
-
 	&__top {
-		padding-bottom: 60px;
-		
-		@include media('<=sm') {
-			padding-bottom: 30px;
-		}
-	}
 
+	}
+	
 	&__title {
 
 	}
-
+	
 	&__t-text {
 
 	}
@@ -27,6 +17,8 @@
 	&__body {
 		position: relative;
 		overflow: hidden;
+		@include range(60px, 30px, 1440px, 780px, 'padding-top');
+		@include range(60px, 30px, 1440px, 780px, 'padding-bottom');
 	}
 
 	&__circle {
@@ -37,25 +29,14 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		border-radius: 50%;
-		height: 550px;
-		width: 550px;
 		background-color: #EDF2FC;
 		z-index: 2;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		overflow: hidden;
-		// @include outline();
-
-		@include media('<=xxlg') {
-			width: calc(70vw - 450px);			
-			height: calc(70vw - 450px);			
-		}
-
-		@include media('<=md') {
-			width: 220px;
-			height: 220px;
-		}
+		@include range(550px, 220px, 1440px, 640px, 'width');
+		@include range(550px, 220px, 1440px, 640px, 'height');
 
 		@include media('<=xxs') {
 			width: 190px;
@@ -108,19 +89,7 @@
 
 	&__row {
 		&:not(:last-child) {
-			margin-bottom: 40px;
-			
-			@include media('<=xlg') {
-				margin-bottom: 30px;
-			}
-			
-			@include media('<=lg') {
-				margin-bottom: 20px;
-			}
-			
-			@include media('<=xs') {
-				margin-bottom: 10px;
-			}
+			@include range(40px, 10px, 1280px, 640px, 'margin-bottom');
 		}
 
 		.swiper-wrapper { 
@@ -138,27 +107,12 @@
 		align-items: center;
 		justify-content: center;
 		background-color: #fff;
-		border-radius: 15px;
-		padding: 40px;
 		font-family: "DMM", sans-serif;
 		white-space: nowrap;
 		overflow: hidden;
 		@include range(28px, 11px, 1440px, 780px);
-		// width: fit-content !important;
-		// width: auto !important;
-		
-		@include media('<=xxlg') {
-			padding: calc(7vw - 60px);
-		}
-		
-		@include media('<=lg') {
-			border-radius: 10px;
-			padding: 16px;
-		}
-			
-		@include media('<=sm') {
-			border-radius: 6px;
-		}
+		@include range(40px, 16px, 1440px, 1100px, 'padding');
+		@include range(15px, 6px, 1440px, 780px, 'border-radius');
 
 		&::before {
 			display: none;

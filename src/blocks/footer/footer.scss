@@ -1,13 +1,8 @@
 .footer {
 	$self: &;
-	padding-top: 80px;
-	padding-bottom: 80px;
 	background-color: #fff;
-	
-	@include media('<=sm') {
-		padding-bottom: 32px;
-		padding-top: 32px;
-	}
+	@include range(80px, 30px, 1920px, 780px, 'padding-top');
+	@include range(80px, 30px, 1920px, 780px, 'padding-bottom');
 	
 	&__inner {
 
@@ -258,10 +253,9 @@
 	&__logo {
 		margin-right: 40px;
 		width: 100%;
-		max-width: 260px;
+		@include range(260px, 100px, 1920px, 780px, 'max-width');
 		
 		@include media('<=sm') {
-			max-width: 100px;
 			margin-right: 16px;
 		}
 		

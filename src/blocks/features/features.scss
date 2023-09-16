@@ -46,18 +46,11 @@
 		align-items: center;
 		box-sizing: border-box;
 		justify-content: space-between;
-		padding: 80px 0;
+		@include range(80px, 30px, 1440px, 780px, 'padding-top');
+		@include range(80px, 30px, 1440px, 780px, 'padding-bottom');
 		
 		&:nth-child(odd) {
 			flex-direction: row-reverse;
-		}
-		
-		@include media('<=lg') {
-			padding: 60px 0;
-		}
-		
-		@include media('<=sm') {
-			padding: 30px 0;
 		}
 		
 		@include media('<=xs') {
@@ -109,28 +102,25 @@
 	}
 	
 	&__image {
-		height: 610px;
 		flex-shrink: 0;
 		border-radius: 40px;
 		width: calc(50% - 40px);
 		background-color: rgba($decor, 0.06);
 		position: relative;
+		@include range(610px, 300px, 1440px, 780px, 'height');
 		
 		@include media('<=xlg') {
 			width: calc(50% - 30px);
-			height: 500px;
 		}
 		
 		@include media('<=lg') {
 			width: calc(50% - 20px);
 			border-radius: 30px;
-			height: 450px;
 		}
 		
 		@include media('<=sm') {
 			width: calc(50% - 15px);
 			border-radius: 20px;
-			height: 300px;
 		}
 		
 		@include media('<=xs') {

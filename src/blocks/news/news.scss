@@ -1,12 +1,7 @@
 .news {
 	$self: &;
-	padding-top: 160px;
-	padding-bottom: 160px;
-	
-	@include media('<=sm') {
-		padding-top: 50px;
-		padding-bottom: 50px;
-	}
+	@include range(160px, 50px, 1920px, 780px, 'padding-top');
+	@include range(160px, 50px, 1920px, 780px, 'padding-bottom');
 	
 	@include media('<=xs') {
 		padding-top: 40px;
@@ -18,21 +13,13 @@
 	}
 
 	&__title {
-		margin-bottom: 60px;
-		
-		@include media('<=sm') {
-			margin-bottom: 30px;
-		}
+		@include range(60px, 30px, 1920px, 780px, 'margin-bottom');
 	}
 
 	&__cards {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-gap: 40px;
-		
-		@include media('<=sm') {
-			grid-gap: 10px;
-		}
+		@include range(40px, 20px, 1920px, 780px, 'grid-gap');
 		
 		@include media('<=xs') {
 			grid-gap: 30px;
@@ -43,11 +30,7 @@
 		grid-column: span 1;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 40px;
-		
-		@include media('<=sm') {
-			grid-gap: 10px;
-		}
+		@include range(40px, 20px, 1920px, 780px, 'grid-gap');
 		
 		@include media('<=xs') {
 			grid-gap: 20px;

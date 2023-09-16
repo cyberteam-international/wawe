@@ -3,12 +3,7 @@
 	position: relative;
 	background: #4F67E8;
 	padding-top: 50px;
-	padding-bottom: 160px;
-	// background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1" preserveAspectRatio="none"><rect width="1" height="1" fill="#4F67E8"/></svg>') top left / 100% 50px no-repeat transparent;
-	
-	@include media('<=sm') {
-		padding-bottom: 80px;
-	}
+	@include range(160px, 80px, 1920px, 780px, 'padding-bottom');
 	
 	@include media('<=xs') {
 		padding-bottom: 40px;
@@ -41,17 +36,13 @@
 
 	&__title {
 		color: #fff;
-		margin-bottom: 60px;
+		@include range(60px, 30px, 1440px, 780px, 'margin-bottom');
 	}
 
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 40px;
-		
-		@include media('<=sm') {
-			grid-gap: 10px;
-		}
+		@include range(40px, 10px, 1440px, 780px, 'grid-gap');
 	}
 
 	&__item {
@@ -59,30 +50,17 @@
 		align-items: center;
 		box-sizing: border-box;
 		justify-content: center;
-		min-height: 260px;
-		padding: 40px;
 		background-color: rgba(255, 255, 255, 0.1);
-		border-radius: 15px;
-		
-		@include media('<=sm') {
-			border-radius: 6px;
-			min-height: 100px;
-		}
-		
-		@include media('<=xs') {
-			padding: 20px;
-		}
+		@include range(15px, 6px, 1440px, 780px, 'border-radius');
+		@include range(40px, 20px, 1440px, 640px, 'padding');
+		@include range(260px, 100px, 1440px, 780px, 'min-height');
 		
 		img {
 			width: 100%;
-			max-width: 170px;
-			
-			@include media('<=sm') {
-				max-width: 90px;
-			}
+			@include range(170px, 90px, 1440px, 780px, 'max-width');
 			
 			@include media('<=xs') {
-				max-width: 50px;
+				max-width: 60px;
 			}
 		}
 	}

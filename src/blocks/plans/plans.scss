@@ -16,13 +16,8 @@
 	&__wrapper {
 		box-sizing: border-box;
 		background-color: #fff;
-		border-radius: 40px;
-		padding: 80px;
-		
-		@include media('<=sm') {
-			border-radius: 16px;
-			padding: 30px;
-		}
+		@include range(80px, 30px, 1920px, 780px, 'padding');
+		@include range(40px, 16px, 1920px, 780px, 'border-radius');
 		
 		@include media('<=xs') {
 			border-radius: 0;
@@ -31,12 +26,8 @@
 	}
 
 	&__title {
-		margin-bottom: 60px;
 		line-height: 0.85 !important;
-		
-		@include media('<=sm') {
-			margin-bottom: 25px;
-		}
+		@include range(60px, 25px, 1920px, 780px, 'margin-bottom');
 		
 		@include media('<=sm') {
 			line-height: 1.0 !important;
@@ -46,26 +37,16 @@
 	&__cards {
 		column-count: 2;
 		column-width: 220px;
-		column-gap: 40px;
-		margin-bottom: 65px;
-		
-		@include media('<=sm') {
-			column-gap: 16px;
-			margin-bottom: 30px;
-		}
+		@include range(40px, 16px, 1920px, 780px, 'column-gap');
+		@include range(65px, 30px, 1920px, 780px, 'margin-bottom');
 	}
-
+	
 	&__card {
 		box-sizing: border-box;
 		background-color: #F2F6FC;
-		padding: 40px;
 		border-radius: 15px;
-		margin-bottom: 40px;
-		
-		@include media('<=sm') {
-			padding: 16px;
-			margin-bottom: 16px;
-		}
+		@include range(40px, 16px, 1920px, 780px, 'margin-bottom');
+		@include range(40px, 16px, 1920px, 780px, 'padding');
 
 		&::before {
 			display: block;

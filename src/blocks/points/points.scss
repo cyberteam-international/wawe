@@ -1,31 +1,10 @@
 .points {
 	$self: &;
-	padding-top: 160px;
-	padding-bottom: 80px;
-
-	@include media('<=xlg') {
-
-	}
-
-	@include media('<=lg') {
-
-	}
-	
-	@include media('<=sm') {
-		padding-top: 45px;
-		padding-bottom: 45px;
-	}
-	
-	@include media('<=xs') {
-
-	}
+	@include range(160px, 45px, 1920px, 780px, 'padding-top');
+	@include range(80px, 45px, 1920px, 780px, 'padding-bottom');
 
 	&__top {
-		margin-bottom: 60px;
-		
-		@include media('<=sm') {
-			margin-bottom: 20px;
-		}
+		@include range(60px, 20px, 1440px, 780px, 'margin-bottom');
 		
 		@include media('<=xs') {
 			margin-bottom: 30px;
@@ -52,36 +31,13 @@
 		display: flex;
 		box-sizing: border-box;
 		flex-flow: column nowrap;
-		border-radius: 40px;
-		padding: 40px;
 		position: relative;
-		min-height: 570px;
 		overflow: hidden;
 		height: auto;
 		color: #fff;
-		
-		@include media('<=xxlg') {
-			min-height: 450px;
-		}
-		
-		@include media('<=xlg') {
-			min-height: 380px;
-		}
-		
-		@include media('<=lg') {
-			border-radius: 30px;
-		}
-		
-		@include media('<=md') {
-			padding: 30px;
-			min-height: 320px;
-		}
-		
-		@include media('<=sm') {
-			padding: 20px;
-			border-radius: 15px;
-			min-height: 230px;
-		}
+		@include range(40px, 20px, 1920px, 780px, 'padding');
+		@include range(570px, 230px, 1920px, 780px, 'min-height');
+		@include range(40px, 15px, 1920px, 780px, 'border-radius');
 		
 		@include media('<=xs') {
 			border-radius: 25px;

@@ -1,13 +1,8 @@
 .about {
 	$self: &;
-	padding-top: 80px;
-	padding-bottom: 200px;
 	overflow: hidden;
-	
-	@include media('<=sm') {
-		padding-top: 30px;
-		padding-bottom: 140px;
-	}
+	@include range(80px, 30px, 1440px, 780px, 'padding-top');
+	@include range(200px, 140px, 1440px, 780px, 'padding-bottom');
 	
 	@include media('<=xs') {
 		padding-bottom: 0;
