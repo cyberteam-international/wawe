@@ -14,7 +14,11 @@ import Swiper from 'swiper';
 				slidesPerView: 1.7
 			},
 			640: {
-				spaceBetween: 14,
+				spaceBetween: 10,
+				slidesPerView: 3.15
+			},
+			780: {
+				spaceBetween: 15,
 				slidesPerView: 3.15
 			},
 			1100: {
@@ -22,6 +26,14 @@ import Swiper from 'swiper';
 				slidesPerView: 3.15,
 			},
 			1280: {
+				spaceBetween: 30,
+				slidesPerView: 3.15,
+			},
+			1440: {
+				spaceBetween: 30,
+				slidesPerView: 3.05,
+			},
+			1680: {
 				spaceBetween: 30,
 				slidesPerView: 3.15,
 			}

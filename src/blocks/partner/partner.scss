@@ -2,8 +2,13 @@
 	$self: &;
 	position: relative;
 	background: #4F67E8;
-	padding-top: 50px;
+	padding-top: 70px;
+	padding-bottom: 160px;
 	@include range(160px, 80px, 1920px, 780px, 'padding-bottom');
+	
+	@include media('<=sm') {
+		padding-top: 20px;
+	}
 	
 	@include media('<=xs') {
 		padding-bottom: 40px;
@@ -19,9 +24,13 @@
 		left: 0;
 		bottom: calc(100% - 390px);
 		
+		@include media('<=xxlg') {
+			bottom: calc(100% - 420px);
+		}
+		
 		@include media('<=sm') {
 			height: 300px;
-			bottom: calc(100% - 150px);
+			bottom: calc(100% - 160px);
 		}
 		
 		@include media('<=xs') {
@@ -36,13 +45,17 @@
 
 	&__title {
 		color: #fff;
-		@include range(60px, 30px, 1440px, 780px, 'margin-bottom');
+		margin-bottom: 50px;
+		@include range(50px, 35px, 1920px, 1440px, 'margin-bottom');
+		@include range(35px, 20px, 1280px, 780px, 'margin-bottom');
 	}
 
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		@include range(40px, 10px, 1440px, 780px, 'grid-gap');
+		grid-gap: 40px;
+		@include range(40px, 30px, 1920px, 1440px, 'grid-gap');
+		@include range(30px, 10px, 1280px, 780px, 'grid-gap');
 	}
 
 	&__item {
@@ -51,13 +64,19 @@
 		box-sizing: border-box;
 		justify-content: center;
 		background-color: rgba(255, 255, 255, 0.1);
+		border-radius: 15px;
+		min-height: 260px;
+		padding: 40px;
 		@include range(15px, 6px, 1440px, 780px, 'border-radius');
 		@include range(40px, 20px, 1440px, 640px, 'padding');
-		@include range(260px, 100px, 1440px, 780px, 'min-height');
+		@include range(260px, 205px, 1920px, 1440px, 'min-height');
+		@include range(205px, 102px, 1280px, 780px, 'min-height');
 		
 		img {
 			width: 100%;
-			@include range(170px, 90px, 1440px, 780px, 'max-width');
+			max-width: 170px;
+			@include range(170px, 140px, 1920px, 1440px, 'max-width');
+			@include range(140px, 100px, 1280px, 780px, 'max-width');
 			
 			@include media('<=xs') {
 				max-width: 60px;

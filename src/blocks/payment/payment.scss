@@ -1,9 +1,25 @@
 .payment {
 	$self: &;
-	@include range(80px, 40px, 1920px, 780px, 'padding-top');
+	padding: 80px 0 55px;
+	@include range(80px, 55px, 1920px, 1440px, 'padding-top');
+	@include range(55px, 30px, 1280px, 780px, 'padding-top');
+	@include range(55px, 45px, 1920px, 1440px, 'padding-bottom');
+	@include range(45px, 35px, 1280px, 780px, 'padding-bottom');
+
+	@include media('<=xs') {
+		padding: 20px 0;
+	}
 	
 	&__top {
-
+		margin-bottom: 50px;
+		
+		@include media('<=xxlg') {
+			margin-bottom: 45px;
+		}
+		
+		@include media('<=sm') {
+			margin-bottom: 10px;
+		}
 	}
 	
 	&__title {
@@ -17,8 +33,7 @@
 	&__body {
 		position: relative;
 		overflow: hidden;
-		@include range(60px, 30px, 1440px, 780px, 'padding-top');
-		@include range(60px, 30px, 1440px, 780px, 'padding-bottom');
+		padding: 20px 0;
 	}
 
 	&__circle {
@@ -35,12 +50,16 @@
 		align-items: center;
 		justify-content: center;
 		overflow: hidden;
-		@include range(550px, 220px, 1440px, 640px, 'width');
-		@include range(550px, 220px, 1440px, 640px, 'height');
-
-		@include media('<=xxs') {
-			width: 190px;
+		width: 550px;
+		height: 550px;
+		@include range(550px, 420px, 1920px, 1440px, 'width');
+		@include range(420px, 220px, 1280px, 780px, 'width');
+		@include range(550px, 420px, 1920px, 1440px, 'height');
+		@include range(420px, 220px, 1280px, 780px, 'height');
+		
+		@include media('<=xs') {
 			height: 190px;
+			width: 190px;
 		}
 		
 		img {
@@ -89,7 +108,9 @@
 
 	&__row {
 		&:not(:last-child) {
-			@include range(40px, 10px, 1280px, 640px, 'margin-bottom');
+			margin-bottom: 37px;
+			@include range(37px, 32px, 1920px, 1440px, 'margin-bottom');
+			@include range(32px, 10px, 1280px, 640px, 'margin-bottom');
 		}
 
 		.swiper-wrapper { 
@@ -110,9 +131,18 @@
 		font-family: "DMM", sans-serif;
 		white-space: nowrap;
 		overflow: hidden;
-		@include range(28px, 11px, 1440px, 780px);
-		@include range(40px, 16px, 1440px, 1100px, 'padding');
-		@include range(15px, 6px, 1440px, 780px, 'border-radius');
+		border-radius: 15px;
+		font-size: 28px;
+		padding: 40px;
+		@include range(28px, 22px, 1920px, 1440px);
+		@include range(22px, 11px, 1280px, 780px);
+		@include range(40px, 26px, 1920px, 1440px, 'padding');
+		@include range(26px, 16px, 1280px, 1100px, 'padding');
+		@include range(15px, 6px, 1920px, 780px, 'border-radius');
+
+		@include media('<=xxs') {
+			padding: 14px 16px;
+		}
 
 		&::before {
 			display: none;
@@ -126,11 +156,16 @@
 			flex-shrink: 0;
 			margin-right: 10px;
 			
+			@include media('<=xxlg') {
+				width: 45px;
+				height: 45px;
+				background-size: 35px 35px;
+			}
+			
 			@include media('<=xlg') {
 				width: 42px;
 				height: 42px;
 				margin-right: 5px;
-				background-size: 35px 35px;
 			}
 			
 			@include media('<=lg') {

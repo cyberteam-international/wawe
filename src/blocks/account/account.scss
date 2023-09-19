@@ -1,11 +1,28 @@
 .account {
 	$self: &;
 	background-color: #fff;
-	@include range(160px, 45px, 1920px, 780px, 'padding-top');
-	@include range(160px, 45px, 1920px, 780px, 'padding-bottom');
+	padding: 160px 0;
+	@include range(160px, 120px, 1920px, 1440px, 'padding-top');
+	@include range(120px, 45px, 1280px, 780px, 'padding-top');
+	@include range(160px, 130px, 1920px, 1440px, 'padding-bottom');
+	@include range(130px, 45px, 1280px, 780px, 'padding-bottom');
+
+	@include media('<=xxs') {
+		padding: 35px 0 20px;
+	}
 	
 	&__top {
-		@include range(60px, 24px, 1440px, 780px, 'margin-bottom');
+		margin-bottom: 55px;
+		@include range(55px, 40px, 1920px, 1440px, 'margin-bottom');
+		@include range(40px, 20px, 1280px, 780px, 'margin-bottom');
+
+		@include media('<=sm') {
+			margin-bottom: 23px;
+		}
+
+		@include media('<=xxs') {
+			margin-bottom: 28px;
+		}
 	}
 
 	&__title {
@@ -19,6 +36,8 @@
 	&__cards {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
+		font-size: 40px;
+		grid-gap: 40px;
 		@include range(40px, 10px, 1440px, 780px, 'grid-gap');
 		
 		@include media('<=xs') {
@@ -33,8 +52,11 @@
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: flex-start;
+		border-radius: 40px;
+		padding: 40px;
 		@include range(40px, 16px, 1440px, 780px, 'border-radius');
-		@include range(40px, 16px, 1440px, 780px, 'padding');
+		@include range(40px, 30px, 1920px, 1440px, 'padding');
+		@include range(30px, 16px, 1440px, 780px, 'padding');
 		
 		@include media('<=xs') {
 			margin-bottom: 20px;
@@ -55,18 +77,26 @@
 
 	&__c-icon {
 		display: block;
-		@include range(100px, 40px, 1440px, 780px, 'max-width');
-		@include range(30px, 15px, 1440px, 780px, 'margin-bottom');
+		max-width: 100px;
+		margin-bottom: 25px;
+		@include range(100px, 90px, 1920px, 1440px, 'max-width');
+		@include range(90px, 40px, 1440px, 780px, 'max-width');
+		@include range(22px, 12px, 1920px, 1440px, 'margin-bottom');
+		// @include range(30px, 10px, 1440px, 780px, 'margin-bottom');
 		
 		@include media('<=xs') {
 			max-width: 80px;
+			margin-bottom: 0;
 		}
 	}
 
 	&__c-title {
 		color: inherit;
 		margin-bottom: 15px;
-		@include range(42px, 18px, 1440px, 780px);
+		font-family: "DMM", sans-serif;
+		font-size: 42px;
+		@include range(42px, 32px, 1920px, 1440px);
+		@include range(32px, 18px, 1440px, 780px);
 		
 		@include media('<=sm') {
 			margin-bottom: 5px;
@@ -82,15 +112,19 @@
 	}
 	
 	&__c-text {
+		font-size: 28px;
 		margin-bottom: 40px;
-		@include range(28px, 12px, 1440px, 780px);
+		line-height: 1.27;
+		letter-spacing: -0.03em;
+		@include range(28px, 20.5px, 1920px, 1440px);
+		@include range(20.5px, 12px, 1440px, 780px);
 		
 		@include media('<=xxlg') {
-			margin-bottom: 30px;
+			margin-bottom: 23px;
 		}
 		
 		@include media('<=lg') {
-			margin-bottom: 25px;
+			margin-bottom: 20px;
 		}
 		
 		@include media('<=sm') {
@@ -98,13 +132,16 @@
 		}
 		
 		@include media('<=xs') {
-			font-size: 18px;
+			font-size: 17.4px;
 			margin-bottom: 24px;
+			line-height: 1.37;
 		}
 
 		p {
+			margin-bottom: 9px;
+			
 			@include media('<=sm') {
-				margin-bottom: 6px;
+				margin-bottom: 4px;
 			}
 		}
 	}
@@ -119,9 +156,11 @@
 		border-radius: 20px;
 		text-align: center;
 		margin-top: auto;
-		@include range(34px, 14px, 1440px, 780px);
+		font-size: 34px;
+		@include range(34px, 26px, 1920px, 1440px);
+		@include range(26px, 14px, 1440px, 780px);
 		
-		@include media('<=xlg') {
+		@include media('<=xxlg') {
 			padding: 20px 35px 25px;
 			border-radius: 15px;
 		}

@@ -4,7 +4,9 @@
 	align-items: center;
 	font-family: "DMM", sans-serif;
 	color: #fff;
-	@include range(28px, 18px, 1440px, 640px);
+	font-size: 28px;
+	@include range(28px, 22px, 1920px, 1440px);
+	@include range(22px, 18px, 1280px, 780px);
 		
 	@include media('<=xs') {
 		font-size: 22px;
@@ -43,6 +45,10 @@
 		height: 35px;
 		width: 2px;
 		
+		@include media('<=xxlg') {
+			margin: 0 20px;
+		}
+
 		@include media('<=sm') {
 			height: 25px;
 		}
@@ -68,21 +74,22 @@
 			margin: 8px 0 0 10px;
 			flex-shrink: 0;
 			
+			@include media('<=xxlg') {
+				margin: 6px 0 0 5px;
+				width: 17px;
+				height: 16px;
+			}
+				
 			@include media('<=md') {
-				width: 16px;
-				height: 15px;
 				margin: 5px 0 0 5px;
+				height: 15px;
+				width: 16px;
 			}
 			
 			@include media('<=sm') {
-				width: 14px;
+				margin: 2px 0 0 5px;
 				height: 13px;
-			}
-			
-			@include media('<=md') {
-				width: 16px;
-				height: 15px;
-				margin: 5px 0 0 5px;
+				width: 14px;
 			}
 		}
 	}

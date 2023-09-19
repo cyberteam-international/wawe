@@ -9,7 +9,6 @@ import { Autoplay } from 'swiper/modules';
 		autoplay: { delay: 0 },
 		loop: true,
 		slidesPerView: 4,
-		// slidesPerView: 'auto',
 		allowTouchMove: false,
 		breakpoints: {
 			0: { 

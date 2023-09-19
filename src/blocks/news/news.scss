@@ -1,5 +1,6 @@
 .news {
 	$self: &;
+	padding: 160px 0;
 	@include range(160px, 50px, 1920px, 780px, 'padding-top');
 	@include range(160px, 50px, 1920px, 780px, 'padding-bottom');
 	
@@ -13,12 +14,14 @@
 	}
 
 	&__title {
+		margin-bottom: 60px;
 		@include range(60px, 30px, 1920px, 780px, 'margin-bottom');
 	}
 
 	&__cards {
 		display: grid;
 		grid-template-columns: 1fr;
+		grid-gap: 40px;
 		@include range(40px, 20px, 1920px, 780px, 'grid-gap');
 		
 		@include media('<=xs') {
@@ -29,6 +32,7 @@
 	&__card {
 		grid-column: span 1;
 		display: grid;
+		grid-gap: 40px;
 		grid-template-columns: repeat(3, 1fr);
 		@include range(40px, 20px, 1920px, 780px, 'grid-gap');
 		
@@ -74,7 +78,8 @@
 	&__date {
 		margin-bottom: 40px;
 		color: rgba($text, 0.6);
-		@include range(28px, 11px, 1440px, 780px);
+		font-size: 28px;
+		@include range(28px, 11px, 1920px, 780px);
 		
 		@include media('<=sm') {
 			margin-bottom: 16px;
@@ -102,7 +107,8 @@
 	&__text {
 		margin-bottom: 20px;
 		color: rgba($text, 0.6);
-		@include range(28px, 11px, 1440px, 780px);
+		font-size: 28px;
+		@include range(28px, 11px, 1920px, 780px);
 		
 		@include media('<=sm') {
 			color: rgba($text, 0.8);
@@ -119,7 +125,8 @@
 		align-items: center;
 		margin-top: auto;
 		color: $decor;
-		@include range(34px, 13px, 1440px, 780px);
+		font-size: 34px;
+		@include range(34px, 13px, 1920px, 780px);
 		font-family: "DMSB", sans-serif;
 		text-decoration: none;
 		align-self: flex-start;

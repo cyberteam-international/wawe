@@ -68,6 +68,7 @@
 		color: #fff;
 		border: 2px solid rgba(255, 255, 255, 0.2);
 		font-family: "DML", sans-serif;
+		font-size: 28px;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
@@ -76,22 +77,25 @@
 		margin: 0 20px 20px 0;
 		min-height: 90px;
 		transition: border-color 0.3s;
-		@include range(28px, 11px, 1440px, 780px);
-
+		font-size: 28px;
+		@include range(28px, 21px, 1920px, 1440px);
+		@include range(21px, 11px, 1280px, 780px);
+		
 		&:hover, &.active {
 			border-color: #fff;
 		}
 		
-		@include media('<=xlg') {
-			min-height: 70px;
+		@include media('<=xxlg') {
+			margin: 0 10px 10px 0;
 			padding: 11px 30px;
 			border-radius: 8px;
+			min-height: 70px;
 		}
 		
 		@include media('<=lg') {
-			min-height: 60px;
 			padding: 11px 20px;
-			margin: 0 15px 15px 0;
+			min-height: 60px;
+			// margin: 0 15px 15px 0;
 		}
 		
 		@include media('<=md') {

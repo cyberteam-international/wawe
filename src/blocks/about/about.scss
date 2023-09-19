@@ -1,10 +1,14 @@
 .about {
 	$self: &;
 	overflow: hidden;
-	@include range(80px, 30px, 1440px, 780px, 'padding-top');
-	@include range(200px, 140px, 1440px, 780px, 'padding-bottom');
+	padding: 80px 0 200px;
+	@include range(80px, 65px, 1920px, 1440px, 'padding-top');
+	@include range(65px, 15px, 1280px, 780px, 'padding-top');
+	@include range(200px, 140px, 1920px, 1440px, 'padding-bottom');
+	@include range(140px, 85px, 1280px, 780px, 'padding-bottom');
 	
 	@include media('<=xs') {
+		padding-top: 20px;
 		padding-bottom: 0;
 	}
 
@@ -13,10 +17,14 @@
 	}
 
 	&__title {
-		margin-bottom: 60px;
+		margin-bottom: 50px;
+		
+		@include media('<=xxlg') {
+			margin-bottom: 38px;
+		}
 		
 		@include media('<=sm') {
-			margin-bottom: 25px;
+			margin-bottom: 20px;
 		}
 	}
 
@@ -31,6 +39,14 @@
 
 	&__t-title {
 		margin-bottom: 15px;
+		
+		@include media('<=sm') {
+			margin-bottom: 5px;
+		}
+
+		@include media('<=xs') {
+			font-size: 17.2px !important;
+		}
 	}
 
 	&__text {
@@ -40,16 +56,29 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 40px;
+		font-size: 28px;
 		color: rgba($text, 0.8);
-		@include range(28px, 14px, 1440px, 780px);
+		@include range(28px, 22px, 1920px, 1440px);
+		@include range(22px, 14px, 1280px, 780px);
 		
 		@include media('<=sm') {
 			grid-gap: 10px;
+			line-height: 1.3;
 		}
 		
 		@include media('<=xs') {
 			font-size: 18px;
 			display: block;
+		}
+
+		p {
+			@include media('<=sm') {
+				margin-bottom: 5px;
+			}
+
+			@include media('<=xs') {
+				margin-bottom: 10px;
+			}
 		}
 	}
 	
@@ -70,9 +99,14 @@
 			max-width: calc(100% + 140px);
 			z-index: 3;
 			
+			@include media('<=xxlg') {
+				max-width: calc(100% + 120px);
+				left: 45%;
+				top: 50%;
+			}
+			
 			@include media('<=sm') {
 				max-width: calc(100% + 50px);
-				top: 50%;
 			}
 		
 			@include media('<=xs') {

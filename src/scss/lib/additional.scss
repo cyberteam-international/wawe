@@ -246,11 +246,11 @@ $images-path: "images/";
 @mixin range($currentValue, $targetValue, $currentScreen, $targetScreen, $property: 'font-size') {
 	$diffValue: num($currentValue) - num($targetValue);
 	$diffScreen: num($currentScreen) - num($targetScreen);
-	
-	#{$property}: $currentValue;
+
 	@media (max-width: $currentScreen) {
 		#{$property}: calc(#{$targetValue} + #{$diffValue} * ((100vw - #{$targetScreen}) / #{$diffScreen}));
 	}
+	
 	@media (max-width: $targetScreen) {
 		#{$property}: $targetValue;
 	}

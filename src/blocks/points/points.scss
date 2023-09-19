@@ -1,13 +1,18 @@
 .points {
 	$self: &;
-	@include range(160px, 45px, 1920px, 780px, 'padding-top');
-	@include range(80px, 45px, 1920px, 780px, 'padding-bottom');
+	padding: 160px 0 80px;
+	@include range(160px, 125px, 1920px, 1440px, 'padding-top');
+	@include range(125px, 45px, 1280px, 780px, 'padding-top');
+	@include range(80px, 60px, 1920px, 1440px, 'padding-bottom');
+	@include range(60px, 55px, 1280px, 780px, 'padding-bottom');
 
 	&__top {
-		@include range(60px, 20px, 1440px, 780px, 'margin-bottom');
+		margin-bottom: 40px;
+		@include range(40px, 30px, 1920px, 1440px, 'margin-bottom');
+		@include range(30px, 40px, 1440px, 780px, 'margin-bottom');
 		
 		@include media('<=xs') {
-			margin-bottom: 30px;
+			margin-bottom: 22px;
 		}
 	}
 
@@ -35,8 +40,13 @@
 		overflow: hidden;
 		height: auto;
 		color: #fff;
-		@include range(40px, 20px, 1920px, 780px, 'padding');
-		@include range(570px, 230px, 1920px, 780px, 'min-height');
+		padding: 40px;
+		min-height: 570px;
+		border-radius: 15px;
+		@include range(40px, 30px, 1920px, 1440px, 'padding');
+		@include range(30px, 15px, 1280px, 780px, 'padding');
+		@include range(570px, 450px, 1440px, 1440px, 'min-height');
+		@include range(450px, 228px, 1280px, 780px, 'min-height');
 		@include range(40px, 15px, 1920px, 780px, 'border-radius');
 		
 		@include media('<=xs') {
@@ -87,7 +97,9 @@
 		margin-bottom: 15px;
 		position: relative;
 		z-index: 1;
-		@include range(42px, 17px, 1440px, 780px);
+		font-size: 42px;
+		@include range(42px, 31px, 1920px, 1440px);
+		@include range(31px, 16px, 1280px, 780px);
 
 		@include media('<=sm') {
 			margin-bottom: 6px;
@@ -103,10 +115,12 @@
 		font-family: "DML", sans-serif;
 		position: relative;
 		z-index: 1;
-		@include range(28px, 11px, 1440px, 780px);
+		font-size: 28px;
+		@include range(28px, 21px, 1920px, 1440px);
+		@include range(21px, 11px, 1440px, 780px);
 
 		@include media('<=xs') {
-			font-size: 18px;
+			font-size: 17px;
 		}
 	}
 
@@ -126,6 +140,10 @@
 		align-items: center;
 		justify-content: space-between;
 		padding-top: 80px;
+		
+		@include media('<=xxlg') {
+			padding-top: 60px;
+		}
 		
 		@include media('<=sm') {
 			padding-top: 30px;

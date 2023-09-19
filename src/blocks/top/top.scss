@@ -22,10 +22,15 @@
 	&__text {
 		max-width: 560px;
 		color: rgba($text, 0.6);
-		@include range(28px, 16px, 1440px, 780px);
+		@include range(28px, 21px, 1920px, 1440px);
+		@include range(21px, 16px, 1280px, 780px);
+		
+		@include media('<=xxlg') {
+			max-width: 420px;
+		}
 		
 		@include media('<=lg') {
-			max-width: 420px;
+
 		}
 		
 		@include media('<=sm') {

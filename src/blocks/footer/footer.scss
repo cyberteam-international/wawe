@@ -1,6 +1,7 @@
 .footer {
 	$self: &;
 	background-color: #fff;
+	padding: 80px 0;
 	@include range(80px, 30px, 1920px, 780px, 'padding-top');
 	@include range(80px, 30px, 1920px, 780px, 'padding-bottom');
 	
@@ -58,6 +59,7 @@
 	&__c-title {
 		color: rgba(64, 70, 104, 0.3);
 		margin-bottom: 20px;
+		font-size: 22px;
 		@include range(22px, 9px, 1440px, 780px);
 
 		@include media('<=sm') {
@@ -78,6 +80,7 @@
 		font-family: "DMM", sans-serif;
 		margin-bottom: 15px;
 		letter-spacing: -0.04em;
+		font-size: 28px;
 		@include range(28px, 11px, 1440px, 780px);
 
 		@include media('<=sm') {
@@ -226,6 +229,7 @@
 	&__info {
 		color: rgba($text, 0.6);
 		margin-bottom: 35px;
+		font-size: 28px;
 		@include range(28px, 11px, 1440px, 780px);
 		
 		@include media('<=sm') {
@@ -253,6 +257,7 @@
 	&__logo {
 		margin-right: 40px;
 		width: 100%;
+		max-width: 260px;
 		@include range(260px, 100px, 1920px, 780px, 'max-width');
 		
 		@include media('<=sm') {
@@ -269,6 +274,7 @@
 	}
 
 	&__copy {
+		font-size: 22px;
 		@include range(22px, 9px, 1440px, 780px);
 
 		@include media('<=xs') {

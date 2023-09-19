@@ -1,9 +1,10 @@
 .title {
 	$self: &;
 	font-family: "DMEB", sans-serif;
-	font-size: 84px;
 	letter-spacing: -0.04em;
-	@include range(84px, 34px, 1440px, 780px);
+	font-size: 84px;
+	@include range(84px, 65px, 1920px, 1440px);
+	@include range(65px, 34px, 1280px, 780px);
 
 	@include media('<=sm') {
 		line-height: 1.1;
@@ -27,7 +28,9 @@
 	}
 
 	&_subtitle {
-		@include range(42px, 17px, 1440px, 780px);
+		font-size: 42px;
+		@include range(42px, 33px, 1920px, 1440px);
+		@include range(33px, 18px, 1280px, 780px);
 
 		@include media('<=xs') {
 			font-size: 20px;
