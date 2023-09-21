@@ -9,7 +9,7 @@
 	&__inner {
 		
 		@include media('<=xs') {
-			padding: 0;
+			padding: 0 !important;
 		}
 	}
 	

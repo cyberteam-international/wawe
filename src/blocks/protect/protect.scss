@@ -25,20 +25,39 @@
 
 	&__scene {
 		padding: 60px 0 80px;
-		min-height: 800px;
 		
 		@include media('<=xxlg') {
-			min-height: 600px;
-			padding: 60px 0 75px;
+			padding: 40px 0 60px;
 		}
 		
 		@include media('<=sm') {
 			padding: 30px 0 40px;
-			min-height: 300px;
 		}
 		
 		@include media('<=xs') {
-			min-height: 910px;
+			padding: 30px 0;
+		}
+
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 480px;
+			
+			@include media('<=xxlg') {
+				width: 400px;
+			}
+			
+			@include media('<=xlg') {
+				width: 300px;
+			}
+			
+			@include media('<=sm') {
+				width: 200px;
+			}
+			
+			@include media('<=xs') {
+				width: 300px;
+			}
 		}
 	}
 

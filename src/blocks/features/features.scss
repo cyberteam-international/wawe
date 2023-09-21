@@ -1,20 +1,24 @@
 .features {
 	$self: &;
 	@keyframes featureMove {
-		from { transform: rotateZ(10deg) translate(-50%, -50%); }
-		50% { transform: rotateZ(-10deg) translate(-50%, -50%); }
-		to { transform: rotateZ(10deg) translate(-50%, -50%); }
+		from { transform: translate(-50%, -50%) rotateZ(10deg); }
+		50% { transform:  translate(-50%, -50%)rotateZ(-10deg); }
+		to { transform: translate(-50%, -50%) rotateZ(10deg); }
 	}
 
 	@keyframes featureMoveReverse {
-		from { transform: rotateZ(-10deg) translate(-50%, -50%); }
-		50% { transform: rotateZ(10deg) translate(-50%, -50%); }
-		to { transform: rotateZ(-10deg) translate(-50%, -50%); }
+		from { transform: translate(-50%, -50%) rotateZ(-10deg); }
+		50% { transform: translate(-50%, -50%) rotateZ(10deg); }
+		to { transform: translate(-50%, -50%) rotateZ(-10deg); }
 	}
 
 	&__inner {
-		padding-bottom: 150px;
 		overflow: hidden;
+		padding-top: 55px;
+		padding-bottom: 150px;
+		@include range(55px, 45px, 1920px, 1440px, 'padding-top');
+		@include range(45px, 35px, 1280px, 780px, 'padding-top');
+	
 		
 		@include media('<=xxlg') {
 			padding-bottom: 120px;
@@ -33,6 +37,7 @@
 		}
 		
 		@include media('<=xs') {
+			padding-top: 20px;
 			padding-bottom: 40px;
 		}
 	}
@@ -145,10 +150,10 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translate(-50%, -50%);
+			// transform: translate(-50%, -50%);
 			animation-fill-mode: both;
 			animation-iteration-count: infinite;
-			transform-origin: left top;
+			transform-origin: center;
 			max-height: calc(100% + 150px);
 			
 			@include media('<=xxlg') {
