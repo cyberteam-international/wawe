@@ -3,13 +3,13 @@
 	@keyframes featureMove {
 		0% { transform: translate(-50%, -50%) rotateZ(10deg); }
 		50% { transform:  translate(-50%, -50%) rotateZ(-10deg); }
-		100% { transform: translate(-50%, -50%) rotateZ(10deg); }
+		100% { transform: translate(-50%, -50%) rotateZ(10.1deg); }
 	}
 
 	@keyframes featureMoveReverse {
 		0% { transform: translate(-50%, -50%) rotateZ(-10deg); }
 		50% { transform: translate(-50%, -50%) rotateZ(10deg); }
-		100% { transform: translate(-50%, -50%) rotateZ(-10deg); }
+		100% { transform: translate(-50%, -50%) rotateZ(-10.1deg); }
 	}
 
 	&__inner {
