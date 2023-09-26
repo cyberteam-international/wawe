@@ -6,7 +6,6 @@ const isSync = process.argv.indexOf('--sync') !== -1;
 const isDev = process.argv.indexOf('--dev') !== -1;
 const isProd = !isDev;
 
-// console.log(JSON.stringify($));
 let pckg = require('./package.json');
 let webconf = {
 	output: {
@@ -29,9 +28,6 @@ let webconf = {
 let pth = {
 	pbl: {
 		root: './docs/',
-		html: './docs/',
-		js: './docs/',
-		css: './docs/',
 		img: './docs/images/',
 		fnts: './docs/fonts/'
 	},
@@ -39,7 +35,7 @@ let pth = {
 		root: './src/',
 		html: './src/[^_]*.html',
 		js: './src/js/common.js',
-		// jslib: './src/js/!(common)*.js',
+		json: './src/blocks/*/*.json',
 		css: './src/scss/style.scss',
 		scss: './src/scss/lib/',
 		img: './src/images/**/!(icon-*.svg|shape-*.svg)',
@@ -72,11 +68,19 @@ function js() {
 	return gulp.src(pth.src.js)
 		.pipe($.webpackStream(webconf))
 		.on('error', swallowError)
-		.pipe(gulp.dest(pth.pbl.js))
+		.pipe(gulp.dest(pth.pbl.root))
 		.pipe($.if(isSync, $.browserSync.stream()))
 		.on('end', function() {
 			if(isRemote) deploy(true, 'js');
 		});
+}
+
+function json() {
+	return gulp.src(pth.src.json)
+		.pipe($.flatten())
+		.pipe($.newer(pth.pbl.root + '*.json'))
+		.pipe(gulp.dest(pth.pbl.root))
+		.pipe($.if(isSync, $.browserSync.stream()));
 }
 
 function jslib () {
@@ -87,7 +91,7 @@ function jslib () {
 		});
 
 		return gulp.src(paths)
-			.pipe(gulp.dest(pth.pbl.js));
+			.pipe(gulp.dest(pth.pbl.root));
 	}
 	return gulp.src('.', { allowEmpty: true });
 }
@@ -96,8 +100,7 @@ function html() {
 	return gulp.src(pth.src.html)
 		.pipe($.fileInclude({ prefix: '@@', basepath: pth.src.tmpl }))
 		.on('error', swallowError)
-		// .pipe($.newer(pth.pbl.html))
-		.pipe(gulp.dest(pth.pbl.html))
+		.pipe(gulp.dest(pth.pbl.root))
 		.pipe($.if(isSync, $.browserSync.stream()));
 }
 
@@ -115,7 +118,7 @@ function styles() {
 		.pipe($.if(isProd, $.groupCssMediaQueries()))
 		.pipe($.if(isProd, $.cleanCss({ level: 2 })))
 		.pipe($.if(isDev, $.sourcemaps.write()))
-		.pipe(gulp.dest(pth.pbl.css))
+		.pipe(gulp.dest(pth.pbl.root))
 		.pipe($.if(isSync, $.browserSync.stream()))
 		.on('end', function() {
 			if(isRemote) deploy(true, 'css');
@@ -192,17 +195,16 @@ function watch() {
 			server: { baseDir: pth.pbl.root }
 		});
 	}
-	gulp.watch(pth.wtch.js, js);
+	gulp.watch(pth.wtch.js, gulp.parallel(js, json));
 	gulp.watch(pth.wtch.html, html);
 	gulp.watch(pth.wtch.css, styles);
-	// gulp.watch(pth.wtch.img, gulp.parallel(images, icons));
 	gulp.watch(pth.wtch.img, images);
 	gulp.watch(pth.wtch.icn, icons);
 	gulp.watch(pth.wtch.shp, shapes);
 	gulp.watch(pth.wtch.fnts, fonts);
 }
 
-const build = gulp.series(clear, gulp.parallel(html, js, jslib, styles, images, icons, shapes, fonts));
+const build = gulp.series(clear, gulp.parallel(html, js, json, jslib, styles, images, icons, shapes, fonts));
 
 exports.build = build;
 exports.watch = gulp.series(build, watch);

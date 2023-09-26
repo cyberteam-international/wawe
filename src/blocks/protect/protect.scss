@@ -1,10 +1,18 @@
 .protect {
 	$self: &;
-	padding: 155px 0 130;
-	@include range(155px, 125px, 1920px, 1440px, 'padding-top');
-	@include range(125px, 60px, 1280px, 780px, 'padding-top');
-	@include range(155px, 130px, 1920px, 1440px, 'padding-bottom');
-	@include range(130px, 60px, 1280px, 780px, 'padding-bottom');
+	padding: 155px 0 130px;
+	
+	@include media('<=xxlg') {
+		padding: 125px 0 130px;
+	}
+	
+	@include media('<=lg') {
+		padding: 90px 0;
+	}
+	
+	@include media('<=sm') {
+		padding: 60px 0;
+	}
 
 	@include media('<=xs') {
 		padding-top: 40px;
@@ -27,24 +35,24 @@
 		padding: 60px 0 80px;
 		
 		@include media('<=xxlg') {
-			padding: 40px 0 60px;
+			padding: 40px 0 65px;
 		}
 		
 		@include media('<=sm') {
-			padding: 30px 0 40px;
+			padding: 15px 0 40px;
 		}
 		
 		@include media('<=xs') {
 			padding: 30px 0;
 		}
 
-		img {
+		svg, img {
 			display: block;
 			margin: 0 auto;
-			width: 480px;
+			width: 480px !important;
 			
 			@include media('<=xxlg') {
-				width: 400px;
+				width: 380px;
 			}
 			
 			@include media('<=xlg') {
@@ -52,11 +60,11 @@
 			}
 			
 			@include media('<=sm') {
-				width: 200px;
+				width: 190px;
 			}
 			
 			@include media('<=xs') {
-				width: 300px;
+				width: 350px;
 			}
 		}
 	}

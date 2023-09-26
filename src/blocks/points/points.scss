@@ -1,16 +1,34 @@
 .points {
 	$self: &;
 	padding: 160px 0 80px;
-	@include range(160px, 125px, 1920px, 1440px, 'padding-top');
-	@include range(125px, 45px, 1280px, 780px, 'padding-top');
-	@include range(80px, 60px, 1920px, 1440px, 'padding-bottom');
-	@include range(60px, 55px, 1280px, 780px, 'padding-bottom');
 
+	@include media('<=xxlg') {
+		padding: 125px 0 60px;
+	}
+	
+	@include media('<=lg') {
+		padding: 80px 0 55px;
+	}
+	
+	@include media('<=sm') {
+		padding: 45px 0 55px;
+	}
+	
 	&__top {
 		margin-bottom: 40px;
-		@include range(40px, 30px, 1920px, 1440px, 'margin-bottom');
-		@include range(30px, 40px, 1440px, 780px, 'margin-bottom');
 		
+		@include media('<=xxlg') {
+			margin-bottom: 30px;
+		}
+		
+		@include media('<=lg') {
+			margin-bottom: 35px;
+		}
+		
+		@include media('<=sm') {
+			margin-bottom: 40px;
+		}
+			
 		@include media('<=xs') {
 			margin-bottom: 22px;
 		}

@@ -2,10 +2,18 @@
 	$self: &;
 	overflow: hidden;
 	padding: 80px 0 200px;
-	@include range(80px, 65px, 1920px, 1440px, 'padding-top');
-	@include range(65px, 15px, 1280px, 780px, 'padding-top');
-	@include range(200px, 140px, 1920px, 1440px, 'padding-bottom');
-	@include range(140px, 85px, 1280px, 780px, 'padding-bottom');
+
+	@include media('<=xxlg') {
+		padding: 65px 0 140px;
+	}
+	
+	@include media('<=lg') {
+		padding: 40px 0 100px;
+	}
+	
+	@include media('<=sm') {
+		padding: 15px 0 85px;
+	}
 	
 	@include media('<=xs') {
 		padding-top: 20px;

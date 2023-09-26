@@ -2,19 +2,33 @@
 	$self: &;
 	background-color: #fff;
 	padding: 160px 0;
-	@include range(160px, 120px, 1920px, 1440px, 'padding-top');
-	@include range(120px, 45px, 1280px, 780px, 'padding-top');
-	@include range(160px, 130px, 1920px, 1440px, 'padding-bottom');
-	@include range(130px, 45px, 1280px, 780px, 'padding-bottom');
-
+	
+	@include media('<=xxlg') {
+		padding: 120px 0 130px;
+	}
+	
+	@include media('<=lg') {
+		padding: 90px 0 100px;
+	}
+	
+	@include media('<=sm') {
+		padding: 45px 0;
+	}
+	
 	@include media('<=xxs') {
 		padding: 35px 0 20px;
 	}
 	
 	&__top {
 		margin-bottom: 55px;
-		@include range(55px, 40px, 1920px, 1440px, 'margin-bottom');
-		@include range(40px, 20px, 1280px, 780px, 'margin-bottom');
+	
+		@include media('<=xxlg') {
+			margin-bottom: 40px;
+		}
+		
+		@include media('<=lg') {
+			margin-bottom: 30px;
+		}
 
 		@include media('<=sm') {
 			margin-bottom: 23px;
@@ -82,7 +96,6 @@
 		@include range(100px, 90px, 1920px, 1440px, 'max-width');
 		@include range(90px, 40px, 1440px, 780px, 'max-width');
 		@include range(22px, 12px, 1920px, 1440px, 'margin-bottom');
-		// @include range(30px, 10px, 1440px, 780px, 'margin-bottom');
 		
 		@include media('<=xs') {
 			max-width: 80px;

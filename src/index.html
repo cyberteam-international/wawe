@@ -204,7 +204,7 @@
 	<div class="protect__inner container">
 		<h2 class="protect__title title">We provide <span>enhanced protection to our application</span> by making it more difficult to read and attack</h2>
 		<div class="protect__scene">
-			<img src="./images/protect-image.png" alt="">
+			<!-- <img src="./images/protect-image.png" alt=""> -->
 		</div>
 		<div class="protect__bottom">
 			<div class="protect__part">We ensure the security of content, code, and user accounts from hackers through internal protection measures. We utilize cryptography and secure storage for key information. </div>
@@ -220,19 +220,98 @@
 		<div class="insure__body tab">
 			<div class="insure__buttons choice">
 				<div class="choice__wrapper">
-					<button class="insure__button choice__button tab__button active">Home/property</button>
+					<button class="insure__button choice__button tab__button active">Moving vehicles</button>
+					<button class="insure__button choice__button tab__button">Device Protection</button>
 					<button class="insure__button choice__button tab__button">Travel</button>
+					<button class="insure__button choice__button tab__button">Home Safe</button>
 					<button class="insure__button choice__button tab__button">Personal accident</button>
-					<button class="insure__button choice__button tab__button">Gadget protection</button>
-					<button class="insure__button choice__button tab__button">Movable risk (car/bike)</button>
 				</div>
 			</div>
 			<div class="insure__blocks">
-				@@include("_i-card.html", { cls: "active"}) 
-				@@include("_i-card.html") 
-				@@include("_i-card.html") 
-				@@include("_i-card.html") 
-				@@include("_i-card.html") 
+				<div class="insure__block tab__block active">
+					<div class="insure__b-image"><img src="./images/insure-image-1.png" alt=""></div>
+					<div class="insure__b-top">
+						<h3 class="insure__b-title">Health and life insurance</h3>
+						<div class="insure__b-text">
+							<p>Exactly, health and life insurance can provide financial security in unforeseen circumstances.</p>
+							<p>Insurance helps you protect yourself and your loved ones, offering peace of mind during challenging times.</p>
+							<p>Everyone faces events that put their health and life at risk.</p>
+						</div>
+					</div>
+					<div class="insure__b-cards">
+						<div class="insure__b-card insure__b-card_mobile"><p>Easy Claim Process Through Apps. Simple methods and user friendly for customers</p></div>
+						<div class="insure__b-card insure__b-card_love"><p>Protect Your Self and Family Get the coverage health for you and your family</p></div>
+						<div class="insure__b-card insure__b-card_star"><p>Start From IDR 85 000 / Year Premi can be adjusted for customers with easy payment methods</p></div>
+					</div>
+				</div>
+				<div class="insure__block tab__block">
+					<div class="insure__b-image"><img src="./images/insure-image-2.png" alt=""></div>
+					<div class="insure__b-top">
+						<h3 class="insure__b-title">Moving vehicles</h3>
+						<div class="insure__b-text">
+							<p>PT Sompo Insurance Indonesia is here to help you in minimizing your potential risk and everything the consequences for your vehicle insurance.</p>
+						</div>
+					</div>
+					<div class="insure__b-cards">
+						<div class="insure__b-card insure__b-card_crash"></div>
+						<div class="insure__b-card insure__b-card_shield"><p>Malicious act</p></div>
+						<div class="insure__b-card insure__b-card_hat"><p>Theft, including theft preceded or accompanied or followed by violence or threat</p></div>
+						<div class="insure__b-card insure__b-card_fire"><p>Fire Vehicles</p></div>
+					</div>
+				</div>
+				<div class="insure__block tab__block">
+					<div class="insure__b-image"><img src="./images/insure-image-3.png" alt=""></div>
+					<div class="insure__b-top">
+						<h3 class="insure__b-title">Device Protection</h3>
+						<div class="insure__b-text">
+							<p>PT Sompo Insurance Indonesia is here to help you in minimizing your potential risk and everything the consequences for your vehicle insurance.</p>
+						</div>
+					</div>
+					<div class="insure__b-cards">
+						<div class="insure__b-card insure__b-card_hand"><p>Affordable Package Plan for your gadget protection</p></div>
+						<div class="insure__b-card insure__b-card_priv"><p>Instant Policy</p></div>
+						<div class="insure__b-card insure__b-card_mobile"><p>Full Protection or and Screen Protection only</p></div>
+						<div class="insure__b-card insure__b-card_delv"><p>Pick up and Delivery feature</p></div>
+					</div>
+				</div>
+				<div class="insure__block tab__block">
+					<div class="insure__b-image"><img src="./images/insure-image-4.png" alt=""></div>
+					<div class="insure__b-top">
+						<h3 class="insure__b-title">Travel</h3>
+						<div class="insure__b-text">
+							<p>PT Sompo Insurance Indonesia is here to help you in minimizing your potential risk and everything the consequences for your vehicle insurance.</p>
+						</div>
+					</div>
+					<div class="insure__b-cards">
+						<div class="insure__b-card insure__b-card_wave"><p>Provides protection of underwater activities</p></div>
+						<div class="insure__b-card insure__b-card_fire"><p>Provides the benefits of reconstructive surgery because Burns</p></div>
+						<div class="insure__b-card insure__b-card_bomb"><p>Provide full protection against the risk of terrorism</p></div>
+						<div class="insure__b-card insure__b-card_dist"><p>Provide home protection against loss of contents and Fire and demolition damage</p></div>
+					</div>
+				</div>
+				<div class="insure__block tab__block">
+					<div class="insure__b-image"><img src="./images/insure-image-5.png" alt=""></div>
+					<div class="insure__b-top">
+						<h3 class="insure__b-title">Home Safe</h3>
+						<div class="insure__b-text">
+							<p>PT Sompo Insurance Indonesia is here to help you in minimizing your potential risk and everything the consequences for your vehicle insurance.</p>
+						</div>
+					</div>
+					<div class="insure__b-cards">
+						<div class="insure__b-card insure__b-card_wallet">
+							<h4>Protect Your Self and Family</h4>
+							<p>Get the coverage health for you and your family	</p>
+						</div>
+						<div class="insure__b-card insure__b-card_zoom">
+							<h4>Easy Claim Process Through Apps</h4>
+							<p>Simple methods and user friendly for customers</p>
+						</div>
+						<div class="insure__b-card insure__b-card_heart">
+							<h4>Start From IDR 107.000/Year</h4>
+							<p>Premi can be adjusted for customers with easy payment methods</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="insure__bottom">

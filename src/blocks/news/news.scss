@@ -1,9 +1,20 @@
 .news {
 	$self: &;
 	padding: 160px 0;
-	@include range(160px, 50px, 1920px, 780px, 'padding-top');
-	@include range(160px, 50px, 1920px, 780px, 'padding-bottom');
 	
+	@include media('<=xxlg') {
+		padding: 140px 0;
+	}
+	
+	@include media('<=lg') {
+		padding: 90px 0;
+	}
+	
+	@include media('<=sm') {
+		padding: 40px 0;
+	}
+
+
 	@include media('<=xs') {
 		padding-top: 40px;
 		padding-bottom: 40px;

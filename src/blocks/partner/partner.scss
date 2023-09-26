@@ -2,12 +2,18 @@
 	$self: &;
 	position: relative;
 	background: #4F67E8;
-	padding-top: 70px;
-	padding-bottom: 160px;
-	@include range(160px, 80px, 1920px, 780px, 'padding-bottom');
+	padding: 70px 0 160px;
+	
+	@include media('<=xxlg') {
+		padding: 70px 0 140px;
+	}
+	
+	@include media('<=lg') {
+		padding: 50px 0 110px;
+	}
 	
 	@include media('<=sm') {
-		padding-top: 20px;
+		padding: 25px 0 80px;
 	}
 	
 	@include media('<=xs') {
@@ -28,9 +34,14 @@
 			bottom: calc(100% - 420px);
 		}
 		
+		@include media('<=lg') {
+			height: 450px;
+			bottom: calc(100% - 250px);
+		}
+		
 		@include media('<=sm') {
 			height: 300px;
-			bottom: calc(100% - 160px);
+			bottom: calc(100% - 170px);
 		}
 		
 		@include media('<=xs') {
@@ -46,8 +57,18 @@
 	&__title {
 		color: #fff;
 		margin-bottom: 50px;
-		@include range(50px, 35px, 1920px, 1440px, 'margin-bottom');
-		@include range(35px, 20px, 1280px, 780px, 'margin-bottom');
+		
+		@include media('<=xxlg') {
+			margin-bottom: 35px;
+		}
+		
+		@include media('<=lg') {
+			margin-bottom: 30px;
+		}
+		
+		@include media('<=sm') {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__items {
@@ -102,7 +123,7 @@
 		@include range(15px, 6px, 1440px, 780px, 'border-radius');
 		@include range(40px, 20px, 1440px, 640px, 'padding');
 		@include range(260px, 205px, 1920px, 1440px, 'min-height');
-		@include range(205px, 110px, 1280px, 780px, 'min-height');
+		@include range(205px, 100px, 1280px, 780px, 'min-height');
 
 		@include media('<=xs') {
 			min-width: 165px;
