@@ -115,9 +115,8 @@ function styles() {
 			cascade: false, 
 			grid: true 
 		}))
-		// .pipe($.if(isProd, $.groupCssMediaQueries()))
-		// .pipe($.if(isProd, $.cleanCss({ level: { 2: { removeWhitespace: false }}})))
-		.pipe($.if(isProd, $.cleanCss({ level: 2 })))
+		.pipe($.if(isProd, $.groupCssMediaQueries()))
+		.pipe($.if(isProd, $.cleanCss({ level: 1 })))
 		.pipe($.if(isDev, $.sourcemaps.write()))
 		.pipe(gulp.dest(pth.pbl.root))
 		.pipe($.if(isSync, $.browserSync.stream()))
