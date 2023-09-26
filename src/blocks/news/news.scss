@@ -46,6 +46,15 @@
 		grid-gap: 40px;
 		grid-template-columns: repeat(3, 1fr);
 		@include range(40px, 20px, 1920px, 780px, 'grid-gap');
+
+		&[data-animation] {
+			opacity: 0;
+	
+			&.showed {
+				animation: cardFadeInUp 0.7s;
+				animation-fill-mode: forwards;
+			}
+		}
 		
 		@include media('<=xs') {
 			grid-gap: 20px;

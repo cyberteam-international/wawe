@@ -2,7 +2,7 @@
 @include reset(); 
 
 // Include breakpoints badge
-body { @include screen-media(); }
+// body { @include screen-media(); }
 
 // Import media-query helper
 @import "../../node_modules/include-media/dist/_include-media.scss";
@@ -87,4 +87,14 @@ em { font-style: italic; }
 	from { right: 0; }
 	50% { right: -300% }
 	to { right: 0; }
+}
+
+@keyframes titleFadeInUp {
+	from { opacity: 0; transform: translateY(30px); }
+	to { opacity: 1; transform: translateY(0)}
+}
+
+@keyframes cardFadeInUp {
+	from { opacity: 0; transform: translateY(100px); }
+	to { opacity: 1; transform: translateY(0)}
 }

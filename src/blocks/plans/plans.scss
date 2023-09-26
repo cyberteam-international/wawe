@@ -59,6 +59,15 @@
 		@include range(40px, 32px, 1920px, 1440px, 'padding');
 		@include range(32px, 16px, 1280px, 780px, 'padding');
 
+		&[data-animation] {
+			opacity: 0;
+	
+			&.showed {
+				animation: cardFadeInUp 0.7s;
+				animation-fill-mode: forwards;
+			}
+		}
+
 		&::before {
 			display: block;
 			content: '';

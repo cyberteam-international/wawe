@@ -132,6 +132,21 @@
 		height: 610px;
 		@include range(610px, 480px, 1920px, 1440px, 'height');
 		@include range(480px, 248px, 1280px, 780px, 'height');
+
+		&[data-animation] {
+			opacity: 0;
+	
+			&.showed {
+				animation: cardFadeInUp 0.7s;
+				animation-fill-mode: forwards;
+	
+				@for $i from 1 through 5 {
+					&:nth-child(#{$i}) {
+						animation-delay: #{$i * 0.3}s;
+					}
+				}
+			}
+		}
 		
 		@include media('<=xlg') {
 			width: calc(50% - 30px);

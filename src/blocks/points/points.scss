@@ -66,7 +66,7 @@
 		@include range(570px, 450px, 1440px, 1440px, 'min-height');
 		@include range(450px, 228px, 1280px, 780px, 'min-height');
 		@include range(40px, 15px, 1920px, 780px, 'border-radius');
-		
+
 		@include media('<=xs') {
 			border-radius: 25px;
 			padding: 15px;
@@ -119,6 +119,22 @@
 		@include range(42px, 31px, 1920px, 1440px);
 		@include range(31px, 16px, 1280px, 780px);
 
+		&[data-animation] {
+			opacity: 0;
+	
+			&.showed {
+				animation: titleFadeInUp 0.5s;
+				animation-fill-mode: forwards;
+	
+				
+				@for $i from 1 through 10 {
+					#{$self}__slide:nth-child(#{$i}) & {
+						animation-delay: #{$i * 0.3}s;
+					}
+				}
+			}
+		}
+	
 		@include media('<=sm') {
 			margin-bottom: 6px;
 		}
