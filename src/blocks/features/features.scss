@@ -1,15 +1,15 @@
 .features {
 	$self: &;
 	@keyframes featureMove {
-		from { transform: translate(-50%, -50%) rotateZ(10deg); }
+		0% { transform: translate(-50%, -50%) rotateZ(10deg); }
 		50% { transform:  translate(-50%, -50%) rotateZ(-10deg); }
-		to { transform: translate(-50%, -50%) rotateZ(10deg); }
+		100% { transform: translate(-50%, -50%) rotateZ(10deg); }
 	}
 
 	@keyframes featureMoveReverse {
-		from { transform: translate(-50%, -50%) rotateZ(-10deg); }
+		0% { transform: translate(-50%, -50%) rotateZ(-10deg); }
 		50% { transform: translate(-50%, -50%) rotateZ(10deg); }
-		to { transform: translate(-50%, -50%) rotateZ(-10deg); }
+		100% { transform: translate(-50%, -50%) rotateZ(-10deg); }
 	}
 
 	&__inner {
