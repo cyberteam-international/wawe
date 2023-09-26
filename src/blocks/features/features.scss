@@ -140,11 +140,11 @@
 				animation: cardFadeInUp 0.7s;
 				animation-fill-mode: forwards;
 	
-				@for $i from 1 through 5 {
+				/* @for $i from 1 through 5 {
 					&:nth-child(#{$i}) {
 						animation-delay: #{$i * 0.3}s;
 					}
-				}
+				} */
 			}
 		}
 		

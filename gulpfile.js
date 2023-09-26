@@ -116,7 +116,7 @@ function styles() {
 			grid: true 
 		}))
 		// .pipe($.if(isProd, $.groupCssMediaQueries()))
-		// .pipe($.if(isProd, $.cleanCss({ level: 2 })))
+		.pipe($.if(isProd, $.cleanCss({ level: 2 })))
 		.pipe($.if(isDev, $.sourcemaps.write()))
 		.pipe(gulp.dest(pth.pbl.root))
 		.pipe($.if(isSync, $.browserSync.stream()))
