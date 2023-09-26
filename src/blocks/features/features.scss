@@ -2,7 +2,7 @@
 	$self: &;
 	@keyframes featureMove {
 		from { transform: translate(-50%, -50%) rotateZ(10deg); }
-		50% { transform:  translate(-50%, -50%)rotateZ(-10deg); }
+		50% { transform:  translate(-50%, -50%) rotateZ(-10deg); }
 		to { transform: translate(-50%, -50%) rotateZ(10deg); }
 	}
 
@@ -158,7 +158,7 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			// transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
 			animation-fill-mode: both;
 			animation-iteration-count: infinite;
 			transform-origin: center;
@@ -180,19 +180,19 @@
 		&_first img {
 			max-width: 90%;
 			animation-duration: 14s;
-			animation-name: featureMove;
+			// animation-name: featureMove;
 		}
 
 		&_second img {
 			max-width: 80%;
-			animation-name: featureMoveReverse;
+			// animation-name: featureMoveReverse;
 			animation-duration: 8s;
 		}
 		
 		&_thrid img {
 			max-width: 90%;
 			animation-duration: 12s;
-			animation-name: featureMove;
+			// animation-name: featureMove;
 		}
 	}
 
