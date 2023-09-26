@@ -152,6 +152,24 @@
 			width: auto;
 			margin-bottom: 20px;
 		}
+		
+		&_first img {
+			max-width: 90%;
+			animation-duration: 14s;
+			animation-name: featureMove;
+		}
+
+		&_second img {
+			max-width: 80%;
+			animation-name: featureMoveReverse;
+			animation-duration: 8s;
+		}
+		
+		&_thrid img {
+			max-width: 90%;
+			animation-duration: 12s;
+			animation-name: featureMove;
+		}
 
 		img {
 			display: block;
@@ -175,24 +193,6 @@
 			@include media('<=xs') {
 				max-height: calc(100% + 50px);
 			}
-		}
-		
-		&_first img {
-			max-width: 90%;
-			animation-duration: 14s;
-			animation-name: featureMove;
-		}
-
-		&_second img {
-			max-width: 80%;
-			animation-name: featureMoveReverse;
-			animation-duration: 8s;
-		}
-		
-		&_thrid img {
-			max-width: 90%;
-			animation-duration: 12s;
-			animation-name: featureMove;
 		}
 	}
 
