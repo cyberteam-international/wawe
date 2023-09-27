@@ -162,13 +162,13 @@
 			}
 		}
 		
-		/* &_first img {
+		&_first img {
 			max-width: 90%;
 			animation-duration: 14s;
 			animation-name: featureMove;
 		}
 
-		&_second img {
+		/* &_second img {
 			max-width: 80%;
 			animation-name: featureMoveReverse;
 			animation-duration: 8s;
@@ -186,8 +186,8 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			// animation-fill-mode: both;
-			// animation-iteration-count: infinite;
+			animation-fill-mode: both;
+			animation-iteration-count: infinite;
 			transform-origin: center;
 			max-height: calc(100% + 150px);
 			
