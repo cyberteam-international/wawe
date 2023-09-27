@@ -45,10 +45,10 @@
 		@include range(40px, 32px, 1920px, 1440px, 'column-gap');
 		@include range(32px, 16px, 1280px, 780px, 'column-gap');
 		@include range(65px, 20px, 1920px, 1440px, 'margin-bottom');
-		// @include range(65px, 30px, 1920px, 780px, 'margin-bottom');
 	}
 	
 	&__card {
+		break-inside: avoid;
 		box-sizing: border-box;
 		background-color: #F2F6FC;
 		border-radius: 15px;
