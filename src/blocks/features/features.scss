@@ -164,31 +164,34 @@
 		
 		&_first img {
 			max-width: 90%;
-			animation-duration: 14s;
 			transform: translate(-50%, -50%);
 			animation-name: featureMove;
+			animation-duration: 14s;
 		}
-
-		/* &_second img {
+		
+		&_second img {
 			max-width: 80%;
+			transform: translate(-50%, -50%);
 			animation-name: featureMoveReverse;
 			animation-duration: 8s;
 		}
 		
 		&_thrid img {
 			max-width: 90%;
-			animation-duration: 12s;
+			transform: translate(-50%, -50%);
 			animation-name: featureMove;
-		} */
-
+			animation-duration: 12s;
+		}
+		
 		img {
 			display: block;
 			position: absolute;
 			top: 50%;
 			left: 50%;
+			transform-origin: center;
 			animation-fill-mode: both;
 			animation-iteration-count: infinite;
-			transform-origin: center;
+			transform: translate(-50%, -50%);
 			max-height: calc(100% + 150px);
 			
 			@include media('<=xxlg') {
