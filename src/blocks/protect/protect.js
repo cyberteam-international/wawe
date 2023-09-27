@@ -1,9 +1,9 @@
-// import { default as Lottie } from "lottie-web/build/player/esm/lottie_svg.min";
+import { default as Lottie } from "lottie-web/build/player/esm/lottie_svg.min";
 
 (() => {
 
-	/* let animation = Lottie.loadAnimation({
-		container: document.querySelector('.protect__scene'),
+	let animation = Lottie.loadAnimation({
+		container: document.querySelector('.protect__lottie'),
 		renderer: 'svg',
 		loop: true,
 		autoplay: true,
@@ -12,6 +12,6 @@
 			scaleMode: 'noScale',
 			progressiveLoad: true,
 		  }
-	}); */
+	});
 
 })();
