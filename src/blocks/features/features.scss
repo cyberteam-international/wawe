@@ -186,9 +186,9 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			// animation-fill-mode: both;
-			// animation-iteration-count: infinite;
-			// transform-origin: center;
+			animation-fill-mode: both;
+			animation-iteration-count: infinite;
+			transform-origin: center;
 			max-height: calc(100% + 150px);
 			
 			@include media('<=xxlg') {
