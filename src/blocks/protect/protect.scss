@@ -77,6 +77,9 @@
 			display: block;
 			max-width: calc(100% - 160px);
 			margin: 0 auto;
+			overflow: hidden;
+			border-radius: 30px;
+			@include range(30px, 15px, 1920px, 780px, 'border-radius');
 			
 			@include media('<=xxlg') {
 				max-width: calc(100% - 100px);
@@ -91,7 +94,16 @@
 			}
 			
 			@include media('<=xs') {
+				border-radius: 25px;
 				max-width: none;
+			}
+			
+			@include media('<=xxs') {
+				border-radius: 20px;
+			}
+			
+			@include media('<=xxxs') {
+				border-radius: 15px;
 			}
 		}
 	}
