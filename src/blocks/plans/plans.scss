@@ -1,9 +1,10 @@
 .plans {
 	$self: &;
-	background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1" preserveAspectRatio="none"><rect width="1" height="1" fill="#4F67E8"/></svg>') top left / 100% 850px no-repeat transparent;
+	// background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1" preserveAspectRatio="none"><rect width="1" height="1" fill="#4F67E8"/></svg>') top left / 100% 850px no-repeat transparent;
+	background: linear-gradient(180deg, #4F67E8 0%, rgba(87, 113, 255, 0.00) 100%);
 		
 	@include media('<=sm') {
-		background-size: 100% 250px;
+		// background-size: 100% 250px;
 	}
 
 	&__inner {
@@ -78,13 +79,12 @@
 			background-color: rgba($accent, 0.09);
 			background-repeat: no-repeat;
 			background-position: center;
-			background-size: 48px 48px;
+			background-size: contain;
 			
 			@include media('<=xxlg') {
 				width: 60px;
 				height: 60px;
 				margin-bottom: 17px;
-				background-size: 40px 40px;
 			}
 			
 			@include media('<=sm') {
@@ -92,7 +92,6 @@
 				height: 30px;
 				border-radius: 5px;
 				margin-bottom: 6px;
-				background-size: 20px 20px;
 			}
 			
 			@include media('<=xs') {
@@ -100,33 +99,28 @@
 				height: 60px;
 				margin-bottom: 10px;
 				border-radius: 10px;
-				background-size: 44px 44px;
 			}
 		}
 
-		&_wallet::before {
+		&_card::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-wallet-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-set-card-view-accent');
 		}
 		
-		&_location::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-location-view-accent');
+		&_geo::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-set-geo-view-accent');
 		}
 		
-		&_shield::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-shield-view-accent');
+		&_cage::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-set-cage-view-accent');
 		}
 		
-		&_headphone::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-headphone-view-accent');
+		&_rotate::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-set-rotate-view-accent');
 		}
 		
-		&_car::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-car-view-accent');
-		}
-		
-		&_graf::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-graf-view-accent');
+		&_study::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-set-study-view-accent');
 		}
 	}
 
