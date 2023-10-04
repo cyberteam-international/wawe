@@ -1,6 +1,7 @@
 .title {
 	$self: &;
-	font-family: "DMEB", sans-serif;
+	font-family: "DM", sans-serif;
+	font-weight: 800;
 	letter-spacing: -0.04em;
 	font-size: 84px;
 	@include range(84px, 65px, 1920px, 1440px);

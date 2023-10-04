@@ -125,7 +125,8 @@
 	&__c-title {
 		color: inherit;
 		margin-bottom: 15px;
-		font-family: "DMM", sans-serif;
+		font-family: "DM", sans-serif;
+		font-weight: 500;
 		font-size: 42px;
 		@include range(42px, 32px, 1920px, 1440px);
 		@include range(32px, 18px, 1440px, 780px);

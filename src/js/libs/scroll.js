@@ -127,35 +127,68 @@ scrollClassToggle({
 } */
 
 export const scrollClassToggle = (options) => {
-	let props = {
-		nodes: [],
-		data: 'animation',
-		class: 'active',
-		...options
+	class Toggle {
+		constructor(options) {
+
+			this.options = {
+				nodes: [],
+				data: 'animation',
+				class: 'active',
+				...options
+			}
+		
+			this.items = [...document.querySelectorAll(`[data-${this.options.data}]`)].map(item => {
+				item.handler = this.throttle(this.toggle.bind(this, item));
+				return item;
+			});
+
+			this.nodes = [ window, ...this.options.nodes ];
+			this.init();
+		}
+
+		throttle = (fn, delay = 250) => {
+			let timeout = null;
+		
+			return (...args) => {
+				if (timeout === null) {
+					
+					timeout = setTimeout(() => {
+						fn.apply(this, args);
+						timeout = null;
+					}, delay)
+				}
+			}
+		}
+
+		toggle = (item) => {
+			const repeat = item.dataset['repeat'] != undefined;
+			const box = item.getBoundingClientRect();
+			
+			let shift = item.dataset[`${this.options.data}`] || '0';
+			shift = shift.includes('px') ? box.height - parseFloat(shift) : box.height * shift;
+		
+			const over = box.bottom + shift > 0;
+			const under = box.bottom - shift - window.innerHeight < 0;
+
+			if (repeat || !item.classList.contains(`${this.options.class}`))
+				item.classList[(over && under) ? 'add': 'remove'](`${this.options.class}`);
+
+			if (typeof this.options.ontoggle === 'function') 
+				return this.options.ontoggle.call(item);
+		};
+
+		init(flag = true) {
+			this.items.forEach((item) => {
+				this.nodes.forEach(node => {
+					node[(flag ? 'add' : 'remove') + 'EventListener']('scroll', item.handler)
+				});
+				
+				flag ? this.toggle(item) : item.classList.remove(`${this.options.class}`);
+			});
+		}
 	}
 
-	let nodes = [ window, ...props.nodes ];
-
-	const classToggle = (item) => {
-		const repeat = item.dataset['repeat'] != undefined;
-		const box = item.getBoundingClientRect();
-		
-		let shift = item.dataset[`${props.data}`] || '0';
-		shift = shift.includes('px') ? box.height - parseFloat(shift) : box.height * shift;
-	
-		const over = box.bottom + shift > 0;
-		const under = box.bottom - shift - window.innerHeight < 0;
-
-		if (repeat || !item.classList.contains(`${props.class}`))
-			item.classList[(over && under) ? 'add': 'remove'](`${props.class}`);
-	};
-	
-	document.querySelectorAll(`[data-${props.data}]`).forEach((item) => {
-		nodes.forEach(node => {
-			node.addEventListener('scroll', () => classToggle(item));
-		});
-		classToggle(item);
-	});
+	return new Toggle(options);
 }
 
 /* 

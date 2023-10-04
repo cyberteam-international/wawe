@@ -147,7 +147,8 @@
 		color: $decor;
 		font-size: 34px;
 		@include range(34px, 13px, 1920px, 780px);
-		font-family: "DMSB", sans-serif;
+		font-family: "DM", sans-serif;
+		font-weight: 600;
 		text-decoration: none;
 		align-self: flex-start;
 		

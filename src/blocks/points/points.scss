@@ -111,7 +111,8 @@
 	}
 
 	&__title {
-		font-family: "DMB", sans-serif;
+		font-family: "DM", sans-serif;
+		font-weight: 700;
 		margin-bottom: 15px;
 		position: relative;
 		z-index: 1;
@@ -146,7 +147,8 @@
 
 	&__text {
 		color: rgba(255, 255, 255, 0.6);
-		font-family: "DML", sans-serif;
+		font-family: "DM", sans-serif;
+		font-weight: 300;
 		position: relative;
 		z-index: 1;
 		font-size: 28px;

@@ -31,12 +31,12 @@ $container: 1820px;
 $oneside: calc(100vw - (100vw - 1820px) / 2);
 
 
-@include font-face("DMSans-ExtraBold", "DMEB");
-@include font-face("DMSans-SemiBold", "DMSB");
-@include font-face("DMSans-Regular", "DM");
-@include font-face("DMSans-Medium", "DMM");
-@include font-face("DMSans-Light", "DML");
-@include font-face("DMSans-Bold", "DMB");
+@include font-face("DMSans-ExtraBold", "DM", 800);
+@include font-face("DMSans-SemiBold", "DM", 600);
+@include font-face("DMSans-Regular", "DM", 400);
+@include font-face("DMSans-Medium", "DM", 500);
+@include font-face("DMSans-Light", "DM", 300);
+@include font-face("DMSans-Bold", "DM", 700);
 @import "../../node_modules/swiper/swiper";
 @import "../../node_modules/swiper/modules/effect-fade";
 
@@ -47,7 +47,8 @@ body, html {
 	box-sizing: border-box;
 	font-size: #{$basesize}px;
 	line-height: 1.2;
-	font-family: "DML", sans-serif;
+	font-family: "DM", sans-serif;
+	font-weight: 300;
 	background-color: #F2F2F7;
 	color: $text;
 	display: flex;

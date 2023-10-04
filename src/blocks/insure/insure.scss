@@ -131,7 +131,8 @@
 	&__b-title {
 		padding-top: 10px;
 		color: #fff;
-		font-family: "DMB", sans-serif;
+		font-family: "DM", sans-serif;
+		font-weight: 700;
 		line-height: 1.2;
 		font-size: 64px;
 		@include range(64px, 48px, 1920px, 1440px);
@@ -186,6 +187,7 @@
 	&__b-card {
 		box-sizing: border-box;
 		font-family: "DM", sans-serif;
+		font-weight: 400;
 		background-color: #fff;
 		border-radius: 12px;
 		line-height: 1.3;

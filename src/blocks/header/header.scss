@@ -125,7 +125,8 @@
 		display: inline-block;
 		position: relative;
 		z-index: 1;
-		font-family: "DMEB", sans-serif;
+		font-family: "DM", sans-serif;
+		font-weight: 800;
 		color: rgba(255, 255, 255, 0.3);
 		letter-spacing: -0.04em;
 		line-height: 0.95;
@@ -233,7 +234,8 @@
 	}
 	
 	&__text {
-		font-family: "DML", sans-serif;
+		font-family: "DM", sans-serif;
+		font-weight: 300;
 		letter-spacing: -0.038em;
 		color: rgba(255, 255, 255, 0.6);
 		line-height: 1.6;

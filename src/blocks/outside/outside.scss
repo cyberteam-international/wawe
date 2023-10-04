@@ -2,7 +2,8 @@
 	$self: &;
 	display: flex;
 	align-items: center;
-	font-family: "DMM", sans-serif;
+	font-family: "DM", sans-serif;
+	font-weight: 500;
 	color: #fff;
 	font-size: 28px;
 	@include range(28px, 22px, 1920px, 1440px);
