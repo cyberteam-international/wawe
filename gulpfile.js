@@ -139,7 +139,11 @@ function icons() {
 		monochrome: {
 			dark: '#0b0e21',
 			white: '#ffffff',
-			accent: '#465BCC'
+			accent: '#465BCC',
+			cornsilk: '#F7F3D6',
+			skyblue: '#add8e6',
+			brown: '#3B2716',
+			lime: '#A9DD38',
 		}
 	}))
 	.pipe(gulp.dest(pth.pbl.img))

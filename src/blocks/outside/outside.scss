@@ -21,7 +21,7 @@
 		color: $accent;
 
 		#{$self}__link::after {
-			background: url('#{$images-path}icons-sprite.svg#icon-arr-link-view-accent') center / contain no-repeat transparent;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-link-view-accent');
 		}
 
 		hr { background-color: rgba(0, 0, 0, 0.15) !important; }
@@ -31,7 +31,7 @@
 		color: $text;
 
 		#{$self}__link::after {
-			background: url('#{$images-path}icons-sprite.svg#icon-arr-link-view-dark') center / contain no-repeat transparent;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-link-view-dark');
 		}
 
 		hr { background-color: rgba(0, 0, 0, 0.08) !important; }
@@ -69,28 +69,39 @@
 		&::after {
 			display: block;
 			content: '';
-			width: 19px;
-			height: 17px;
-			background: url('#{$images-path}icons-sprite.svg#icon-arr-link-view-white') center / contain no-repeat transparent;
+			width: 20px;
+			height: 20px;
+			background-image: url('#{$images-path}icons-sprite.svg#icon-link-view-white');
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 150% 150%;
+
 			margin: 8px 0 0 10px;
 			flex-shrink: 0;
 			
 			@include media('<=xxlg') {
 				margin: 6px 0 0 5px;
 				width: 17px;
-				height: 16px;
+				height: 17px;
+			}
+			
+			@include media('<=xlg') {
+				margin: 4px 0 0 5px;
 			}
 				
 			@include media('<=md') {
-				margin: 5px 0 0 5px;
 				height: 15px;
-				width: 16px;
+				width: 15px;
 			}
 			
 			@include media('<=sm') {
 				margin: 2px 0 0 5px;
-				height: 13px;
-				width: 14px;
+			}
+			
+			@include media('<=xs') {
+				height: 17px;
+				width: 17px;
 			}
 		}
 	}

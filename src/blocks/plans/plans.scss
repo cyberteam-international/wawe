@@ -104,23 +104,23 @@
 
 		&_card::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-card-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-card-view-accent');
 		}
 		
 		&_geo::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-geo-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-geo-view-accent');
 		}
 		
 		&_cage::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-cage-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-cage-view-accent');
 		}
 		
 		&_rotate::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-rotate-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-rotate-view-accent');
 		}
 		
 		&_study::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-study-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-study-view-accent');
 		}
 	}
 

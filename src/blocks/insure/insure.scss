@@ -76,11 +76,12 @@
 	}
 
 	&__block {
-		display: grid;
+		display: none;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: minmax(185px, auto);
 		grid-gap: 20px;
 		flex-flow: column nowrap;
+		animation: show_tab 1.0s;
 
 		&.active {
 			display: grid;
@@ -252,82 +253,82 @@
 		
 		&_mobile::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-mob-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-mob-view-accent');
 		}
 		
 		&_love::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-fav-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-fav-view-accent');
 		}
 
 		&_star::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-star-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-star-view-accent');
 		}
 
 		&_crash::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-crash-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-crash-view-accent');
 		}
 
 		&_shield::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-shield-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-shield-view-accent');
 		}
 
 		&_hat::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-hat-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-hat-view-accent');
 		}
 
 		&_fire::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-fire-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-fire-view-accent');
 		}
 
 		&_hand::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-hand-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-hand-view-accent');
 		}
 
 		&_delv::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-delv-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-delv-view-accent');
 		}
 
 		&_priv::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-priv-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-priv-view-accent');
 		}
 
 		&_wave::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-wave-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-wave-view-accent');
 		}
 
 		&_wallet::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-wallet-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-wallet-view-accent');
 		}
 
 		&_zoom::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-zoom-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-zoom-view-accent');
 		}
 
 		&_heart::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-heart-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-heart-view-accent');
 		}
 
 		&_bomb::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-bomb-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-bomb-view-accent');
 		}
 
 		&_dist::before {
 			display: block;
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-dist-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-dist-view-accent');
 		}
 	}
 

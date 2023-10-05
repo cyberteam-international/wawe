@@ -85,8 +85,8 @@
 		@extend %reset-button;
 		display: none;
 		width: 30px;
-		height: 19px;
-		background: url('#{$images-path}icons-sprite.svg#icon-menu-view-white') center / auto no-repeat transparent;
+		height: 30px;
+		background: url('#{$images-path}icons-sprite.svg#icon-menu-view-white') center / 140% 140% no-repeat transparent;
 
 		@include media('<=xs') {
 			display: block;
@@ -163,8 +163,12 @@
 				content: '';
 				margin-right: 10px;
 				width: 40px;
-				aspect-ratio: 3 / 1.8;
-				background: url('#{$images-path}icons-sprite.svg#icon-aye-view-white') center / contain no-repeat transparent;
+				aspect-ratio: 1 / 1;
+				background-image: url('#{$images-path}icons-sprite.svg#icon-eye-view-white');
+				background-size: 160% 170%;
+				background-color: transparent;
+				background-repeat: no-repeat;
+				background-position: center;
 				@include range(40px, 30px, 1920px, 1440px, 'width');
 
 				@include media('<=sm') {
@@ -172,6 +176,7 @@
 				}
 
 				@include media('<=xs') {
+					background-size: 150% 170%;
 					width: 20px;
 				}
 			}

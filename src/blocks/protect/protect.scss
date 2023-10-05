@@ -175,19 +175,19 @@
 		}
 
 		&_zoom::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-zoom-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-zoom-view-accent');
 		}
 		
 		&_cast::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-cast-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-cast-view-accent');
 		}
 		
 		&_saved::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-saved-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-saved-view-accent');
 		}
 		
 		&_smile::before {
-			background-image: url('#{$images-path}icons-sprite.svg#icon-set-smile-view-accent');
+			background-image: url('#{$images-path}icons-sprite.svg#icon-smile-view-accent');
 		}
 	}
 

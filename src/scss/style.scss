@@ -43,6 +43,15 @@ $oneside: calc(100vw - (100vw - 1820px) / 2);
 // Import BEM blocks scss
 @import "../blocks/**/*.scss";
 
+:root {
+	--font: "DM", sans-serif;
+	--spacing: 0;
+	--size: 16;
+	--color: #000;
+	--bgcolor: #fff;
+	--display: block;
+}
+
 body, html {
 	box-sizing: border-box;
 	font-size: #{$basesize}px;
