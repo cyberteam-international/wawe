@@ -5,3 +5,5 @@ import "../blocks/navi/navi.js";
 import "../blocks/tab/tab.js";
 import "../blocks/choice/choice.js";
 import "../blocks/protect/protect.js";
+import "../blocks/a-header/a-header.js";
+import "../blocks/a-panel/a-panel.js";

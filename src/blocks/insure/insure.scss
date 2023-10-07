@@ -81,7 +81,7 @@
 		grid-template-rows: minmax(185px, auto);
 		grid-gap: 20px;
 		flex-flow: column nowrap;
-		animation: show_tab 1.0s;
+		animation: fadeIn 1.0s;
 
 		&.active {
 			display: grid;

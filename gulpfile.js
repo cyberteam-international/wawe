@@ -141,8 +141,9 @@ function icons() {
 			white: '#ffffff',
 			accent: '#465BCC',
 			cornsilk: '#F7F3D6',
-			skyblue: '#add8e6',
+			skyblue: '#9DD1FF',
 			brown: '#3B2716',
+			blue: '#063462',
 			lime: '#A9DD38',
 		}
 	}))

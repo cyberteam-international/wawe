@@ -9,10 +9,10 @@
 		display: none;
 		content: '';
 		position: absolute;
-		height: 7px;
+		height: 12px;
 		width: 12px;
-		background: url('#{$images-path}icons-sprite.svg#icon-list-down-view-white') center / contain no-repeat transparent;
-		top: calc(50% - 3px);
+		background: url('#{$images-path}icons-sprite.svg#icon-list-down-view-white') center / 150% 140% no-repeat transparent;
+		top: calc(50% - 6px);
 		right: 15px;
 		z-index: 2;
 		

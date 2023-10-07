@@ -1,0 +1,30 @@
+.a-title {
+	$self: &;
+	font-size: calc(var(--shift) + 100px);
+	color: rgb(var(--color));
+	letter-spacing: calc(var(--spacing) - 2px);
+	font-weight: 600;
+	line-height: 1;
+	
+	@include media('<=sm') {
+		font-size: calc(var(--shift) + 64px);
+	}
+	
+	@include media('<=xxs') {
+		font-size: calc(var(--shift) + 42px);
+	}
+	
+	&_subtitle {
+		font-size: calc(var(--shift) + 42px);
+		letter-spacing: calc(var(--spacing) - 1.68px);
+		font-weight: 700;
+	
+		@include media('<=sm') {
+			font-size: calc(var(--shift) + 32px);
+		}
+	
+		@include media('<=xxs') {
+			font-size: calc(var(--shift) + 22px);
+		}
+	}
+}

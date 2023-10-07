@@ -45,16 +45,54 @@ $oneside: calc(100vw - (100vw - 1820px) / 2);
 
 :root {
 	--font: "DM", sans-serif;
-	--spacing: 0;
-	--size: 16;
-	--color: #000;
-	--bgcolor: #fff;
+	--spacing: 0px;
+	--shift: 0px;
+	--color: 0, 0, 0;
+	--bgcolor: 255, 255, 255;
 	--display: block;
+	
+	&[data-theme] body {
+		background-color: rgb(var(--bgcolor));
+		padding-top: 110px;
+		padding-bottom: 110px;
+		
+		@include media('<=lg') {
+			padding-top: 90px;
+		}
+		
+		@include media('<=md') {
+			padding-top: 70px;
+		}
+		
+		@include media('<=xxs') {
+			padding-top: 60px;
+		}
+	}
+	
+	&[data-theme="dark"] {
+		--bgcolor: 0, 0, 0;
+		--color: 255, 255, 255;
+	}
+	
+	&[data-theme="cornsilk"] {
+		--bgcolor: 247, 243, 214;
+		--color: 59, 39, 22;
+	}
+	
+	&[data-theme="brown"] {
+		--bgcolor: 59, 39, 22;
+		--color: 169, 221, 56;
+	}
+	
+	&[data-theme="skyblue"] {
+		--bgcolor: 157, 209, 255;
+		--color: 6, 52, 98;
+	}
 }
 
 body, html {
 	box-sizing: border-box;
-	font-size: #{$basesize}px;
+	font-size: var(--size);
 	line-height: 1.2;
 	font-family: "DM", sans-serif;
 	font-weight: 300;
@@ -63,17 +101,22 @@ body, html {
 	display: flex;
 	min-height: 100vh;
 	flex-flow: column nowrap;
+	transition: background-color 0.2s;
 }
-// .main { flex: 1 0 auto; }
+
 .footer { 
 	flex: 0 0 auto; 
 	margin-top: auto; 
 }
 
-
 p { margin-bottom: 10px; }
 strong { font-weight: bold; }
 em { font-style: italic; }
+
+@keyframes fadeIn { 
+	from { opacity: 0; } 
+	to { opacity: 1; }
+}
 
 @keyframes waveLeftToRight {
 	from { left: 0; }

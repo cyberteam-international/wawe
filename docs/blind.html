@@ -1,5 +1,5 @@
-<!DOCTYPE html> 
-<html lang="ru"> 
+<!DOCTYPE html>
+<html lang="ru" data-theme="white">
 <head> 
 	<meta charset="UTF-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
@@ -7,11 +7,11 @@
 	<link rel="stylesheet" href="style.css"> 
 	<title></title> 
 </head> 
-<body class=""> 
-
-<header class="a-header a-header-js"> 
-	<div class="a-header__inner container">
+<body>
+<header class="a-header"> 
+	<div class="a-header__inner container" data-scroll-lock-fill-gap>
 		<a class="a-header__logo" href="./"></a>
+		<button class="a-header__settings">Settings</button>
 		<div class="a-header__shell">
 			<button class="a-header__close"></button>
 			<nav class="a-header__menu" data-scroll-lock-scrollable>
@@ -22,8 +22,8 @@
 				<a class="a-header__link" href="./">News</a>
 			</nav>
 			<div class="a-header__lang">
-				<a class="a-header__link a-header__link_lang active" href="./">EN</a><hr>
-				<a class="a-header__link a-header__link_lang" href="./">ID</a>
+				<a class="a-header__link a-header__link_lang" href="./">EN</a>
+				<a class="a-header__link a-header__link_lang active" href="./">ID</a>
 			</div>
 			<a class="a-header__link a-header__link_access" href="./">Standard version</a>
 		</div>
@@ -33,7 +33,7 @@
 
 <section class="a-hero">
 	<div class="a-hero__inner container">
-		<h1 class="a-hero__title">All financial services on your phone — Buy stocks in 1 click</h1>
+		<h1 class="a-hero__title a-title">All financial services on your phone — Buy stocks in 1 click</h1>
 		<div class="a-hero__text">Call center operating hours 24/7 We respond with in 1 minute</div>
 		<div class="a-hero__buttons">
 			<a class="a-hero__button a-button" href="./">App Store</a>
@@ -79,14 +79,14 @@
 	<div class="a-features__inner container">
 		<div class="a-features__cards">
 			<div class="a-features__card">
-				<div class="a-features__image"><img src="./images/features-image-wallet.png" alt=""></div>
+				<div class="a-features__image"><img src="./images/features-image-wallet-grey.png" alt=""></div>
 				<div class="a-features__side">
 					<h2 class="a-features__title a-title">Multi-wallet</h2>
 					<div class="a-features__text"><p>Store and manage any type of currencies and crypto. No need to pre-convert crypto before payment. Spend anywhere and anytime</p></div>
 				</div>
 			</div>
 			<div class="a-features__card">
-				<div class="a-features__image"><img src="./images/features-image-phone.png" alt=""></div>
+				<div class="a-features__image"><img src="./images/features-image-phone-grey.png" alt=""></div>
 				<div class="a-features__side">
 					<h2 class="a-features__title a-title">Payment via QR code</h2>
 					<div class="a-features__text">
@@ -97,7 +97,7 @@
 				</div>
 			</div>
 			<div class="a-features__card">
-				<div class="a-features__image"><img src="./images/features-image-cashback.png" alt=""></div>
+				<div class="a-features__image"><img src="./images/features-image-cashback-grey.png" alt=""></div>
 				<div class="a-features__side">
 					<h2 class="a-features__title a-title">Up to 20% cashback</h2>
 					<div class="a-features__text"><p>Every Time You Spend earn Up to 20% Wawe coin. All cashback is automatically credited to your Financial Wallet </p></div>
@@ -123,7 +123,7 @@
 	</div>
 	<div class="a-account__cards container">
 		<div class="a-account__card">
-			<img class="a-account__c-icon" src="./images/ic-account-wallet.png" alt="">
+			<img class="a-account__c-icon" src="./images/ic-account-wallet-grey.png" alt="">
 			<h3 class="a-account__c-title a-title a-title_subtitle">Daily account</h3>
 			<div class="a-account__c-text">
 				<p>It's free to open by default</p>
@@ -135,7 +135,7 @@
 			<a class="a-account__c-link" href="./">Open an account</a>
 		</div>
 		<div class="a-account__card">
-			<img class="a-account__c-icon" src="./images/ic-account-pet.png" alt="">
+			<img class="a-account__c-icon" src="./images/ic-account-pet-grey.png" alt="">
 			<h3 class="a-account__c-title a-title a-title_subtitle">E-commerce account</h3>
 			<div class="a-account__c-text">
 				<p>It's free to open by default</p>
@@ -147,7 +147,7 @@
 			<a class="a-account__c-link" href="./">Open an account</a>
 		</div>
 		<div class="a-account__card">
-			<img class="a-account__c-icon" src="./images/ic-account-bag.png" alt="">
+			<img class="a-account__c-icon" src="./images/ic-account-bag-grey.png" alt="">
 			<h3 class="a-account__c-title a-title a-title_subtitle">Business account</h3>
 			<div class="a-account__c-text">
 				<p>It's free to open by default</p>
@@ -457,35 +457,59 @@
 		</div>
 	</div>
 </footer>
-<div class="a-panel a-panel-js">
-	<div class="a-panel__inner container">
-		<div class="a-panel__col">
-			<span class="a-panel__title">Font size</span>
-			<div class="a-panel__control a-panel__control_size">
-				<input type="radio" name="size" id="small">
-				<input type="radio" name="size" id="normal">
-				<input type="radio" name="size" id="large">
+<div class="a-panel">
+	<div class="a-panel__top">
+		<div class="a-panel__t-inner container">
+			<button class="a-panel__t-close"></button>
+			<div class="a-panel__row">
+				<span class="a-panel__title a-title a-title_subtitle">Select font</span>
+				<div class="a-panel__buttons">
+					<input type="radio" name="font" id="sansserif" checked data-label="Sans-serif">
+					<input type="radio" name="font" id="serif" data-label="Serif">
+				</div>
+			</div>
+			<div class="a-panel__row">
+				<span class="a-panel__title a-title a-title_subtitle">Letter spacing</span>
+				<div class="a-panel__buttons">
+					<input type="radio" name="spacing" id="standart" checked data-label="Standart">
+					<input type="radio" name="spacing" id="medium" data-label="Medium">
+					<input type="radio" name="spacing" id="large" data-label="Large">
+				</div>
 			</div>
 		</div>
-		<div class="a-panel__col">
-			<span class="a-panel__title">Website color</span>
-			<div class="a-panel__control a-panel__control_scheme">
-				<input type="radio" name="scheme" id="white">
-				<input type="radio" name="scheme" id="dark">
-				<input type="radio" name="scheme" id="cornsilk">
-				<input type="radio" name="scheme" id="brown">
-				<input type="radio" name="scheme" id="skyblue">
+	</div>
+	<div class="a-panel__bottom">
+		<div class="a-panel__b-inner container">
+			<div class="a-panel__col">
+				<span class="a-panel__title a-title a-title_subtitle">Font size</span>
+				<div class="a-panel__controls">
+					<input type="radio" name="size" id="small" data-label="A">
+					<input type="radio" name="size" id="normal" checked data-label="A">
+					<input type="radio" name="size" id="big" data-label="A">
+				</div>
 			</div>
-		</div>
-		<div class="a-panel__col">
-			<span class="a-panel__title">Image</span>
-			<div class="a-panel__control a-panel__control_image">
-				<input type="checkbox" name="image" id="show">
+			<div class="a-panel__col">
+				<span class="a-panel__title a-title a-title_subtitle">Website color</span>
+				<div class="a-panel__controls">
+					<input type="radio" name="scheme" id="white" checked data-label="A">
+					<input type="radio" name="scheme" id="dark" data-label="A">
+					<input type="radio" name="scheme" id="cornsilk" data-label="A">
+					<input type="radio" name="scheme" id="brown" data-label="A">
+					<input type="radio" name="scheme" id="skyblue" data-label="A">
+				</div>
 			</div>
-		</div>
-		<div class="a-panel__col">
-			<span class="a-panel__title">More settings</span>
-			<button class="a-panel__more"></button>
+			<div class="a-panel__col">
+				<span class="a-panel__title a-title a-title_subtitle">Image</span>
+				<div class="a-panel__controls">
+					<input type="checkbox" name="image" checked>
+				</div>
+			</div>
+			<div class="a-panel__col">
+				<span class="a-panel__title a-title a-title_subtitle">More settings</span>
+				<div class="a-panel__controls">
+					<button id="more"></button>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
