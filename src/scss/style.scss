@@ -1,8 +1,10 @@
 @import "lib/additional.scss"; 
 @include reset(); 
 
+
 // Include breakpoints badge
-// body { @include screen-media(); }
+body { @include screen-media(); }
+
 
 // Import media-query helper
 @import "../../node_modules/include-media/dist/_include-media.scss";
@@ -20,53 +22,85 @@ $breakpoints: (
 	'xxxxlg': 1920px
 );
 
+
 // Colors
 $black: #0C0D12;
 $accent: #2f4ce7;
 $decor: #8357FF;
 $text: #404668;
 
+
 // Sizes
 $container: 1820px;
 $oneside: calc(100vw - (100vw - 1820px) / 2);
 
 
+// Fonts
 @include font-face("DMSans-ExtraBold", "DM", 800);
 @include font-face("DMSans-SemiBold", "DM", 600);
 @include font-face("DMSans-Regular", "DM", 400);
 @include font-face("DMSans-Medium", "DM", 500);
 @include font-face("DMSans-Light", "DM", 300);
 @include font-face("DMSans-Bold", "DM", 700);
+
+
+// Dependencies styles
 @import "../../node_modules/swiper/swiper";
 @import "../../node_modules/swiper/modules/effect-fade";
+
+
+// Local mixins
+@mixin atRootThemeIcons($icon) {
+	$themes: (
+		'dark': 'white',
+		'cornsilk': 'brown',
+		'brown': 'lime',
+		'skyblue': 'blue'
+	);
+
+	@each $theme, $color in $themes {
+		@at-root [data-theme="#{$theme}"] & {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-#{$icon}-view-#{$color}');
+		}
+	}
+}
+
 
 // Import BEM blocks scss
 @import "../blocks/**/*.scss";
 
+
+// Themes
 :root {
-	--font: "DM", sans-serif;
+	--size: 0px;
 	--spacing: 0px;
-	--shift: 0px;
-	--color: 0, 0, 0;
-	--bgcolor: 255, 255, 255;
 	--display: block;
+	--color: 64, 70, 104;
+	--bgcolor: 242, 242, 247;
+	--font: "DM", sans-serif;
 	
 	&[data-theme] body {
-		background-color: rgb(var(--bgcolor));
 		padding-top: 110px;
 		padding-bottom: 110px;
 		
 		@include media('<=lg') {
 			padding-top: 90px;
+			padding-bottom: 90px;
 		}
 		
 		@include media('<=md') {
 			padding-top: 70px;
+			padding-bottom: 0;
 		}
 		
-		@include media('<=xxs') {
+		@include media('<=sm') {
 			padding-top: 60px;
 		}
+	}
+	
+	&[data-theme="white"] {
+		--bgcolor: 255, 255, 255;
+		--color: 0, 0, 0;
 	}
 	
 	&[data-theme="dark"] {
@@ -88,20 +122,52 @@ $oneside: calc(100vw - (100vw - 1820px) / 2);
 		--bgcolor: 157, 209, 255;
 		--color: 6, 52, 98;
 	}
+
+	&[data-font="serif"] {
+		--font: "Times New Roman", Times, serif;
+	}
+
+	&[data-font="sansserif"] {
+		--font: "DM", sans-serif;
+	}
+
+	&[data-size="small"] {
+		--size: -2px;
+	}
+
+	&[data-size="normal"] {
+		--size: 0px;
+	}
+
+	&[data-size="big"] {
+		--size: 2px;
+	}
+
+	&[data-spacing="standart"] {
+		--size: 0px;
+	}
+
+	&[data-spacing="medium"] {
+		--size: 1px;
+	}
+
+	&[data-spacing="large"] {
+		--size: 2px;
+	}
 }
 
 body, html {
 	box-sizing: border-box;
-	font-size: var(--size);
-	line-height: 1.2;
-	font-family: "DM", sans-serif;
-	font-weight: 300;
-	background-color: #F2F2F7;
-	color: $text;
-	display: flex;
-	min-height: 100vh;
-	flex-flow: column nowrap;
+	font-size: calc(var(--size) + #{$basesize}px);
+	background-color: rgb(var(--bgcolor));
 	transition: background-color 0.2s;
+	font-family: var(--font);
+	color: rgb(var(--color));
+	line-height: 1.2;
+	font-weight: 300;
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100vh;
 }
 
 .footer { 
@@ -113,6 +179,8 @@ p { margin-bottom: 10px; }
 strong { font-weight: bold; }
 em { font-style: italic; }
 
+
+// Animations
 @keyframes fadeIn { 
 	from { opacity: 0; } 
 	to { opacity: 1; }

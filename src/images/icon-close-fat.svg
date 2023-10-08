@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="close-fat" class="cls-1" d="M22.44,12.912L36,26.448,49.536,12.912l9.552,9.528L45.552,36,59.088,49.536,49.56,59.088,36,45.552,22.464,59.088,12.912,49.56,26.448,36,12.912,22.464Z"/>
+</svg>

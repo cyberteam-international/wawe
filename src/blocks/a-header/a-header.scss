@@ -8,6 +8,10 @@
 	border-bottom: 2px solid rgba(var(--color), 0.3);
 	background-color: rgb(var(--bgcolor));
 	transition: background-color 0.2s;
+
+	@include media('<=md') {
+		border-width: 1px;
+	}
 	
 	&__inner {
 		min-height: 110px;
@@ -22,7 +26,7 @@
 			min-height: 70px;
 		}
 		
-		@include media('<=xxs') {
+		@include media('<=sm') {
 			min-height: 60px;
 		}
 	}
@@ -51,6 +55,10 @@
 			margin-right: 12px;
 			max-width: 85px;
 		}
+		
+		@include media('<=sm') {
+			max-width: 70px;
+		}
 
 		&::before {
 			background: url('#{$images-path}icons-sprite.svg#icon-logo-view-dark') center / contain no-repeat transparent;	
@@ -78,7 +86,7 @@
 		@extend %reset-button;
 		margin: 0 15px 0 auto;
 		font-weight: 500;
-		font-size: calc(var(--shift) + 22px);
+		font-size: 22px;
 		color: rgb(var(--color));
 		align-items: center;
 		width: 100%;
@@ -93,6 +101,7 @@
 			height: 30px;
 			background: url('#{$images-path}icons-sprite.svg#icon-gear-view-dark') center / 120% 120% no-repeat transparent;
 			margin-right: 5px;
+			@include atRootThemeIcons('gear');
 		}
 
 		@include media('<=md') {
@@ -109,8 +118,8 @@
 		@include media('<=md') {
 			align-items: stretch;
 			flex-flow: column nowrap;
-			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-			background-color: #fff;
+			box-shadow: 0px 0px 10px rgba(var(--color), 0.2);
+			background-color: rgb(var(--bgcolor));
 			backdrop-filter: blur(8px);
 			padding: 50px 20px 20px;
 			width: 100%;
@@ -139,6 +148,7 @@
 		width: 38px;
 		height: 38px;
 		background: url('#{$images-path}icons-sprite.svg#icon-close-view-dark') center / auto no-repeat transparent;
+		@include atRootThemeIcons('close');
 
 		@include media('<=md') {
 			display: block;
@@ -186,37 +196,42 @@
 		text-decoration: none;
 		color: rgb(var(--color));
 		margin: 0 20px;
-		font-size: calc(36px + var(--shift));
+		font-size: 36px;
 		font-weight: 500;
 		white-space: nowrap;
-		letter-spacing: calc(var(--spacing) - 1.44px);
+		letter-spacing: -1.44px;
 		position: relative;
 		
 		@include media('<=xxxlg') {
-			font-size: calc(30px + var(--shift));
+			font-size: 30px;
 			margin: 0 18px;
 		}
 		
 		@include media('<=xxlg') {
-			font-size: calc(28px + var(--shift));
+			font-size: 28px;
 			margin: 0 15px;
 		}
 		
 		@include media('<=xlg') {
-			font-size: calc(24px + var(--shift));
+			font-size: 24px;
 			margin: 0 12px;
 		}
 		
 		@include media('<=lg') {
-			font-size: calc(21px + var(--shift));
+			font-size: 21px;
 			margin: 0 10px;
 		}
 		
 		@include media('<=md') {
 			letter-spacing: normal;
+			font-size: 24px;
 			padding: 20px 0;
 			margin: 0;
 			width: 100%;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 21px;
 		}
 		
 		&_lang {
@@ -230,38 +245,38 @@
 			align-items: center;
 			justify-content: center;
 			margin: 0 5px;
-			font-size: calc(32px + var(--shift));
+			font-size: 32px;
 			font-weight: 600;
 			line-height: 0.8;
 		
 			@include media('<=xxxlg') {
 				width: 45px;
 				height: 45px;
-				font-size: calc(28px + var(--shift));
+				font-size: 29px;
 			}
 		
 			@include media('<=xxlg') {
 				width: 42px;
 				height: 42px;
-				font-size: calc(26px + var(--shift));
+				font-size: 26px;
 			}
 		
 			@include media('<=xlg') {
 				width: 38px;
 				height: 38px;
-				font-size: calc(22px + var(--shift));
+				font-size: 22px;
 			}
 				
 			@include media('<=lg') {
 				width: 32px;
 				height: 32px;
-				font-size: calc(18px + var(--shift));
+				font-size: 18px;
 			}
 				
 			@include media('<=md') {
 				width: 40px;
 				height: 40px;
-				font-size: calc(20px + var(--shift));
+				font-size: 20px;
 			}
 				
 			&.active {
@@ -287,6 +302,7 @@
 				background-color: transparent;
 				background-repeat: no-repeat;
 				background-position: center;
+				@include atRootThemeIcons('eye');
 				
 				@include media('<=xxlg') {
 					width: 36px;
@@ -298,22 +314,6 @@
 				
 				@include media('<=lg') {
 					width: 28px;
-				}
-			
-				@at-root [data-theme="dark"] & {
-					background-image: url('#{$images-path}icons-sprite.svg#icon-eye-view-white');
-				}
-	
-				@at-root [data-theme="cornsilk"] & {
-					background-image: url('#{$images-path}icons-sprite.svg#icon-eye-view-brown');
-				}
-	
-				@at-root [data-theme="brown"] & {
-					background-image: url('#{$images-path}icons-sprite.svg#icon-eye-view-lime');
-				}
-	
-				@at-root [data-theme="skyblue"] & {
-					background-image: url('#{$images-path}icons-sprite.svg#icon-eye-view-blue');
 				}
 			}
 		}
@@ -337,8 +337,12 @@
 		
 		@include media('<=md') {
 			order: -1;
-			margin: 0;
+			margin: 0 0 20px;
 			align-self: center;
+		}
+		
+		@include media('<=xxs') {
+			margin: 0;
 		}
 	}
 
@@ -346,9 +350,10 @@
 		@extend %reset-button;
 		display: none;
 		flex-shrink: 0;
-		width: 30px;
-		height: 30px;
-		background: url('#{$images-path}icons-sprite.svg#icon-menu-view-dark') center / 140% 140% no-repeat transparent;
+		width: 34px;
+		height: 34px;
+		background: url('#{$images-path}icons-sprite.svg#icon-menu-view-dark') center / 150% 150% no-repeat transparent;
+		@include atRootThemeIcons('menu');
 
 		@include media('<=md') {
 			display: block;
