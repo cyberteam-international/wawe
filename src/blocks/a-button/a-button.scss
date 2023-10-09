@@ -11,4 +11,13 @@
 	color: rgb(var(--color));
 	font-weight: 500;
 	line-height: 0.9;
+	
+	@include media('<=sm') {
+		padding: 12px 30px;
+		font-size: calc(var(--size) + 22px);
+	}
+	
+	@include media('<=xxs') {
+		font-size: calc(var(--size) + 18px);
+	}
 }

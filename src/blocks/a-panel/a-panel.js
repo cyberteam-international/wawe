@@ -9,14 +9,17 @@ import Cookies from 'js-cookie';
 
 	const controls = [...panel.querySelectorAll('.a-panel__buttons [name="font"], .a-panel__controls [name="size"], .a-panel__controls [name="theme"], .a-panel__buttons [name="spacing"], .a-panel__controls [name="image"]')];
 
-	controls.forEach(control => control.checked = false);
-	
 	for (const key in data) {
 		if (Object.hasOwnProperty.call(data, key)) {
 			document.documentElement.dataset[key] = data[key];
 			controls.forEach(control => {
-				if (control.name == key && control.id == data[key])
-					control.checked = true;
+				if (control.name == key) {
+					if (control.id == data[key])
+						control.checked = true;
+					
+					if (control.type == 'checkbox')
+						control.checked = data[key];
+				}
 			});
 		}
 	}
@@ -37,7 +40,7 @@ import Cookies from 'js-cookie';
 	
 	controls.forEach((control) => {
 		control.addEventListener('click', () => {
-			const value = (control.type == "checkbox") ? control.checked : control.id;
+			const value = (control.type == 'checkbox') ? control.checked : control.id;
 			document.documentElement.dataset[control.name] = value;
 			data[control.name] = value;
 			Cookies.set('dataset', JSON.stringify(data));

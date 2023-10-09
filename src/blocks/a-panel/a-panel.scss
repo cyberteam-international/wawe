@@ -250,9 +250,38 @@
 	&__buttons {
 		display: flex;
 		flex-wrap: wrap;
+	}
 
-		[data-label] {
-			@extend %reset-button;
+	&__button {
+		display: block;
+		box-sizing: border-box;
+		margin-bottom: 10px;
+		
+		&:not(:last-child) {
+			margin-right: 25px;
+			
+			@include media('<=xxxlg') {
+				margin-right: 22px;
+			}
+			
+			@include media('<=xxlg') {
+				margin-right: 20px;
+			}
+			
+			@include media('<=xlg') {
+				margin-right: 18px;
+			}
+			
+			@include media('<=lg') {
+				margin-right: 16px;
+			}
+			
+			@include media('<=sm') {
+				margin-right: 10px;
+			}
+		}
+
+		span {
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -264,31 +293,30 @@
 			background-color: rgb(var(--bgcolor));
 			border-color: rgb(var(--color));
 			color:  rgb(var(--color));
-			font-size: 36px;
 			padding: 22px 60px;
-			margin-bottom: 10px;
-
+			font-size: 36px;
+			
 			@include media('<=xxxlg') {
-				font-size: 29px;
 				padding: 20px 55px;
+				font-size: 29px;
 			}
 			
 			@include media('<=xxlg') {
-				font-size: 26px;
 				padding: 19px 50px;
+				font-size: 26px;
 			}
 			
 			@include media('<=xlg') {
-				font-size: 24px;
 				padding: 18px 45px;
-			}
-			
-			@include media('<=lg') {
-				padding: 16px 35px;
+				font-size: 24px;
 			}
 			
 			@include media('<=md') {
 				font-size: 26px;
+			}
+			
+			@include media('<=lg') {
+				padding: 16px 35px;
 			}
 			
 			@include media('<=sm') {
@@ -300,52 +328,25 @@
 				padding: 12px 30px;
 				font-size: 18px;
 			}
+		}
 
-			&::before {
-				display: block;
-				content: attr(data-label);
-				line-height: 0.9;
-				font-weight: 500;
-			}
-			
-			&:not(:last-child) {
-				margin-right: 25px;
-				
-				@include media('<=xxxlg') {
-					margin-right: 22px;
-				}
-				
-				@include media('<=xxlg') {
-					margin-right: 20px;
-				}
-				
-				@include media('<=xlg') {
-					margin-right: 18px;
-				}
-				
-				@include media('<=lg') {
-					margin-right: 16px;
-				}
-				
-				@include media('<=sm') {
-					margin-right: 10px;
-				}
-			}
+		input {
+			display: none;
 
-			&:checked {
+			&:checked + span {
 				color: rgb(var(--bgcolor));
 				background-color: rgb(var(--color));
 			}
-			
-			&#sansserif {
+
+			&#sansserif + span {
 				font-family: "DM", sans-serif;
 			}
 			
-			&#serif {
+			&#serif + span {
 				font-family: "Times New Roman", Times, serif;
 			}
 			
-			&#medium {
+			&#medium + span {
 				letter-spacing: 3.6px;
 				
 				@include media('<=xxs') {
@@ -353,7 +354,7 @@
 				}
 			}
 			
-			&#large {
+			&#large + span {
 				letter-spacing: 10.8px;
 				
 				@include media('<=xxs') {
@@ -362,7 +363,7 @@
 			}
 		}
 	}
-	
+
 	&__bottom {
 		box-sizing: border-box;
 		border-top: 2px solid rgba(var(--color), 0.3);
