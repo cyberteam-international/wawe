@@ -65,6 +65,7 @@
 	},
 	"dependencies": {
 		"gsap": "^3.12.2",
+		"js-cookie": "^3.0.5",
 		"lottie-web": "^5.12.2",
 		"scroll-lock": "^2.1.5",
 		"swiper": "^10.2.0"

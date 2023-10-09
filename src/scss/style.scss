@@ -52,6 +52,7 @@ $oneside: calc(100vw - (100vw - 1820px) / 2);
 // Local mixins
 @mixin atRootThemeIcons($icon) {
 	$themes: (
+		'white': 'dark',
 		'dark': 'white',
 		'cornsilk': 'brown',
 		'brown': 'lime',
@@ -132,7 +133,7 @@ $oneside: calc(100vw - (100vw - 1820px) / 2);
 	}
 
 	&[data-size="small"] {
-		--size: -2px;
+		--size: -4px;
 	}
 
 	&[data-size="normal"] {
@@ -140,7 +141,7 @@ $oneside: calc(100vw - (100vw - 1820px) / 2);
 	}
 
 	&[data-size="big"] {
-		--size: 2px;
+		--size: 4px;
 	}
 
 	&[data-spacing="standart"] {

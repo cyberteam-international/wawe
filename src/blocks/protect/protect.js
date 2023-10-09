@@ -1,4 +1,4 @@
-import { default as Lottie } from "lottie-web/build/player/esm/lottie_svg.min";
+import { default as Lottie } from "lottie-web/build/player/esm/lottie_light.min";
 
 (() => {
 
@@ -11,7 +11,7 @@ import { default as Lottie } from "lottie-web/build/player/esm/lottie_svg.min";
 		rendererSettings: {
 			scaleMode: 'noScale',
 			progressiveLoad: true,
-		  }
+		}
 	});
 
 })();
