@@ -12,9 +12,39 @@
 	font-weight: 500;
 	line-height: 0.9;
 	
+	@include media('<=xxxlg') {
+		font-size: calc(var(--size) + 34px);
+		padding: 20px 55px;
+	}
+	
+	@include media('<=xxlg') {
+		font-size: calc(var(--size) + 32px);
+		padding: 20px 50px;
+	}
+	
+	@include media('<=xlg') {
+		font-size: calc(var(--size) + 30px);
+		padding: 18px 45px;
+	}
+	
+	@include media('<=lg') {
+		font-size: calc(var(--size) + 28px);
+		padding: 20px 40px;
+	}
+	
+	@include media('<=md') {
+		font-size: calc(var(--size) + 26px);
+		padding: 16px 35px;
+	}
+
 	@include media('<=sm') {
 		padding: 12px 30px;
 		font-size: calc(var(--size) + 22px);
+	}
+
+	@include media('<=xs') {
+		padding: 10px 30px;
+		font-size: calc(var(--size) + 20px);
 	}
 	
 	@include media('<=xxs') {

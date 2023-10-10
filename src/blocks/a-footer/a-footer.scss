@@ -2,22 +2,117 @@
 	$self: &;
 	border-top: 2px solid rgba(var(--color), 0.3);
 	padding: 160px 0 140px;
+	
+	@include media('<=md') {
+		border-width: 1px;
+		padding: 100px 0 60px;
+	}
+	
+	@include media('<=xs') {
+		padding: 60px 0;
+	}
 
 	&__inner {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 80px 40px;
+		
+		@include media('<=md') {
+			grid-gap: 30px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=xxs') {
+			display: flex;
+			flex-flow: column nowrap;
+		}
 	}
 
 	&__col {
 		grid-column: span 1;
+		grid-row: span 1;
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: flex-start;
+		
+		&_menu {
+			
+		}
+		
+		&_company {
+			@include media('<=md') {
+				padding-top: 30px;
+				grid-row: 3;
+				position: relative;
+
+				&::before {
+					display: block;
+					content: '';
+					height: 1px;
+					background-color: rgba(var(--color), 0.3);
+					position: absolute;
+					top: 0; left: 0;
+					width: calc(200% + 30px);
+					
+					@include media('<=xs') {
+						width: 100%;
+					}
+				}
+			}
+
+			@include media('<=xs') {
+				grid-column: 1 / span 2;
+			}
+		
+			@include media('<=xxs') {
+				order: 2;
+			}
+		}
+		
+		&_support {
+			@include media('<=md') {
+				grid-column: 2 / span 1;
+				grid-row: 2;
+			}			
+		}
+
+		&_links {
+			#{$self}__button {
+					
+				@include media('<=md') {
+					margin-top: auto;
+				}
+
+				&:first-child {
+					margin: auto 0 20px 0;
+					
+					@include media('<=md') {
+						margin: auto 20px 0 0;
+					}
+				}
+			}
+
+			@include media('<=md') {
+				padding-top: 30px;
+				flex-flow: row nowrap;
+			}			
+
+			@include media('<=xs') {
+				grid-column: 1 / span 2;
+			}
+		
+			@include media('<=xxs') {
+				order: 2;
+			}
+		}
 	}
 	
 	&__text {
 		margin-bottom: 20px;
+		
+		@include media('<=md') {
+			margin-bottom: 10px;
+		}			
 
 		&_copy {
 			margin: 0;
@@ -27,6 +122,10 @@
 	&__link {
 		display: block;
 		padding: 10px 0;
+		
+		@include media('<=md') {
+			padding: 7px 0;
+		}			
 	}
 
 	&__logo {
@@ -34,6 +133,14 @@
 		max-width: 310px;
 		margin-bottom: 20px;
 		@include aspect-ratio(4, 1);
+		
+		@include media('<=md') {
+			max-width: 200px;
+		}
+		
+		@include media('<=sm') {
+			max-width: 170px;
+		}
 
 		&::before {
 			background: url('#{$images-path}icons-sprite.svg#icon-logo-view-dark') center / contain no-repeat transparent;	
@@ -42,8 +149,11 @@
 	}
 
 	&__button {
-		&:first-child {
-			margin: auto 0 20px 0;
+		text-align: center;
+
+		@include media('<=md') {
+			padding-left: 15px;
+			padding-right: 15px;
 		}
 	}
 }

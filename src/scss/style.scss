@@ -3,7 +3,7 @@
 
 
 // Include breakpoints badge
-// body { @include screen-media(); }
+body { @include screen-media(); }
 
 
 // Import media-query helper
@@ -130,7 +130,7 @@ $oneside: calc(100vw - (100vw - 1820px) / 2);
 	}
 
 	&[data-size="small"] {
-		--size: -6px;
+		--size: -4px;
 	}
 
 	&[data-size="normal"] {
@@ -168,7 +168,7 @@ body, html {
 	min-height: 100vh;
 }
 
-.footer { 
+footer { 
 	flex: 0 0 auto; 
 	margin-top: auto; 
 }

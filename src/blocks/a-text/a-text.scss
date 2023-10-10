@@ -3,9 +3,37 @@
 	font-size: calc(var(--size) + 36px);
 	letter-spacing: var(--spacing);
 	line-height: 1.5;
+	
+	@include media('<=xxxlg') {
+		font-size: calc(var(--size) + 34px);
+	}
 
 	@include media('<=xxlg') {
-		
+		font-size: calc(var(--size) + 32px);
+	}
+
+	@include media('<=xlg') {
+		font-size: calc(var(--size) + 30px);
+	}
+
+	@include media('<=lg') {
+		font-size: calc(var(--size) + 28px);
+	}
+
+	@include media('<=md') {
+		font-size: calc(var(--size) + 26px);
+	}
+
+	@include media('<=sm') {
+		font-size: calc(var(--size) + 22px);
+	}
+
+	@include media('<=xs') {
+		font-size: calc(var(--size) + 20px);
+	}
+
+	@include media('<=xxs') {
+		font-size: calc(var(--size) + 18px);
 	}
 
 	li {
