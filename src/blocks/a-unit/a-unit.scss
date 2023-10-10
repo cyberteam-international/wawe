@@ -2,94 +2,138 @@
 	$self: &;
 
 	&__top {
-
+		column-count: 2;
+		column-gap: 40px;
+		column-width: 300px;
+		border-bottom: 2px solid rgba(var(--color), 0.3);
+		margin-bottom: 40px;
+		padding-bottom: 40px;
 	}
-
+	
 	&__title {
-
+		break-inside: avoid;
 	}
-
+	
 	&__text {
-
+		break-inside: avoid;
 	}
 
 	&__cards {
-
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 40px;
+		grid-auto-rows: minmax(260px, auto);
 	}
 
 	&__card {
+		grid-column: span 1;
+		padding: 40px;
+		box-sizing: border-box;
+		border: 2px solid rgb(var(--color));
 
-		&_mobile {
-			
+		&::before {
+			display: none;
+			content: '';
+			width: 96px;
+			height: 96px;
+			animation: fadeIn 0.3s;
+			background-size: 100% 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			margin-bottom: 20px;
 		}
 
-		&_favorite {
-			
+		@at-root[data-image='false'] &::before {
+			display: none !important;
 		}
 
-		&_star {
-			
+		&_mobile::before {
+			display: block;
+			@include atRootThemeIcons('mobile');
 		}
 
-		&_crash {
-			
+		&_favorite::before {
+			display: block;
+			@include atRootThemeIcons('fav');
 		}
 
-		&_saved {
-			
+		&_star::before {
+			display: block;
+			@include atRootThemeIcons('star');
 		}
 
-		&_hat {
-			
+		&_crash::before {
+			display: block;
+			@include atRootThemeIcons('crash');
 		}
 
-		&_fire {
-			
+		&_saved::before {
+			display: block;
+			@include atRootThemeIcons('shield');
 		}
 
-		&_hand {
-			
+		&_hat::before {
+			display: block;
+			@include atRootThemeIcons('hat');
 		}
 
-		&_priv {
-			
+		&_fire::before {
+			display: block;
+			@include atRootThemeIcons('fire');
 		}
 
-		&_delv {
-			
+		&_hand::before {
+			display: block;
+			@include atRootThemeIcons('hand');
 		}
 
-		&_wave {
-			
+		&_priv::before {
+			display: block;
+			@include atRootThemeIcons('priv');
 		}
 
-		&_bomb {
-			
+		&_delv::before {
+			display: block;
+			@include atRootThemeIcons('delv');
 		}
 
-		&_dist {
-			
+		&_wave::before {
+			display: block;
+			@include atRootThemeIcons('wave');
 		}
 
-		&_wallet {
-			
+		&_bomb::before {
+			display: block;
+			@include atRootThemeIcons('bomb');
 		}
 
-		&_shield {
-			
+		&_dist::before {
+			display: block;
+			@include atRootThemeIcons('dist');
 		}
 
-		&_heart {
-			
+		&_wallet::before {
+			display: block;
+			@include atRootThemeIcons('wallet');
+		}
+
+		&_shield::before {
+			display: block;
+			@include atRootThemeIcons('saved');
+		}
+
+		&_heart::before {
+			display: block;
+			@include atRootThemeIcons('heart');
 		}
 	}
 
 	&__c-title {
-
+		margin-bottom: 20px;
 	}
 
 	&__c-text {
 
 	}
-
 }

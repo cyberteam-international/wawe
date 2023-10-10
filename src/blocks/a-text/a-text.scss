@@ -1,0 +1,27 @@
+.a-text {
+	$self: &;
+	font-size: calc(var(--size) + 36px);
+	letter-spacing: var(--spacing);
+	line-height: 1.5;
+
+	@include media('<=xxlg') {
+		
+	}
+
+	li {
+		margin: 15px 0;
+		padding-left: 40px;
+		position: relative;
+
+		&::before {
+			display: block;
+			content: '';
+			height: 9px;
+			width: 9px;
+			border-radius: 50%;
+			background-color: rgb(var(--color));
+			position: absolute;
+			left: 10px; top: 23px;
+		}
+	}
+}

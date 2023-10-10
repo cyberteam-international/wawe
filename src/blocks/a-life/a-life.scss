@@ -1,12 +1,13 @@
 .a-life {
 	$self: &;
+	padding-top: 160px;
 
 	&__top {
 
 	}
 
 	&__title {
-
+		margin-bottom: 80px;
 	}
 
 	&__t-text {
@@ -14,15 +15,24 @@
 	}
 
 	&__items {
-
+		padding-top: 80px;
+		padding-bottom: 160px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 40px;
+		grid-auto-rows: minmax(320px, auto);
 	}
 
 	&__item {
-
+		display: block;
+		padding: 36px 40px;
+		box-sizing: border-box;
+		border: 2px solid rgb(var(--color));
+		grid-column: span 1;
 	}
 
 	&__i-title {
-
+		margin-bottom: 10px;
 	}
 
 	&__i-text {
@@ -32,5 +42,4 @@
 	&__bottom {
 
 	}
-
 }

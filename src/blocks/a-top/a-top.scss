@@ -1,12 +1,14 @@
 .a-top {
 	$self: &;
+	display: grid;
+	grid-template-columns: 1fr 560px;
+	grid-gap: 40px;
 
 	&__title {
-
+		grid-column: span 1;
 	}
-
+	
 	&__side {
-
+		grid-column: span 1;
 	}
-
 }

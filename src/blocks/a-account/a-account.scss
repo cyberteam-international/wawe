@@ -1,8 +1,9 @@
 .a-account {
 	$self: &;
+	padding: 160px 0 80px;
 
 	&__top {
-
+		margin-bottom: 80px;
 	}
 
 	&__title {
@@ -12,29 +13,52 @@
 	&__t-text {
 
 	}
-
+	
 	&__cards {
-
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 40px;
 	}
-
+	
 	&__card {
-
+		grid-column: span 1;
+		padding: 40px;
+		box-sizing: border-box;
+		border: 2px solid rgb(var(--color));
+		// display: flex;
+		align-self: start;
 	}
 
 	&__c-icon {
+		margin-bottom: 40px;
+		animation: fadeIn 0.3s;
 
+		@at-root[data-image='false'] & {
+			display: none !important;
+		}
+
+		@at-root[data-theme='cornsilk'] & {
+			filter: sepia(0.25) saturate(2) hue-rotate(345deg);
+		}
+
+		@at-root[data-theme='brown'] & {
+			filter: sepia(0.7) saturate(4) hue-rotate(40deg);
+		}
+
+		@at-root[data-theme='skyblue'] & {
+			filter: sepia(0.3) saturate(4) hue-rotate(175deg);
+		}
 	}
 
 	&__c-title {
-
+		margin-bottom: 40px;
 	}
 
 	&__c-text {
-
+		margin-bottom: 40px;
 	}
 
 	&__c-link {
 
 	}
-
 }

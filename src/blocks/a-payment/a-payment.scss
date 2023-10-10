@@ -3,7 +3,7 @@
 	padding: 80px 0;
 
 	&__top {
-
+		margin-bottom: 80px;
 	}
 
 	&__title {
@@ -15,66 +15,111 @@
 	}
 
 	&__items {
-
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	&__item {
+		display: flex;
+		box-sizing: border-box;
+		align-items: center;
+		white-space: nowrap;
+		overflow: hidden;
+		padding: 35px;
+		box-sizing: border-box;
+		border: 2px solid rgb(var(--color));
+		margin-bottom: 38px;
 
-		&_mobile {
-			
+		&:not(:last-child) {
+			margin-right: 38px;
 		}
 
-		&_faucet {
-			
+		&::before {
+			display: none;
+			content: '';
+			width: 48px;
+			height: 48px;
+			animation: fadeIn 0.3s;
+			background-size: 150% 150%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			margin-right: 10px;
+			flex-shrink: 0;
 		}
 
-		&_union {
-			
+		@at-root[data-image='false'] &::before {
+			display: none !important;
 		}
 
-		&_wifi {
-			
+		&_mobile::before {
+			display: block;
+			@include atRootThemeIcons('mob');
 		}
 
-		&_plane {
-			
+		&_faucet::before {
+			display: block;
+			@include atRootThemeIcons('faucet');
 		}
 
-		&_car {
-			
+		&_union::before {
+			display: block;
+			@include atRootThemeIcons('union');
 		}
 
-		&_parking {
-			
+		&_wifi::before {
+			display: block;
+			@include atRootThemeIcons('wifi');
 		}
 
-		&_crew {
-			
+		&_plane::before {
+			display: block;
+			@include atRootThemeIcons('plane');
 		}
 
-		&_wallet2 {
-			
+		&_car::before {
+			display: block;
+			@include atRootThemeIcons('car');
 		}
 
-		&_tv {
-			
+		&_parking::before {
+			display: block;
+			@include atRootThemeIcons('parking');
 		}
 
-		&_phone {
-			
+		&_crew::before {
+			display: block;
+			@include atRootThemeIcons('crew');
 		}
 
-		&_percent {
-			
+		&_wallet2::before {
+			display: block;
+			@include atRootThemeIcons('wallet2');
 		}
 
-		&_game {
-			
+		&_tv::before {
+			display: block;
+			@include atRootThemeIcons('tv');
 		}
 
-		&_bag {
-			
+		&_phone::before {
+			display: block;
+			@include atRootThemeIcons('phone');
+		}
+
+		&_percent::before {
+			display: block;
+			@include atRootThemeIcons('percent');
+		}
+
+		&_game::before {
+			display: block;
+			@include atRootThemeIcons('game');
+		}
+
+		&_bag::before {
+			display: block;
+			@include atRootThemeIcons('bag');
 		}
 	}
-
 }

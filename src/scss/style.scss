@@ -3,7 +3,7 @@
 
 
 // Include breakpoints badge
-body { @include screen-media(); }
+// body { @include screen-media(); }
 
 
 // Import media-query helper
@@ -82,16 +82,13 @@ $oneside: calc(100vw - (100vw - 1820px) / 2);
 	
 	&[data-theme] body {
 		padding-top: 110px;
-		padding-bottom: 110px;
 		
 		@include media('<=lg') {
 			padding-top: 90px;
-			padding-bottom: 90px;
 		}
 		
 		@include media('<=md') {
 			padding-top: 70px;
-			padding-bottom: 0;
 		}
 		
 		@include media('<=sm') {
@@ -133,7 +130,7 @@ $oneside: calc(100vw - (100vw - 1820px) / 2);
 	}
 
 	&[data-size="small"] {
-		--size: -4px;
+		--size: -6px;
 	}
 
 	&[data-size="normal"] {
@@ -141,19 +138,19 @@ $oneside: calc(100vw - (100vw - 1820px) / 2);
 	}
 
 	&[data-size="big"] {
-		--size: 4px;
+		--size: 6px;
 	}
 
 	&[data-spacing="standart"] {
-		--size: 0px;
+		--spacing: 0px;
 	}
 
 	&[data-spacing="medium"] {
-		--size: 1px;
+		--spacing: 1px;
 	}
 
 	&[data-spacing="large"] {
-		--size: 2px;
+		--spacing: 2px;
 	}
 }
 

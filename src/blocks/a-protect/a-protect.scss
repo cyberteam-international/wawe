@@ -2,34 +2,76 @@
 	$self: &;
 
 	&__inner {
+		padding-top: 160px;
+		padding-bottom: 80px;
+	}
 
+	&__title {
+		margin-bottom: 80px;
 	}
 
 	&__items {
-
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 40px;
+		margin-bottom: 80px;
 	}
 
 	&__item {
+		grid-column: span 1;
+		display: flex;
+		box-sizing: border-box;
+		align-items: center;
+		padding: 40px;
+		box-sizing: border-box;
+		border: 2px solid rgb(var(--color));
 
-		&_zoom {
-			
+		&::before {
+			display: none;
+			content: '';
+			width: 96px;
+			height: 96px;
+			animation: fadeIn 0.3s;
+			background-size: 100% 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			margin-right: 20px;
+			flex-shrink: 0;
 		}
 
-		&_range {
-			
+		@at-root[data-image='false'] &::before {
+			display: none !important;
 		}
 
-		&_shield {
-			
+		&_zoom::before {
+			display: block;
+			@include atRootThemeIcons('zoom');
 		}
-
-		&_smile {
-			
+		
+		&_cast::before {
+			display: block;
+			@include atRootThemeIcons('cast');
+		}
+		
+		&_shield::before {
+			display: block;
+			@include atRootThemeIcons('saved');
+		}
+		
+		&_smile::before {
+			display: block;
+			@include atRootThemeIcons('smile');
 		}
 	}
 
 	&__text {
+		column-count: 2;
+		column-gap: 40px;
+		column-width: 300px;
 
+		p {
+			break-inside: avoid;
+		}
 	}
-
 }

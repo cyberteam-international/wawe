@@ -62,22 +62,7 @@
 
 		&::before {
 			background: url('#{$images-path}icons-sprite.svg#icon-logo-view-dark') center / contain no-repeat transparent;	
-
-			@at-root [data-theme="dark"] & {
-				background-image: url('#{$images-path}icons-sprite.svg#icon-logo-view-white');
-			}
-
-			@at-root [data-theme="cornsilk"] & {
-				background-image: url('#{$images-path}icons-sprite.svg#icon-logo-view-brown');
-			}
-
-			@at-root [data-theme="brown"] & {
-				background-image: url('#{$images-path}icons-sprite.svg#icon-logo-view-lime');
-			}
-
-			@at-root [data-theme="skyblue"] & {
-				background-image: url('#{$images-path}icons-sprite.svg#icon-logo-view-blue');
-			}
+			@include atRootThemeIcons('logo');
 		}
 	}
 
@@ -288,7 +273,7 @@
 		&_access {
 			display: flex;
 			align-items: center;
-			letter-spacing: var(--spacing);
+			// letter-spacing: var(--spacing);
 			margin: 0;
 			
 			&::before {

@@ -1,20 +1,43 @@
 .a-insure {
 	$self: &;
-
-	&__title {
-
+	
+	&__top {
+		padding-top: 80px;
+		padding-bottom: 160px;
 	}
-
-	&__inner {
-
+	
+	&__title {
+		margin-bottom: 60px;
+	}
+	
+	&__tabs {
+		box-sizing: border-box;
+		border: 2px solid rgb(var(--color));
+		padding: 40px;
 	}
 
 	&__buttons {
-
+		display: flex;
+		flex-wrap: wrap;
+		border-bottom: 2px solid rgba(var(--color), 0.3);
+		padding-bottom: 20px;
+		margin-bottom: 40px;
 	}
 
 	&__button {
+		margin-bottom: 20px;
+		padding-left: 30px;
+		padding-right: 30px;
+		transition: background-color 0.3s;
+		
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
 
+		&.active {
+			background-color: rgb(var(--color));
+			color: rgb(var(--bgcolor));
+		}
 	}
 
 	&__blocks {
@@ -22,11 +45,15 @@
 	}
 
 	&__block {
+		display: none;
+		animation: fadeIn 0.3s;
 
+		&.active {
+			display: block;
+		}
 	}
 
 	&__bottom {
 
 	}
-
 }

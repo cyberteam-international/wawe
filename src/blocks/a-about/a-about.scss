@@ -1,20 +1,26 @@
 .a-about {
 	$self: &;
+	padding: 160px 0 80px;
 
 	&__inner {
 
 	}
 
 	&__title {
-
+		margin-bottom: 70px;
 	}
-
+	
 	&__subtitle {
-
+		margin-bottom: 20px;
 	}
 
 	&__text {
+		column-count: 2;
+		column-gap: 40px;
+		column-width: 300px;
 
+		p {
+			break-inside: avoid;
+		}
 	}
-
 }

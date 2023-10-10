@@ -1,32 +1,38 @@
 .a-news {
 	$self: &;
+	padding: 160px 0 120px;
 
 	&__title {
-
+		margin-bottom: 80px;
 	}
-
+	
 	&__cards {
-
+		
 	}
-
+	
 	&__card {
-
+		box-sizing: border-box;
+		
+		&:not(:last-child) {
+			margin-bottom: 40px;
+			padding-bottom: 40px;
+			border-bottom: 2px solid rgba(var(--color), 0.3);
+		}
 	}
-
+	
 	&__c-date {
-
+		margin-bottom: 20px;
 	}
-
+	
 	&__c-title {
-
+		margin-bottom: 20px;
 	}
-
+	
 	&__c-text {
-
+		margin-bottom: 30px;
 	}
 
 	&__more {
 
 	}
-
 }

@@ -1,32 +1,48 @@
 .a-hero {
 	$self: &;
-	padding: 80px 0;
-
+	padding-bottom: 80px;
+	
 	&__inner {
-
+		padding-bottom: 80px;
+		padding-top: 80px;
 	}
-
+	
 	&__title {
-
+		max-width: 1160px;
+		margin-bottom: 30px;
 	}
-
+	
 	&__text {
-
+		margin-bottom: 50px;
+		max-width: 560px;
 	}
-
+	
 	&__buttons {
-
+		display: flex;
 	}
-
+	
 	&__button {
-
+		border-width: 4px;
+		
+		&:not(:last-child) {
+			margin-right: 24px;
+		}
 	}
-
+	
 	&__items {
-		padding: 80px 0;
+		padding-bottom: 80px;
+		padding-top: 80px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 40px;
+		grid-auto-rows: minmax(320px, auto);
 	}
 
 	&__item {
-
+		display: block;
+		padding: 36px 40px;
+		box-sizing: border-box;
+		border: 2px solid rgb(var(--color));
+		grid-column: span 1;
 	}
 }

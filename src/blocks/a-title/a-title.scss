@@ -1,8 +1,9 @@
 .a-title {
 	$self: &;
+	letter-spacing: calc(var(--spacing) - 2px);
 	font-size: calc(var(--size) + 100px);
 	color: rgb(var(--color));
-	letter-spacing: calc(var(--spacing) - 2px);
+	text-decoration: none;
 	font-weight: 600;
 	line-height: 1;
 	
@@ -15,8 +16,8 @@
 	}
 	
 	&_subtitle {
-		font-size: calc(var(--size) + 42px);
 		letter-spacing: calc(var(--spacing) - 1.68px);
+		font-size: calc(var(--size) + 42px);
 		font-weight: 700;
 	
 		@include media('<=xxxlg') {
