@@ -113,7 +113,7 @@
 		grid-gap: 40px;
 		grid-auto-rows: minmax(320px, auto);
 		
-		@include media('<=xlg') {
+		@include media('<=xxlg') {
 			grid-gap: 30px;
 		}
 		

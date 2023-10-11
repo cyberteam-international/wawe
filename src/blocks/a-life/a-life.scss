@@ -36,9 +36,6 @@
 		
 		@include media('<=xxlg') {
 			padding-bottom: 120px;
-		}
-			
-		@include media('<=xlg') {
 			grid-gap: 30px;
 		}
 		

@@ -57,7 +57,7 @@
 		&:not(:last-child) {
 			margin-right: 40px;
 			
-			@include media('<=xlg') {
+			@include media('<=xxlg') {
 				margin-right: 30px;
 			}
 			

@@ -32,10 +32,13 @@
 		grid-auto-rows: minmax(320px, auto);
 		grid-gap: 40px;
 		
-		@include media('<=xlg') {
-			grid-auto-rows: minmax(240px, auto);
+		@include media('<=xxlg') {
 			grid-gap: 30px;
 		}
+		
+		@include media('<=xlg') {
+			grid-auto-rows: minmax(240px, auto);
+	}
 		
 		@include media('<=md') {
 			grid-template-columns: repeat(2, 1fr);
