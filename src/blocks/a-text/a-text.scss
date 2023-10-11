@@ -5,23 +5,23 @@
 	line-height: 1.5;
 	
 	@include media('<=xxxlg') {
-		font-size: calc(var(--size) + 34px);
-	}
-
-	@include media('<=xxlg') {
 		font-size: calc(var(--size) + 32px);
 	}
 
-	@include media('<=xlg') {
-		font-size: calc(var(--size) + 30px);
-	}
-
-	@include media('<=lg') {
+	@include media('<=xxlg') {
 		font-size: calc(var(--size) + 28px);
 	}
 
-	@include media('<=md') {
+	@include media('<=xlg') {
 		font-size: calc(var(--size) + 26px);
+	}
+
+	@include media('<=lg') {
+		font-size: calc(var(--size) + 24px);
+	}
+
+	@include media('<=md') {
+		// font-size: calc(var(--size) + 24px);
 	}
 
 	@include media('<=sm') {
@@ -40,6 +40,16 @@
 		margin: 15px 0;
 		padding-left: 40px;
 		position: relative;
+		
+		@include media('<=xlg') {
+			margin: 12px 0;
+			padding-left: 35px;
+		}
+		
+		@include media('<=md') {
+			margin: 10px 0;
+			padding-left: 30px;
+		}
 
 		&::before {
 			display: block;
@@ -50,6 +60,25 @@
 			background-color: rgb(var(--color));
 			position: absolute;
 			left: 10px; top: 23px;
+		
+			@include media('<=xlg') {
+				top: 15px;
+				height: 7px;
+				width: 7px;
+			}
+				
+			@include media('<=md') {
+				height: 5px;
+				width: 5px;
+			}
+			
+			@include media('<=xs') {
+				top: 13px;
+			}
+			
+			@include media('<=xxs') {
+				top: 11px;
+			}
 		}
 	}
 }

@@ -3,8 +3,9 @@
 	@extend %reset-button;
 	display: inline-flex;
 	align-items: center;
-	justify-content: center;
+	text-align: center;
 	padding: 22px 60px;
+	justify-content: center;
 	letter-spacing: calc(var(--spacing) - 1.44px);
 	font-size: calc(var(--size) + 36px);
 	border: 2px solid rgb(var(--color));
@@ -38,16 +39,17 @@
 	}
 
 	@include media('<=sm') {
-		padding: 12px 30px;
+		padding: 14px 30px;
 		font-size: calc(var(--size) + 22px);
 	}
 
 	@include media('<=xs') {
-		padding: 10px 30px;
+		padding: 12px 30px;
 		font-size: calc(var(--size) + 20px);
 	}
 	
-	@include media('<=xxs') {
+	@include media('<=xxxs') {
 		font-size: calc(var(--size) + 18px);
+		padding: 10px 20px;
 	}
 }

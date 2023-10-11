@@ -4,16 +4,50 @@
 	&__top {
 		padding-top: 80px;
 		padding-bottom: 160px;
+		
+		@include media('<=xxlg') {
+			padding-bottom: 120px;
+		}
+			
+		@include media('<=sm') {
+			padding-top: 50px;
+			padding-bottom: 60px;
+		}
+			
+		@include media('<=xxs') {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
 	}
 	
 	&__title {
 		margin-bottom: 60px;
+					
+		@include media('<=sm') {
+			margin-bottom: 45px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 20px;
+		}
 	}
 	
 	&__tabs {
 		box-sizing: border-box;
 		border: 2px solid rgb(var(--color));
 		padding: 40px;
+		
+		@include media('<=lg') {
+			padding: 30px;
+		}
+		
+		@include media('<=sm') {
+			border-width: 1px;
+		}
+		
+		@include media('<=xxs') {
+			padding: 15px;
+		}
 	}
 
 	&__buttons {
@@ -22,6 +56,16 @@
 		border-bottom: 2px solid rgba(var(--color), 0.3);
 		padding-bottom: 20px;
 		margin-bottom: 40px;
+		
+		@include media('<=sm') {
+			border-width: 1px;
+			padding-bottom: 10px;
+			margin-bottom: 30px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__button {
@@ -30,8 +74,17 @@
 		padding-right: 30px;
 		transition: background-color 0.3s;
 		
+		@include media('<=xxs') {
+			margin-bottom: 10px;
+			padding: 10px 30px;
+		}
+		
 		&:not(:last-child) {
 			margin-right: 20px;
+			
+			@include media('<=xxs') {
+				margin-right: 10px;
+			}
 		}
 
 		&.active {

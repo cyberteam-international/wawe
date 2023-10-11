@@ -1,6 +1,14 @@
 .a-plans {
 	$self: &;
 	padding-top: 80px;
+	
+	@include media('<=md') {
+		padding-top: 60px;
+	}
+	
+	@include media('<=xxs') {
+		padding-top: 40px;
+	}
 
 	&__inner {
 
@@ -8,14 +16,42 @@
 
 	&__title {
 		margin-bottom: 80px;
+		
+		@include media('<=md') {
+			margin-bottom: 40px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__items {
 		padding-bottom: 160px;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		grid-auto-rows: minmax(240px, auto);
+		grid-auto-rows: minmax(260px, auto);
 		grid-gap: 40px;
+		
+		@include media('<=xxlg') {
+			padding-bottom: 120px;
+		}
+			
+		@include media('<=xlg') {
+			grid-gap: 30px;
+		}
+
+		@include media('<=md') {
+			padding-bottom: 60px;
+		}
+		
+		@include media('<=sm') {
+			grid-template-columns: 1fr;
+		}
+			
+		@include media('<=xxs') {
+			padding-bottom: 40px;
+		}
 	}
 
 	&__item {
@@ -23,6 +59,14 @@
 		padding: 40px;
 		box-sizing: border-box;
 		border: 2px solid rgb(var(--color));
+		
+		@include media('<=lg') {
+			padding: 30px;
+		}
+
+		@include media('<=sm') {
+			border-width: 1px;
+		}
 
 		&::before {
 			display: none;
@@ -35,6 +79,16 @@
 			background-repeat: no-repeat;
 			background-color: transparent;
 			margin-bottom: 20px;
+		
+			@include media('<=xlg') {
+				width: 86px;
+				height: 86px;
+			}
+		
+			@include media('<=md') {
+				width: 72px;
+				height: 72px;
+			}
 		}
 
 		@at-root[data-image='false'] &::before {

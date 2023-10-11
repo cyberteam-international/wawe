@@ -7,12 +7,33 @@
 	font-weight: 600;
 	line-height: 1;
 	
+	@include media('<=xxxlg') {
+		font-size: calc(var(--size) + 95px);
+	}
+	
+	@include media('<=xxlg') {
+		font-size: calc(var(--size) + 80px);
+	}
+	
+	@include media('<=xlg') {
+		font-size: calc(var(--size) + 75px);
+	}
+	
+	@include media('<=lg') {
+		font-size: calc(var(--size) + 70px);
+	}
+
 	@include media('<=sm') {
 		font-size: calc(var(--size) + 64px);
+		line-height: 1.05;
+	}
+	
+	@include media('<=xs') {
+		font-size: calc(var(--size) + 40px);
 	}
 	
 	@include media('<=xxs') {
-		font-size: calc(var(--size) + 42px);
+		font-size: calc(var(--size) + 32px);
 	}
 	
 	&_subtitle {
@@ -25,11 +46,11 @@
 		}
 	
 		@include media('<=xxlg') {
-			font-size: calc(var(--size) + 37px);
+			font-size: calc(var(--size) + 35px);
 		}
 	
 		@include media('<=lg') {
-			font-size: calc(var(--size) + 35px);
+			// font-size: calc(var(--size) + 35px);
 		}
 	
 		@include media('<=md') {

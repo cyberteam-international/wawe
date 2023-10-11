@@ -1,11 +1,27 @@
 .a-top {
 	$self: &;
 	display: grid;
-	grid-template-columns: 1fr 560px;
+	grid-template-columns: minmax(48%, 1fr) minmax(auto, 560px);
 	grid-gap: 40px;
+	
+	@include media('<=lg') {
+		grid-gap: 30px;
+	}
+
+	@include media('<=md') {
+		display: block;
+	}
 
 	&__title {
 		grid-column: span 1;
+
+		@include media('<=md') {
+			margin-bottom: 15px;
+		}
+
+		@include media('<=xxs') {
+			margin-bottom: 5px;
+		}
 	}
 	
 	&__side {

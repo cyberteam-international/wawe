@@ -18,6 +18,10 @@
 		display: flex;
 		align-items: center;
 		
+		@include media('<=xxlg') {
+			min-height: 100px;
+		}
+		
 		@include media('<=lg') {
 			min-height: 90px;
 		}

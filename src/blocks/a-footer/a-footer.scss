@@ -3,13 +3,25 @@
 	border-top: 2px solid rgba(var(--color), 0.3);
 	padding: 160px 0 140px;
 	
+	@include media('<=xxlg') {
+		padding: 120px 0 140px;
+	}
+
 	@include media('<=md') {
+		padding-bottom: 60px;
+	}
+
+	@include media('<=sm') {
 		border-width: 1px;
-		padding: 100px 0 60px;
+		padding: 60px 0;
 	}
 	
 	@include media('<=xs') {
 		padding: 60px 0;
+	}
+	
+	@include media('<=xxs') {
+		padding: 40px 0;
 	}
 
 	&__inner {
@@ -23,6 +35,7 @@
 		}
 		
 		@include media('<=xxs') {
+			grid-gap: 25px;
 			display: flex;
 			flex-flow: column nowrap;
 		}
@@ -82,12 +95,20 @@
 				@include media('<=md') {
 					margin-top: auto;
 				}
-
+			
+				@include media('<=xxs') {
+					flex-grow: 1;
+				}
+		
 				&:first-child {
 					margin: auto 0 20px 0;
 					
 					@include media('<=md') {
 						margin: auto 20px 0 0;
+					}
+					
+					@include media('<=xxs') {
+						margin: auto 15px 0 0;
 					}
 				}
 			}
@@ -141,6 +162,10 @@
 		@include media('<=sm') {
 			max-width: 170px;
 		}
+		
+		@include media('<=xxs') {
+			max-width: 165px;
+		}
 
 		&::before {
 			background: url('#{$images-path}icons-sprite.svg#icon-logo-view-dark') center / contain no-repeat transparent;	
@@ -149,7 +174,6 @@
 	}
 
 	&__button {
-		text-align: center;
 
 		@include media('<=md') {
 			padding-left: 15px;

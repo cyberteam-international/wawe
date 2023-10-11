@@ -1,9 +1,29 @@
 .a-news {
 	$self: &;
-	padding: 160px 0 120px;
+	padding: 160px 0;
+	
+	@include media('<=xxlg') {
+		padding: 120px 0;
+	}
+	
+	@include media('<=md') {
+		padding: 60px 0;
+	}
+	
+	@include media('<=xxs') {
+		padding: 40px 0;
+	}
 
 	&__title {
 		margin-bottom: 80px;
+		
+		@include media('<=md') {
+			margin-bottom: 40px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 20px;
+		}
 	}
 	
 	&__cards {
@@ -17,6 +37,15 @@
 			margin-bottom: 40px;
 			padding-bottom: 40px;
 			border-bottom: 2px solid rgba(var(--color), 0.3);
+			
+			@include media('<=sm') {
+				border-width: 1px;
+			}
+			
+			@include media('<=xxs') {
+				padding-bottom: 30px;
+				margin-bottom: 30px;
+			}
 		}
 	}
 	

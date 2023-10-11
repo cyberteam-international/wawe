@@ -1,13 +1,25 @@
 .a-life {
 	$self: &;
 	padding-top: 160px;
+	
+	@include media('<=xxlg') {
+		padding-top: 120px;
+	}
+	
+	@include media('<=md') {
+		padding-top: 60px;
+	}
+	
+	@include media('<=xxs') {
+		padding-top: 40px;
+	}
 
 	&__top {
 
 	}
 
 	&__title {
-		margin-bottom: 80px;
+
 	}
 
 	&__t-text {
@@ -21,6 +33,32 @@
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 40px;
 		grid-auto-rows: minmax(320px, auto);
+		
+		@include media('<=xxlg') {
+			padding-bottom: 120px;
+		}
+			
+		@include media('<=xlg') {
+			grid-gap: 30px;
+		}
+		
+		@include media('<=lg') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=sm') {
+			grid-template-columns: 1fr;
+			grid-auto-rows: minmax(175px, auto);
+			padding-top: 50px;
+			padding-bottom: 60px;
+		}
+		
+		@include media('<=xxs') {
+			grid-auto-rows: minmax(165px, auto);
+			padding-top: 20px;
+			padding-bottom: 40px;
+			grid-gap: 15px;
+		}
 	}
 
 	&__item {
@@ -29,6 +67,18 @@
 		box-sizing: border-box;
 		border: 2px solid rgb(var(--color));
 		grid-column: span 1;
+		
+		@include media('<=md') {
+			padding: 30px;
+		}
+		
+		@include media('<=sm') {
+			border-width: 1px;
+		}
+		
+		@include media('<=xxs') {
+			padding: 15px;
+		}
 	}
 
 	&__i-title {
